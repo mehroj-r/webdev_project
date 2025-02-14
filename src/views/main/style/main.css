@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* .neonbg{
+  @apply bg-center bg-no-repeat bg-cover relative;
+  background-image: url('../img/bg-registan.png');
+} */
+/* .neonbg::before,
+.neonbg::after {
+  content: "";
+  width: 1000px;
+  height: 1000px;
+  background: #ffd200;
+  position: fixed;
+  border-radius: 100%;
+  filter: blur(500px);
+  z-index: -3;
+  opacity: 0.5;
+  top: 0;
+  left: 0;
+  animation: bg linear 10s infinite;
+}
+
+.neonbg::after { */
+  /* background: #00d5ff; */
+  /* animation: bg linear 7s infinite alternate-reverse; */
+/* } */
+/* 
+@keyframes bg {
+  0% {
+    top: 0;
+    left: 0;
+  }
+
+  20% {
+    top: 40%;
+    left: 5%;
+  }
+
+  40% {
+    top: 60%;
+    left: 50%;
+  }
+  80% {
+    top: 30%;
+    left: 20%;
+  }
+  100% {
+    top: 0;
+    left: 0;
+  }
+} */
