@@ -7,11 +7,51 @@
   <title>Uzbekation</title>
   <link rel="stylesheet" href="./style/fonts.css">
   <link rel="stylesheet" href="./style/main.css">
-  <link href="../../../dist/output.css" rel="stylesheet">
+  <!-- <link href="../../../dist/output.css" rel="stylesheet"> -->
+  <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        screens: {
+          // 'xl': {'max': '1500px'},
+          // // => @media (max-width: 1535px) { ... }
+
+          lg: { max: "1024px" },
+          // => @media (max-width: 1024px) { ... }
+
+          md: { max: "768px" },
+          // => @media (max-width: 768px) { ... }
+
+          hamvisible: { max: "700px" },
+          // => @media (max-width: 650px) { ... }
+
+          sm: { max: "425px" },
+          // => @media (max-width: 425px) { ... }
+
+          xs: { max: "375px" },
+          // => @media (max-width: 375px) { ... }
+
+          s: { max: "320px" },
+          // => @media (max-width: 375px) { ... }
+        },
+        extend: {
+          colors: {
+            // search icon colors
+            lightpurple: "#A585FA",
+            mainpurple: "#4600FF",
+            // places to go card colors
+            endblue: "#05073C",
+          },
+        },
+      },
+    };
+  </script>
 
 </head>
 
-<body class="bg-[#141414] text-white scroll-smooth">
+<body class="bg-[#141414] text-white scroll-smooth overscroll-auto
+">
   <header
     class="flex items-center justify-between fixed top-0 left-0 right-0 px-[100px] py-5 backdrop-blur-[10px] border-b border-white border-opacity-10 urbanist-medium z-50">
     <!-- logo -->
@@ -22,25 +62,25 @@
     <nav>
       <ul class="flex items-center justify-center gap-8">
         <a href="./home.html"
-          class="text-white px-6 py-3 bg-[#4a4a4a] bg-opacity-10 rounded-lg backdrop-blur-md border border-white border-opacity-10 cursor-pointer hover:font-bold">Home</a>
+          class="px-6 py-3 bg-[#4a4a4a]/10 rounded-lg backdrop-blur-md border border-white/10 cursor-pointer hover:font-bold">Home</a>
         <a href="./home.html"
-          class="text-white px-6 py-3 bg-[#4a4a4a] bg-opacity-10 rounded-lg backdrop-blur-md border border-white border-opacity-10 cursor-pointer hover:font-bold">About
+          class="px-6 py-3 bg-[#4a4a4a]/10 rounded-lg backdrop-blur-md border border-white/10 cursor-pointer hover:font-bold">About
           Us</a>
         <a href="./home.html"
-          class="text-white px-6 py-3 bg-[#4a4a4a] bg-opacity-10 rounded-lg backdrop-blur-md border border-white border-opacity-10 cursor-pointer hover:font-bold">Places</a>
+          class="px-6 py-3 bg-[#4a4a4a]/10 rounded-lg backdrop-blur-md border border-white/10 cursor-pointer hover:font-bold">Places</a>
         <a href="./home.html"
-          class="text-white px-6 py-3 bg-[#4a4a4a] bg-opacity-10 rounded-lg backdrop-blur-md border border-white border-opacity-10 cursor-pointer hover:font-bold">Services</a>
+          class="px-6 py-3 bg-[#4a4a4a]/10 rounded-lg backdrop-blur-md border border-white/10 cursor-pointer hover:font-bold">Services</a>
 
       </ul>
     </nav>
     <button
-      class="text-white px-6 py-3 bg-[#4a4a4a] bg-opacity-10 rounded-lg backdrop-blur-md border border-white border-opacity-10">
+      class="text-white px-6 py-3 bg-[#4a4a4a]/10 rounded-lg backdrop-blur-md border border-white/10 hover:font-bold">
       <a href="./contact.html">Contact Us</a>
     </button>
   </header>
   <main>
-    <section
-      class="flex flex-col items-start justify-center relative mb-5">
+    <!--mainstage hook -->
+    <section class="flex flex-col items-start justify-center relative mb-10">
       <div class="absolute inset-0 bg-gradient-to-r from-[#141414] to-transparent "></div>
       <div class="absolute inset-x-0 bottom-0 h-[80px] bg-gradient-to-t from-[#141414] to-transparent "></div>
       <img class=" w-full -z-10" src="./img/bg-registan.png" alt="">
@@ -60,7 +100,8 @@
           </div>
         </div>
         <!-- locations info -->
-        <div class="px-6 py-4 rounded-[28px] backdrop-blur-sm border border-white border-opacity-20 flex items-center gap-16">
+        <div
+          class="px-6 py-4 rounded-[28px] backdrop-blur-sm border border-white/20 flex items-center gap-16">
           <div class="flex items-center justify-between gap-10">
             <div class="flex items-center gap-4 worksans-regular">
               <img src="./img/location.svg" alt="location">
@@ -79,20 +120,23 @@
             </div>
           </div>
           <!-- search button -->
-          <button class="grid place-content-center p-5 rounded-2xl bg-gradient-to-r from-lightpurple to-mainpurple">
+          <button
+            class="grid place-content-center p-5 rounded-2xl bg-gradient-to-r from-[#A585FA] to-[#4600FF] cursor-pointer">
             <img src="./img/searchicon.svg" alt="search">
           </button>
         </div>
       </div>
     </section>
+
     <!-- offers -->
-    <section class="px-5 flex items-stretch gap-5 urbanist-semibold">
+    <section class="px-5 flex gap-5 urbanist-semibold mb-20 relative">
       <a class="flex-1" href="#">
         <div
-          class="py-10 px-5 flex flex-col items-center gap-5 rounded-xl bg-[#1a1a1a] bg-opacity-10 border border-white border-opacity-10 relative hover:border-opacity-20 group">
-          <img class="size-20 group-hover:animate-bell" src="./img/dstay.svg" alt="stay">
+          class="py-10 px-5 flex flex-col items-center gap-5 rounded-xl bg-[#1a1a1a]/10 border border-white/10 relative hover:border-white/20 group">
+          <img class="size-20" src="./img/dstay.svg" alt="stay">
           <p>Find Your Dream Stay</p>
-          <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+          <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor"
             class="size-6 absolute top-5 right-5 opacity-60 group-hover:top-3 group-hover:translate-x-2 group-hover:-translate-y-0.5 transition-all duration-300 ease-in-out">
             <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
           </svg>
@@ -100,10 +144,11 @@
       </a>
       <a class="flex-1" href="#">
         <div
-          class="py-10 px-5 flex flex-col items-center gap-5 rounded-xl bg-[#1a1a1a] bg-opacity-10 border border-white border-opacity-10 relative hover:border-opacity-20 group">
-          <img class="size-20 group-hover:animate-bell" src="./img/dstay.svg" alt="stay">
-          <p>Find Your Dream Stay</p>
-          <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+          class="py-10 px-5 flex flex-col items-center gap-5 rounded-xl bg-[#1a1a1a]/10 border border-white/10 relative hover:border-white/20 group">
+          <img class="size-20" src="./img/package.svg" alt="stay">
+          <p>Cheap Holiday Packages</p>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor"
             class="size-6 absolute top-5 right-5 opacity-60 group-hover:top-3 group-hover:translate-x-2 group-hover:-translate-y-0.5 transition-all duration-300 ease-in-out">
             <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
           </svg>
@@ -111,10 +156,11 @@
       </a>
       <a class="flex-1" href="#">
         <div
-          class="py-10 px-5 flex flex-col items-center gap-5 rounded-xl bg-[#1a1a1a] bg-opacity-10 border border-white border-opacity-10 relative hover:border-opacity-20 group">
-          <img class="size-20 group-hover:animate-bell" src="./img/dstay.svg" alt="stay">
-          <p>Find Your Dream Stay</p>
-          <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+          class="py-10 px-5 flex flex-col items-center gap-5 rounded-xl bg-[#1a1a1a]/10 border border-white/10 relative hover:border-white/20 group">
+          <img class="size-20 group-hover:animate-bell" src="./img/building.svg" alt="stay">
+          <p>Effortless Check-in</p>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor"
             class="size-6 absolute top-5 right-5 opacity-60 group-hover:top-3 group-hover:translate-x-2 group-hover:-translate-y-0.5 transition-all duration-300 ease-in-out">
             <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
           </svg>
@@ -122,15 +168,73 @@
       </a>
       <a class="flex-1" href="#">
         <div
-          class="py-10 px-5 flex flex-col items-center gap-5 rounded-xl bg-[#1a1a1a] bg-opacity-10 border border-white border-opacity-10 relative hover:border-opacity-20 group">
-          <img class="size-20 group-hover:animate-bell" src="./img/dstay.svg" alt="stay">
-          <p>Find Your Dream Stay</p>
-          <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+          class="py-10 px-5 flex flex-col items-center gap-5 rounded-xl bg-[#1a1a1a]/10 border border-white/10 relative hover:border-white/20 group">
+          <img class="size-20 group-hover:animate-bell" src="./img/sun.svg" alt="stay">
+          <p>Explore Places</p>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor"
             class="size-6 absolute top-5 right-5 opacity-60 group-hover:top-3 group-hover:translate-x-2 group-hover:-translate-y-0.5 transition-all duration-300 ease-in-out">
             <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
           </svg>
         </div>
       </a>
+      <div class="fixed left-[360px] top-[1000px] size-[140px] bg-[#3BF7E7] rounded-full blur-[200px]"></div>
+      <div class="fixed right-[100px] top-[740px] size-[180px] bg-[#F43BF7] rounded-full blur-[200px]"></div>
+      <div class="fixed right-[120px] top-[800px] size-[180px] bg-[#703BF7] rounded-full blur-[200px]"></div>
+      <div class="fixed left-[100px] top-[800px] size-[180px] bg-[#703BF7] rounded-full blur-[200px]"></div>
+      <div class="fixed left-10 bottom-5 size-[140px] bg-[#33FF00] rounded-full blur-[160px]"></div>
+      <div class="fixed right-28 bottom-4 size-[160px] bg-[#F7743B] rounded-full blur-[180px]"></div>
+
+    </section>
+
+    <!-- popular places to go -->
+    <section class="px-[100px] mt-8">
+      <div class="flex items-center justify-between">
+        <p class="urbanist-bold text-5xl">Popular things to do</p>
+        <button
+          class="text-white px-6 py-3 bg-[#4a4a4a]/10 rounded-lg backdrop-blur-md border border-white/10 hover:border-white/30 urbanist-medium text-xl">
+          <a href="./contact.html">See all</a>
+        </button>
+      </div>
+      <div class="flex items-center gap-9 mt-16">
+        <a href="#"
+          class="max-w-56 h-78 backdrop-opacity-80 bg-cover bg-no-repeat bg-center flex flex-1 flex-col items-center justify-between px-5 py-6 rounded-xl overflow-hidden relative hover:scale-110 transition duration-300 forwards">
+          <img src="./img/place1.png" alt="" class="absolute inset-0 -z-10 h-full w-full object-cover">
+          <p class="urbanist-medium text-4xl text-center">City <br> Tours</p>
+          <p class="urbanist-regular text-3xl">150+ Tours</p>
+          <div class="absolute inset-0 -z-10 bg-gradient-to-t from-gray-900 to-[#05073C]/0"></div>
+        </a>
+        <a href="#"
+          class="max-w-56 h-78 backdrop-opacity-80 bg-cover bg-no-repeat bg-center flex flex-1 flex-col items-center justify-between px-5 py-6 rounded-xl overflow-hidden relative hover:scale-110 transition duration-300 forwards">
+          <img src="./img/place2.png" alt="" class="absolute inset-0 -z-10 h-full w-full object-cover">
+          <p class="urbanist-medium text-4xl text-center">Cultural <br> Towels</p>
+          <p class="urbanist-regular text-3xl">50+ Tours</p>
+          <div class="absolute inset-0 -z-10 bg-gradient-to-t from-gray-900 to-[#05073C]/0"></div>
+        </a>
+        <a href="#"
+          class="max-w-56 h-78 backdrop-opacity-80 bg-cover bg-no-repeat bg-center flex flex-1 flex-col items-center justify-between px-5 py-6 rounded-xl overflow-hidden relative hover:scale-110 transition duration-300 forwards">
+          <img src="./img/place3.png" alt="" class="absolute inset-0 -z-10 h-full w-full object-cover">
+          <p class="urbanist-medium text-4xl text-center">Day <br> Cruises</p>
+          <p class="urbanist-regular text-3xl">100+ Tours</p>
+          <div class="absolute inset-0 -z-10 bg-gradient-to-t from-gray-900 to-[#05073C]/0"></div>
+        </a>
+        <a href="#"
+          class="max-w-56 h-78 backdrop-opacity-80 bg-cover bg-no-repeat bg-center flex flex-1 flex-col items-center justify-between px-5 py-6 rounded-xl overflow-hidden relative hover:scale-110 transition duration-300 forwards">
+          <img src="./img/place4.png" alt="" class="absolute inset-0 -z-10 h-full w-full object-cover">
+          <p class="urbanist-medium text-4xl text-center">Bus <br> Tours</p>
+          <p class="urbanist-regular text-3xl">200+ Tours</p>
+          <div class="absolute inset-0 -z-10 bg-gradient-to-t from-gray-900 to-[#05073C]/0"></div>
+        </a>
+        <a href="#"
+          class="max-w-56 h-78 backdrop-opacity-80 bg-cover bg-no-repeat bg-center flex flex-1 flex-col items-center justify-between px-5 py-6 rounded-xl overflow-hidden relative hover:scale-110 transition duration-300 forwards">
+          <img src="./img/place5.png" alt="" class="absolute inset-0 -z-10 h-full w-full object-cover">
+          <p class="urbanist-medium text-4xl text-center">Beach <br> Tours</p>
+          <p class="urbanist-regular text-3xl">80+ Tours</p>
+          <div class="absolute inset-0 -z-10 bg-gradient-to-t from-gray-900 to-[#05073C]/0"></div>
+        </a>
+      </div>
+
+      <!-- opacity cover -->
     </section>
   </main>
 </body>
