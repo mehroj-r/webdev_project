@@ -53,7 +53,7 @@
 <body class="bg-[#141414] text-white scroll-smooth overscroll-auto
 ">
   <header
-    class="flex items-center justify-between fixed top-0 left-0 right-0 px-[100px] py-5 backdrop-blur-[10px] border-b border-white border-opacity-10 urbanist-medium z-50">
+    class="flex items-center justify-between fixed top-0 left-0 right-0 px-24 py-5 backdrop-blur-[10px] border-b border-white/10 urbanist-medium z-50">
     <!-- logo -->
     <a href="./home.html" class=" flex items-center gap-2 urbanist-extrabold text-3xl">
       <img src="./img/logo.svg" alt="">
@@ -85,7 +85,7 @@
       <div class="absolute inset-x-0 bottom-0 h-[80px] bg-gradient-to-t from-[#141414] to-transparent "></div>
       <img class=" w-full -z-10" src="./img/bg-registan.png" alt="">
 
-      <div class="flex flex-col items-start justify-start gap-20 absolute px-[100px]">
+      <div class="flex flex-col items-start justify-start gap-20 absolute ccontainer">
         <!-- main info of event -->
         <div class="flex flex-col items-start justify-center gap-4 max-w-[600px]">
           <div class="text-5xl waterbrush-regular">
@@ -101,7 +101,7 @@
         </div>
         <!-- locations info -->
         <div
-          class="px-6 py-4 rounded-[28px] backdrop-blur-sm border border-white/20 flex items-center gap-16">
+          class="px-6 py-4 rounded-[28px] bg-black/10 backdrop-blur-sm border border-white/20 flex items-center gap-16">
           <div class="flex items-center justify-between gap-10">
             <div class="flex items-center gap-4 worksans-regular">
               <img src="./img/location.svg" alt="location">
@@ -129,7 +129,7 @@
     </section>
 
     <!-- offers -->
-    <section class="px-5 flex gap-5 urbanist-semibold mb-20 relative">
+    <section class="px-5 flex gap-5 urbanist-semibold mb-20 ">
       <a class="flex-1" href="#">
         <div
           class="py-10 px-5 flex flex-col items-center gap-5 rounded-xl bg-[#1a1a1a]/10 border border-white/10 relative hover:border-white/20 group">
@@ -140,6 +140,8 @@
             class="size-6 absolute top-5 right-5 opacity-60 group-hover:top-3 group-hover:translate-x-2 group-hover:-translate-y-0.5 transition-all duration-300 ease-in-out">
             <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
           </svg>
+          <div class="absolute left-6 top-0 size-[200px] bg-[#703BF7] rounded-full blur-[180px] elipse animate-move">
+          </div>
         </div>
       </a>
       <a class="flex-1" href="#">
@@ -176,67 +178,178 @@
             class="size-6 absolute top-5 right-5 opacity-60 group-hover:top-3 group-hover:translate-x-2 group-hover:-translate-y-0.5 transition-all duration-300 ease-in-out">
             <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
           </svg>
+          <div
+            class="absolute right-14 top-5 size-[180px] bg-[#F43BF7] rounded-full blur-[220px] elipse animate-move-reverse">
+          </div>
+          <div class="absolute right-10 top-10 size-[180px] bg-[#703BF7] rounded-full blur-[220px] elipse animate-move">
+          </div>
         </div>
       </a>
-      <div class="fixed left-[360px] top-[1000px] size-[140px] bg-[#3BF7E7] rounded-full blur-[200px]"></div>
-      <div class="fixed right-[100px] top-[740px] size-[180px] bg-[#F43BF7] rounded-full blur-[200px]"></div>
-      <div class="fixed right-[120px] top-[800px] size-[180px] bg-[#703BF7] rounded-full blur-[200px]"></div>
-      <div class="fixed left-[100px] top-[800px] size-[180px] bg-[#703BF7] rounded-full blur-[200px]"></div>
-      <div class="fixed left-10 bottom-5 size-[140px] bg-[#33FF00] rounded-full blur-[160px]"></div>
-      <div class="fixed right-28 bottom-4 size-[160px] bg-[#F7743B] rounded-full blur-[180px]"></div>
-
     </section>
 
     <!-- popular places to go -->
-    <section class="px-[100px] mt-8">
-      <div class="flex items-center justify-between">
+    <section class="ccontainer mt-8 mb-20">
+      <div class="flex items-center justify-between relative">
         <p class="urbanist-bold text-5xl">Popular things to do</p>
-        <button
-          class="text-white px-6 py-3 bg-[#4a4a4a]/10 rounded-lg backdrop-blur-md border border-white/10 hover:border-white/30 urbanist-medium text-xl">
-          <a href="./contact.html">See all</a>
-        </button>
+        <a href="./contact.html">
+          <button
+            class="text-white px-6 py-3 cursor-pointer bg-[#1a1a1a]/10 rounded-lg border border-white/10 hover:border-white/20 ">
+            See all
+          </button>
+        </a>
+        <div
+          class="absolute left-[450px] top-0 size-[100px] bg-[#3BF7E7] rounded-full blur-[180px] animate-move-reverse">
+        </div>
       </div>
-      <div class="flex items-center gap-9 mt-16">
+      <div class="flex items-center justify-between gap-9 mt-16">
         <a href="#"
-          class="max-w-56 h-78 backdrop-opacity-80 bg-cover bg-no-repeat bg-center flex flex-1 flex-col items-center justify-between px-5 py-6 rounded-xl overflow-hidden relative hover:scale-110 transition duration-300 forwards">
+          class="max-w-56 h-78 backdrop-opacity-80 flex flex-1 flex-col items-center justify-between px-5 py-6 rounded-xl overflow-hidden relative hover:scale-105 shadow-lg transition-all duration-300 ease-in-out hover:backdrop-blur-[20px] hover:shadow-[0_0_15px_5px_rgba(255,255,255,0.1)] hover:text-shadow-[0_0_10px_rgba(112,59,247,0.8),0_0_20px_rgba(112,59,247,0.9)]">
           <img src="./img/place1.png" alt="" class="absolute inset-0 -z-10 h-full w-full object-cover">
           <p class="urbanist-medium text-4xl text-center">City <br> Tours</p>
           <p class="urbanist-regular text-3xl">150+ Tours</p>
           <div class="absolute inset-0 -z-10 bg-gradient-to-t from-gray-900 to-[#05073C]/0"></div>
         </a>
         <a href="#"
-          class="max-w-56 h-78 backdrop-opacity-80 bg-cover bg-no-repeat bg-center flex flex-1 flex-col items-center justify-between px-5 py-6 rounded-xl overflow-hidden relative hover:scale-110 transition duration-300 forwards">
+          class="max-w-56 h-78 backdrop-opacity-80 bg-cover bg-no-repeat bg-center flex flex-1 flex-col items-center justify-between px-5 py-6 rounded-xl overflow-hidden relative hover:scale-105 shadow-lg transition-all duration-300 ease-in-out hover:backdrop-blur-[20px] hover:shadow-[0_0_15px_5px_rgba(255,255,255,0.1)] hover:text-shadow-[0_0_10px_rgba(112,59,247,0.8),0_0_20px_rgba(112,59,247,0.9)]">
           <img src="./img/place2.png" alt="" class="absolute inset-0 -z-10 h-full w-full object-cover">
           <p class="urbanist-medium text-4xl text-center">Cultural <br> Towels</p>
           <p class="urbanist-regular text-3xl">50+ Tours</p>
           <div class="absolute inset-0 -z-10 bg-gradient-to-t from-gray-900 to-[#05073C]/0"></div>
         </a>
         <a href="#"
-          class="max-w-56 h-78 backdrop-opacity-80 bg-cover bg-no-repeat bg-center flex flex-1 flex-col items-center justify-between px-5 py-6 rounded-xl overflow-hidden relative hover:scale-110 transition duration-300 forwards">
+          class="max-w-56 h-78 backdrop-opacity-80 bg-cover bg-no-repeat bg-center flex flex-1 flex-col items-center justify-between px-5 py-6 rounded-xl overflow-hidden relative hover:scale-105 shadow-lg transition-all duration-300 ease-in-out hover:backdrop-blur-[20px] hover:shadow-[0_0_15px_5px_rgba(255,255,255,0.1)] hover:text-shadow-[0_0_10px_rgba(112,59,247,0.8),0_0_20px_rgba(112,59,247,0.9)]">
           <img src="./img/place3.png" alt="" class="absolute inset-0 -z-10 h-full w-full object-cover">
           <p class="urbanist-medium text-4xl text-center">Day <br> Cruises</p>
           <p class="urbanist-regular text-3xl">100+ Tours</p>
           <div class="absolute inset-0 -z-10 bg-gradient-to-t from-gray-900 to-[#05073C]/0"></div>
         </a>
         <a href="#"
-          class="max-w-56 h-78 backdrop-opacity-80 bg-cover bg-no-repeat bg-center flex flex-1 flex-col items-center justify-between px-5 py-6 rounded-xl overflow-hidden relative hover:scale-110 transition duration-300 forwards">
+          class="max-w-56 h-78 backdrop-opacity-80 bg-cover bg-no-repeat bg-center flex flex-1 flex-col items-center justify-between px-5 py-6 rounded-xl overflow-hidden relative hover:scale-105 shadow-lg transition-all duration-300 ease-in-out hover:backdrop-blur-[20px] hover:shadow-[0_0_15px_5px_rgba(255,255,255,0.1)] hover:text-shadow-[0_0_10px_rgba(112,59,247,0.8),0_0_20px_rgba(112,59,247,0.9)]">
           <img src="./img/place4.png" alt="" class="absolute inset-0 -z-10 h-full w-full object-cover">
           <p class="urbanist-medium text-4xl text-center">Bus <br> Tours</p>
           <p class="urbanist-regular text-3xl">200+ Tours</p>
           <div class="absolute inset-0 -z-10 bg-gradient-to-t from-gray-900 to-[#05073C]/0"></div>
         </a>
         <a href="#"
-          class="max-w-56 h-78 backdrop-opacity-80 bg-cover bg-no-repeat bg-center flex flex-1 flex-col items-center justify-between px-5 py-6 rounded-xl overflow-hidden relative hover:scale-110 transition duration-300 forwards">
+          class="max-w-56 h-78 backdrop-opacity-80 bg-cover bg-no-repeat bg-center flex flex-1 flex-col items-center justify-between px-5 py-6 rounded-xl overflow-hidden relative hover:scale-105 shadow-lg transition-all duration-300 ease-in-out hover:backdrop-blur-[20px] hover:shadow-[0_0_15px_5px_rgba(255,255,255,0.1)] hover:text-shadow-[0_0_10px_rgba(112,59,247,0.8),0_0_20px_rgba(112,59,247,0.9)]">
           <img src="./img/place5.png" alt="" class="absolute inset-0 -z-10 h-full w-full object-cover">
           <p class="urbanist-medium text-4xl text-center">Beach <br> Tours</p>
           <p class="urbanist-regular text-3xl">80+ Tours</p>
           <div class="absolute inset-0 -z-10 bg-gradient-to-t from-gray-900 to-[#05073C]/0"></div>
         </a>
       </div>
+    </section>
 
-      <!-- opacity cover -->
+    <!-- featured trips -->
+    <section class="space-y-20">
+
+      <div class=" ccontainer space-y-4">
+        <p class="urbanist-bold text-5xl">Featured Trips</p>
+        <p class="urbanist-medium text-xl text-[#999999]">Explore our handpicked selection of featured Trips.Each
+          listing offers a glimpse into exceptional Places available <br>
+          through Estatein</p>
+      </div>
+
+      <div class="ccontainer flex items-center gap-8 overflow-scroll scrollbar-none">
+        <div
+          class="space-y-[30px] w-fit p-10 rounded-xl bg-[#141414]/10 border border-white/20 hover:border-white/30 transition duation-300 ease-in-out backdrop-blur-md snap-start">
+          <img class="rounded-t-lg" src="./img/trips1.png" alt="trip">
+          <div class="flex flex-col gap-8">
+            <div class="flex flex-col items-start gap-1.5">
+              <p class="text-4xl urbanist-semibold">Paris, France</p>
+              <p class="urbanist-medium text-2xl whitespace-normal max-w-[430px]">Centipede Tour - Guided Arizona
+                Desert Tour by ATV</p>
+            </div>
+            <div class="flex items-center jusfity-between gap-[50px]">
+              <div class="flex flex-col items-start gap-0.5">
+                <p class="text-[#999999] text-3xl urbanist-medium">From</p>
+                <p class="urbanist-semibold text-2xl">$189.35</p>
+              </div>
+              <button
+                class="cursor-pointer flex-1 px-6 py-5 rounded-xl bg-[#703BF7] text-lg transition-all duration-200 ease-in-out hover:shadow-[0_0_15px_5px_rgba(112,59,247,0.5)] hover:text-shadow-[0_0_10px_rgba(112,59,247,0.8),0_0_20px_rgba(112,59,247,0.9)] whitespace-nowrap">
+                View Trip Details
+              </button>
+            </div>
+            <div class="grid place-content-center">
+              <p class="urbanist-regular text-2xl">4.8 (243)</p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="space-y-[30px] w-fit p-10 rounded-xl bg-[#141414]/10 border border-white/20 hover:border-white/30 transition duation-300 ease-in-out backdrop-blur-md snap-start">
+          <img class="rounded-t-lg" src="./img/trips1.png" alt="trip">
+          <div class="flex flex-col gap-8">
+            <div class="flex flex-col items-start gap-1.5">
+              <p class="text-4xl urbanist-semibold">Paris, France</p>
+              <p class="urbanist-medium text-2xl whitespace-normal max-w-[430px]">Centipede Tour - Guided Arizona
+                Desert Tour by ATV</p>
+            </div>
+            <div class="flex items-center jusfity-between gap-[50px]">
+              <div class="flex flex-col items-start gap-0.5">
+                <p class="text-[#999999] text-3xl urbanist-medium">From</p>
+                <p class="urbanist-semibold text-2xl">$189.35</p>
+              </div>
+              <button
+                class="cursor-pointer flex-1 px-6 py-5 rounded-xl bg-[#703BF7] text-lg transition-all duration-200 ease-in-out hover:shadow-[0_0_15px_5px_rgba(112,59,247,0.5)] hover:text-shadow-[0_0_10px_rgba(112,59,247,0.8),0_0_20px_rgba(112,59,247,0.9)] whitespace-nowrap">
+                View Trip Details
+              </button>
+            </div>
+            <div class="grid place-content-center">
+              <p class="urbanist-medium text-2xl">4.8 (243)</p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="space-y-[30px] w-fit p-10 rounded-xl bg-[#141414]/10 border border-white/20 hover:border-white/30 transition duation-300 ease-in-out backdrop-blur-md snap-start">
+          <img class="rounded-t-lg" src="./img/trips1.png" alt="trip">
+          <div class="flex flex-col gap-8">
+            <div class="flex flex-col items-start gap-1.5">
+              <p class="text-4xl urbanist-semibold">Paris, France</p>
+              <p class="urbanist-medium text-2xl whitespace-normal max-w-[430px]">Centipede Tour - Guided Arizona
+                Desert Tour by ATV</p>
+            </div>
+            <div class="flex items-center jusfity-between gap-[50px]">
+              <div class="flex flex-col items-start gap-0.5">
+                <p class="text-[#999999] text-3xl urbanist-medium">From</p>
+                <p class="urbanist-semibold text-2xl">$189.35</p>
+              </div>
+              <button
+                class="cursor-pointer flex-1 px-6 py-5 rounded-xl bg-[#703BF7] text-lg transition-all duration-200 ease-in-out hover:shadow-[0_0_15px_5px_rgba(112,59,247,0.5)] hover:text-shadow-[0_0_10px_rgba(112,59,247,0.8),0_0_20px_rgba(112,59,247,0.9)] whitespace-nowrap">
+                View Trip Details
+              </button>
+            </div>
+            <div class="grid place-content-center">
+              <p class="urbanist-medium text-2xl">4.8 (243)</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex items-center justify-between w-full ccontainer border-[#262626] border-t">
+        <div class="flex items-center justify-center gap-2">
+          <p class="text-white urbanist-medium text-xl">01</p>
+          <p class="urbanist-medium text-[#999999] text-xl">of 60</p>
+        </div>
+        <div class="flex items-center gap-2">
+          <button class="rounded-full p-4 border border-[#262626] cursor-pointer hover:border-white/20">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" stroke-width="1.5"
+              stroke="currentColor" class="size-6 opacity-60">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" />
+            </svg>
+          </button>
+          <button class="bg-[#1A1A1A] rounded-full p-4 border border-[#262626] cursor-pointer hover:border-white/20">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+              class="size-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+            </svg>
+          </button>
+        </div>
+
+      </div>
     </section>
   </main>
+
+  <script src="./js/animate.js"></script>
 </body>
 
 </html>

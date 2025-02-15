@@ -5,6 +5,12 @@
 html, body,main {
   min-height: 100%;
 }
+.ccontainer{
+  margin-left: 96px;
+  margin-right: 96px;
+  width: auto; /* or max-width: 100% */
+  height: auto; /* or max-height: 100% */
+}
 
 @keyframes bell {
   0%, 100% { transform: rotate(0deg); }
