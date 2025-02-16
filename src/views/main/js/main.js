@@ -37,3 +37,24 @@ element.innerHTML = `
 `;
 
 document.head.appendChild(element);
+
+const locationBtn = document.getElementById("locationBtn");
+const locationModal = document.getElementById("locationModal");
+let hideTimeout;
+function showModal() {
+    locationModal.classList.remove("hidden");
+    clearTimeout(hideTimeout);
+    hideTimeout = setTimeout(() => {
+        if (!locationModal.matches(":hover")) {
+        hideModal();
+        }
+    }, 2000);
+}
+function hideModal() {
+  locationModal.classList.add("hidden");
+}
+locationBtn.addEventListener("mouseenter", showModal);
+locationModal.addEventListener("mouseenter", () => {
+  clearTimeout(hideTimeout); 
+});
+locationModal.addEventListener("mouseleave", hideModal);

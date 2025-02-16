@@ -12,6 +12,10 @@ html, body,main {
   height: auto; /* or max-height: 100% */
 }
 
+.scrollbar-hidden::-webkit-scrollbar {
+  display: none;
+}
+
 @keyframes bell {
   0%, 100% { transform: rotate(0deg); }
   25% { transform: rotate(10deg); }
