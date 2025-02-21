@@ -4,6 +4,7 @@
 
 html, body,main {
   min-height: 100%;
+  scroll-behavior: smooth;
 }
 .ccontainer{
   margin-left: 96px;
