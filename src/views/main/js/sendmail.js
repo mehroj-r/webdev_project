@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const emailInput = document.getElementById("email");
+  try {
+    const emailInput = document.getElementById("email");
   const sendBtn = document.getElementById("send-btn");
 
   emailIcon.addEventListener("click", function () {
@@ -18,4 +19,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     emailInput.value = "";
   });
+  } catch (err) {
+    console.log(err);
+    
+  }
 });
