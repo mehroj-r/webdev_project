@@ -6,7 +6,6 @@ function toggleFaq(event) {
     answerBox.style.display = "none";
     parentFaq.classList.remove("active");
   } else {
-    // Close other open FAQs
     document.querySelectorAll(".faq").forEach((faq) => {
       faq.classList.remove("active");
       faq.querySelector(".answer-box").style.display = "none";
@@ -17,7 +16,6 @@ function toggleFaq(event) {
   }
 }
 
-// Attach event listener to all FAQ questions and arrows
 document.querySelectorAll(".faq").forEach((faq) => {
   faq.addEventListener("click", toggleFaq);
 });
