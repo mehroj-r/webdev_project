@@ -102,3 +102,20 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+
+try {
+  window.onload = function () {
+    const hash = window.location.hash; 
+    if (hash) {
+        const targetElement = document.querySelector(hash);
+        if (targetElement) {
+            setTimeout(() => {
+                targetElement.scrollIntoView({ behavior: "smooth", block: "center" });
+            }, 100); 
+        }
+    }
+};
+} catch (err) {
+  console.log(err);
+  
+}

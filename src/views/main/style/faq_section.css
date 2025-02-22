@@ -1,0 +1,41 @@
+.faq-section {
+  width: 70%;
+}
+
+.faq {
+  cursor: pointer;
+  padding: 15px 20px;
+}
+
+.faq-question-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.faq-question {
+  font-size: 20px;
+  color: #999999;
+}
+
+.openimg {
+  width: 20px;
+  transition: transform 0.3s ease;
+}
+
+.answer-box {
+  display: none;
+  overflow: hidden;
+  margin-top: 20px;
+  font-size: 18px;
+  transition: transform 0.3s ease;
+}
+
+.faq.active .openimg {
+  transform: rotate(180deg);
+}
+
+.faq-divider {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  margin: 12px 0px;
+}
