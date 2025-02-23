@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Places | Chimgan</title>
+  <link rel="stylesheet" href="../../styles/fonts.css">
+  <link rel="stylesheet" href="../../styles/main.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        screens: {
+          // 'xl': {'max': '1500px'},
+          // // => @media (max-width: 1535px) { ... }
+
+          lg: { max: "1024px" },
+          // => @media (max-width: 1024px) { ... }
+
+          md: { max: "768px" },
+          // => @media (max-width: 768px) { ... }
+
+          hamvisible: { max: "700px" },
+          // => @media (max-width: 650px) { ... }
+
+          sm: { max: "425px" },
+          // => @media (max-width: 425px) { ... }
+
+          xs: { max: "375px" },
+          // => @media (max-width: 375px) { ... }
+
+          s: { max: "320px" },
+          // => @media (max-width: 375px) { ... }
+        },
+        extend: {
+          colors: {
+            mainpurple: "#703BF7",
+            lighterpurple: "#A685FA"
+          },
+        },
+      },
+    };
+  </script>
+
+  <style>
+    .text-inner-shadow {
+      text-shadow: inset 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    }
+  </style>
+</head>
+
+<body
+  class="bg-[url('./img/chimgan.jpg')] h-screen bg-cover bg-center text-white scroll-smooth overscroll-auto scrollbar-hidden">
+  <div class="absolute inset-0 bg-gradient-to-r from-black/50 to-black/50 via-transparent -z-10"></div>
+
+  <div class="flex flex-col justify-between h-full px-8 py-6">
+    <!-- navigation buttons -->
+    <nav class=" flex items-center justify-between">
+      <button onclick="history.back()"
+        class="text-lg sfpro-display-bold flex items-center justify-center gap-1.5 py-2 px-4 bg-mainpurple rounded-xl transition-all duration-200 ease-in-out hover:shadow-[0_0_15px_5px_rgba(112,59,247,0.5)] hover:text-shadow-[0_0_10px_rgba(112,59,247,0.8),0_0_20px_rgba(112,59,247,0.9)] whitespace-nowrap">
+        <img class="size-4" src="./img/svgs/back.svg" alt="back">
+        Back
+      </button>
+      <button onclick="doPayment()"
+        class="text-lg sfpro-display-bold flex items-center justify-center gap-1.5 py-2 px-4 bg-mainpurple rounded-xl transition-all duration-200 ease-in-out hover:shadow-[0_0_15px_5px_rgba(112,59,247,0.5)] hover:text-shadow-[0_0_10px_rgba(112,59,247,0.8),0_0_20px_rgba(112,59,247,0.9)] whitespace-nowrap">
+        Next
+        <img class="size-4" src="./img/svgs/next.svg" alt="next">
+      </button>
+    </nav>
+
+    <div class="flex items-end justify-between">
+      <!-- detailed information about the place -->
+      <article
+        class="flex flex-col items-start max-w-[550px] p-4 bg-[#0A0A0A]/40 border border-[#FFFFFF]/20 backdrop-blur-sm rounded-3xl">
+        <img class="size-12" src="./img/svgs/park.svg" alt="park">
+        <div class="flex flex-col items-start ml-6 mt-4 mb-10">
+          <p class="sfpro-display-bold text-5xl text-[#F8F8FF] ml-4">Tashkent</p>
+          <p class="regular-brush text-5xl text-lighterpurple mt-1">Chimgan Mountains</p>
+        </div>
+        <img class="mb-5" src="./img/divider.png" alt="divider">
+        <!-- details about the location -->
+        <p class="sfpro-display text-base mb-5">
+          Chimgan is the most popular <span class="text-lighterpurple font-semibold">ski resort</span> of Uzbekistan, <span class="underline">located 80 km from Tashkent</span> on slopes of Chimgan Mountains which are the part of Chatkal range of western Tian-Shan. The Valley of Chimgan is located on the height of <span class="text-lighterpurple font-semibold">1200-1600 meters above sea level</span> and is surrounded with mountains. Chimgan mountains include such beauty spots as <span class="text-lighterpurple font-semibold">Gulkam</span>, <span class="text-lighterpurple font-semibold">Beldersay</span> and others. There is the fresh and pure air with fragnance of numerous flowers and herbals <span class="text-lighterpurple font-semibold">(the word “Chimgan” or “Chim yon” is
+          translated as “green grass”, “green valley”).</span>
+        </p>
+
+        <!-- information -->
+        <div class="flex items-start gap-5">
+          <div class="flex flex-col items-center justify-start relative max-w-[160px] min-h-[168px]">
+            <img class="absolute top-0 left-0 right-0 bottom-0" src="./img/svgs/Union.svg" alt="union">
+            <img class="size-15" src="./img/svgs/sleep.svg" alt="sleep">
+            <p class="text-lighterpurple regular-brush text-base text-[#A685FA] text-center mb-1">Where to sleep</p>
+            <p class="text-center text-[#F8F8FF] sfpro-display text-xs mx-1">Tenting is allowed – however it is
+              not permitted to camp near
+              the natural breeding.</p>
+          </div>
+          <div class="flex flex-col items-center justify-center relative max-w-[160px] min-h-[168px]">
+            <img class="absolute top-0 left-0 right-0 bottom-0" src="./img/svgs/Union.svg" alt="union">
+            <img class="size-15" src="./img/svgs/plane.svg" alt="sleep">
+            <p class="text-lighterpurple regular-brush text-base text-[#A685FA] text-center mb-1">Where to sleep</p>
+            <p class="text-center text-[#F8F8FF] sfpro-display text-xs mx-1">
+              Tourist complex Chimgan includes the number of sanatoriums, hotels, cable rail road, shops and restaurants.</p>
+          </div>
+          <div class="flex flex-col items-center justify-center relative max-w-[160px] min-h-[168px]">
+            <img class="absolute top-0 left-0 right-0 bottom-0" src="./img/svgs/Union.svg" alt="union">
+            <img class="size-15" src="./img/svgs/animalpath.svg" alt="sleep">
+            <p class="text-lighterpurple regular-brush text-base text-[#A685FA] text-center mb-1">Where to sleep</p>
+            <p class="text-center text-[#F8F8FF] sfpro-display text-xs mx-1">Since hunting has been
+              prohibited for many decades,
+              the animal populations thrive in
+              the National Park.</p>
+          </div>
+        </div>
+
+        <!-- Weather info -->
+        <div class="flex flex-col items-center mx-auto mt-4">
+          <p class="text-[#A685FA] sfpro-display-bold text-lg">Weather info: </p>
+          <p class=" font-semibold">
+            Chimgan has a <span class="underline">dry-summer,</span> <span class="underline">humid</span> ,<span class="underline">continental climate</span> characterized by <span class="text-lighterpurple"> cold, snowy winters</span> and <span class="text-lighterpurple">warm, dry summers.</span>
+          </p>
+        </div>
+
+      </article>
+      <div class="flex flex-col gap-3 items-end">
+        <!-- price info -->
+        <p
+          class="w-fit px-6 py-4 text-xl regular-brush text-lighterpurple leading-[150%] bg-[#000]/20 rounded-xl backdrop-blur-md border border-white/10">
+          Price <span class="sfpro-display font-bold text-white"> : $ 45</span></p>
+        <!-- Geographical information -->
+        <article
+          class="flex flex-col items-start max-w-[500px] py-6 px-3 bg-[#0A0A0A]/40 border border-[#FFFFFF]/20 backdrop-blur-sm rounded-3xl">
+          <p class="sfpro-display-bold text-lighterpurple text-xl mx-auto mb-4">Geography</p>
+          <img class="rounded-3xl mb-4" src="./img/chimganmap.jpg" alt="map">
+
+          <!-- facts about the place -->
+          <div class="flex flex-col items-start gap-1 ml-3">
+            <p class="sfpro-display-bold text-base">Location : <span class="text-lighterpurple"> Tashkent Region
+,
+                Uzbekistan
+              </span> </p>
+            <p class="sfpro-display-bold text-base">Coordinates : <span class="text-lighterpurple"> 41°29′40″N 70°03′28″E </span>
+            </p>
+            <p class="sfpro-display-bold text-base">Top elevation : <span class="text-lighterpurple">3,309 m (10,856 ft)
+              </span>
+            </p>
+            <p class="sfpro-display-bold text-base">Popular : <span class="text-lighterpurple">Skiing, Alpinism, Rock climbing.</span>
+            </p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
