@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Uzbekation | Sign In</title>
+  <link rel="stylesheet" href="../../styles/fonts.css">
+  <link rel="stylesheet" href="../../styles/main.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        screens: {
+          // 'xl': {'max': '1500px'},
+          // // => @media (max-width: 1535px) { ... }
+
+          lg: { max: "1024px" },
+          // => @media (max-width: 1024px) { ... }
+
+          md: { max: "768px" },
+          // => @media (max-width: 768px) { ... }
+
+          hamvisible: { max: "700px" },
+          // => @media (max-width: 650px) { ... }
+
+          sm: { max: "425px" },
+          // => @media (max-width: 425px) { ... }
+
+          xs: { max: "375px" },
+          // => @media (max-width: 375px) { ... }
+
+          s: { max: "320px" },
+          // => @media (max-width: 375px) { ... }
+        },
+        extend: {
+          colors: {
+            // search icon colors
+            lightpurple: "#A585FA",
+            mainpurple: "#703BF7",
+            // places to go card colors
+            endblue: "#05073C",
+          },
+        },
+      },
+    };
+  </script>
+
+</head>
+
+<body class="relative h-screen bg-cover bg-center text-white scroll-smooth overscroll-auto scrollbar-hidden">
+  <!-- Background Image Wrapper -->
+  <div
+    class="absolute inset-0 bg-[url('./img/khiva.webp')] bg-cover bg-center filter brightness-50 contrast-125 saturate-100 sepia-10 hue-rotate-15">
+  </div>
+  <!-- Overlay for Better Readability -->
+  <div class="absolute inset-0 bg-black opacity-40"></div>
+
+  <!-- Content -->
+  <section class="relative z-10 flex flex-col items-start justify-start h-full px-8 py-6">
+    <!-- button for going back -->
+    <button onclick="history.back()"
+      class="text-lg sfpro-display-bold flex items-center justify-center gap-1.5 py-2 px-4 bg-mainpurple rounded-xl transition-all duration-200 ease-in-out hover:shadow-[0_0_15px_5px_rgba(112,59,247,0.5)] hover:text-shadow-[0_0_10px_rgba(112,59,247,0.8),0_0_20px_rgba(112,59,247,0.9)] whitespace-nowrap">
+      <img class="size-4" src="./img/back.svg" alt="back">
+      Back
+    </button>
+
+    <!-- modal -->
+    <div class="w-full flex-1 grid place-content-center">
+      <div
+        class="flex flex-col items-center justify-center rounded-3xl px-8 py-7  bg-[#OAOAOA]/50 border border-1 border-white/20 backdrop-blur-md">
+
+        <h1 class="urbanist-semibold text-6xl mb-3">Sign in</h1>
+        <!-- Sign in form -->
+        <form action="#" class="flex flex-col items-center justify-center ">
+          <div class="p-5 space-y-5">
+            <!-- Email Name -->
+            <div class="relative flex-1 items-center">
+              <img src="./img/inputicon.svg" alt="icon"
+                class="absolute left-4 top-1/2 -translate-y-1/2 w-8 h-8 md:w-[34px] md:h-[34px]" />
+              <input id="emailInput" type="text" placeholder="Email"
+                class="w-full urbanist-regular text-2xl pl-16 pr-4 py-3 md:py-4 text-white/50 md:text-[30px] font-normal bg-transparent border border-white/20 rounded-lg placeholder-white/50 focus:outline-none focus:ring-1 focus:ring-purple-500" />
+            </div>
+            <!-- Password Name -->
+            <div class="relative flex-1 items-center">
+              <img src="./img/inputicon.svg" alt="icon"
+                class="absolute left-4 top-1/2 -translate-y-1/2 w-8 h-8 md:w-[34px] md:h-[34px]" />
+              <input id="passwordInput" type="text" placeholder="Password"
+                class="w-full urbanist-regular text-2xl pl-16 pr-4 py-3 md:py-4 text-white/50 md:text-[30px] font-normal bg-transparent border border-white/20 rounded-lg placeholder-white/50 focus:outline-none focus:ring-1 focus:ring-purple-500" />
+            </div>
+          </div>
+
+          <p class="urbanist-medium text-lg text-center mb-5">
+            Don’t have an account?
+            <a href="./signup.html" class=" text-mainpurple font-semibold hover:underline ml-1">Sign up</a>
+          </p>
+
+          <!-- sign in button -->
+          <button id="signinBtn" type="submit"
+            class="text-lg sfpro-display py-2.5 px-10 mb-10 bg-mainpurple rounded-xl transition-all duration-200 ease-in-out hover:shadow-[0_0_15px_5px_rgba(112,59,247,0.5)] hover:text-shadow-[0_0_10px_rgba(112,59,247,0.8),0_0_20px_rgba(112,59,247,0.9)] whitespace-nowrap">
+            Sign In
+          </button>
+
+          <!-- divider -->
+          <div class="flex items-center jusfity-center gap-5 mb-6">
+            <img src="./img/line.svg" alt="line">
+            <p class="urbanist-medium text-xl">Sign in with</p>
+            <img src="./img/line.svg" alt="line">
+          </div>
+
+          <!-- sign in with: -->
+
+          <div class="flex items-cemter justify-center gap-8">
+            <a href="#" class="hover:scale-[103%] transition duration-100 ease">
+              <img src="./img/google.svg" alt="google">
+            </a>
+            <a href="#" class="hover:scale-[103%] transition duration-100 ease">
+              <img src="./img/linkedin.svg" alt="linkedin">
+            </a>
+            <a href="#" class="hover:scale-[103%] transition duration-100 ease">
+              <img src="./img/facebook.svg" alt="facebook">
+            </a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+  <script src="./js/signin.js"></script>
+</body>
+
+</html>
