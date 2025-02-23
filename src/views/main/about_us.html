@@ -4,10 +4,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Uzbekation</title>
+  <title>Uzbekation | About us</title>
   <link rel="stylesheet" href="../../styles/fonts.css">
   <link rel="stylesheet" href="../../styles/main.css">
-  <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+
 
   <script>
     tailwind.config = {
@@ -60,22 +61,24 @@
       Uzbekation
     </a>
     <nav>
-      <ul class="flex items-center justify-center gap-8 urbanist-medium">
-        <a href="./home.html" class="px-6 py-4 text-lg leading-[150%] rounded-lg cursor-pointer nav-link"
+      <ul class="flex items-center justify-center gap-6 urbanist-medium">
+        <a href="./home.html" class="px-6 py-3 text-base leading-[150%] rounded-md cursor-pointer nav-link"
           data-page="home">Home</a>
-        <a href="./about_us.html" class="px-6 py-4 text-lg leading-[150%] rounded-lg cursor-pointer  nav-link"
+        <a href="./about_us.html" class="px-6 py-3 text-base leading-[150%] rounded-md cursor-pointer nav-link"
           data-page="about_us">About
           Us</a>
-        <a href="./places.html" class="px-6 py-4 text-lg leading-[150%] rounded-lg cursor-pointer  nav-link"
+        <a href="./places.html" class="px-6 py-3 text-base leading-[150%] rounded-md cursor-pointer nav-link"
           data-page="places">Places</a>
-        <a href="./services.html" class="px-6 py-4 text-lg leading-[150%] rounded-lg cursor-pointer nav-link"
+        <a href="./services.html" class="px-6 py-3 text-base leading-[150%] rounded-md cursor-pointer nav-link"
           data-page="services">Services</a>
+        <a href="./contact_us.html" class="px-6 py-3 text-base leading-[150%] rounded-md cursor-pointer nav-link"
+          data-page="contact_us">Contact us</a>
       </ul>
     </nav>
-    <button
-      class="text-white px-6 py-4 text-lg leading-[150%] bg-[#4a4a4a]/10 rounded-[10px] backdrop-blur-md border border-white/10  hover:border-white/20 hover:bg-[#4a4a4a]/20 transition duration-200 ease-in-out">
-      <a href="./contact_us.html">Contact Us</a>
-    </button>
+    <a href="./profile.html"
+      class="text-white px-5 py-3 text-base leading-[150%] bg-[#4a4a4a]/10 rounded-[10px] backdrop-blur-md border border-white/10  hover:border-white/20 hover:bg-[#4a4a4a]/20 transition duration-200 ease-in-out">
+      <img src="./img/profile.svg" alt="profile">
+    </a>
   </header>
 
   <!-- main part -->
@@ -86,201 +89,228 @@
       <div class="absolute inset-x-0 bottom-0 h-[80px] bg-gradient-to-t from-[#141414] to-transparent "></div>
       <img class=" w-full -z-10" src="./img/group.png" alt="">
 
-      <div class="flex flex-col items-start justify-start gap-20 absolute ccontainer">
+      <div class="flex flex-col items-start justify-start gap-20 absolute top-[30%] ccontainer max-w-[55%]">
         <!-- main info of event -->
-        <div class="flex flex-col items-start justify-center gap-4 max-w-[600px]">
+        <div class="flex flex-col items-start justify-center gap-4 ">
           <div class="text-5xl waterbrush-regular">
             Explorer and Travel
           </div>
           <div class="text-white font-bold text-[86px]">About us</div>
           <div class="text-base urbanist-medium">
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-            industry's
-            standard
-            dummy text ever since the 1500s,
+            Travel with purpose. At Explorer and Travel, we are committed to responsible and sustainable tourism. We carefully craft
+            eco-friendly trips that support local communities and protect nature, ensuring that future generations can enjoy the
+            beauty of our world. Let’s explore responsibly and leave a positive impact wherever we go!
           </div>
         </div>
-        
-        </div>
-        
+
+      </div>
+
       </div>
     </section>
 
-    <!-- offers -->
-    <section class="px-5 flex gap-5 urbanist-semibold mb-20 ccontainer">
-      <a class="flex-1" href="#">
-        
+    <!-- Who are we -->
+    <section class="px-5 flex gap-5 urbanist-semibold mb-20 ccontainer relative">
+      <!-- ellipse -->
+      <div class="absolute -left-5 top-5 size-[180px] bg-[#703BF7] rounded-full blur-[180px] elipse animate-move">
+      </div>
+      <div class="absolute right-16 top-5 size-[140px] bg-[#F43BF7] rounded-full blur-[220px] elipse animate-move-reverse">
+      </div>
+      <div class="absolute right-10 top-10 size-[140px] bg-[#703BF7] rounded-full blur-[220px] elipse animate-move">
+      </div>
+        <!-- main information about us -->
         <div
           class="py-10 px-5 flex flex-col items-start gap-5 rounded-xl bg-[#1a1a1a]/10 border border-white/10 relative hover:border-white/20 group">
-            <img class="w-64 h-64 absolute top-5 right-5" src="./img/question_mark.png" alt="stay">
-            <h1 class="text-[64px] ms-5 text-white">Who are we?</h1>
-            <div class="max-w-[70%] ms-5">
-                <p class="text-[24px]">Your dream place is just a click away. Whether you're looking for a new place, a historial place, or a chill place, Estatein is here to assist you every step of the way. Take the first step towards your real trip planner and explore our available properties or get in touch with our team for personalized assistance.</p>
-            </div>
-         
-          <div class="absolute left-6 top-0 size-[200px] bg-[#703BF7] rounded-full blur-[180px] elipse animate-move">
+          <img class="w-64 h-64 absolute top-15 right-0" src="./img/question-mark.png" alt="stay">
+          <h1 class="text-[64px] ms-5 text-white">Who are we?</h1>
+          <div class="max-w-[70%] ms-5">
+            <p class="text-[24px]">Your dream place is just a click away. Whether you're looking for a new place, a
+              historial place, or a chill place, Estatein is here to assist you every step of the way. Take the first
+              step towards your real trip planner and explore our available properties or get in touch with our team for
+              personalized assistance.</p>
           </div>
         </div>
-      </a>
-      
     </section>
 
-    <!-- popular places to go -->
+    <!--what we offer for you -->
     <section class="ccontainer mb-20 space-y-20">
-        <div class="flex items-center justify-between relative">
-          <p class="text-white text-6xl font-semibold">What we offer?</p>
-          <a href="./contact.html"></a>
-          <div
-            class="absolute left-[450px] top-0 size-[100px] bg-[#3BF7E7] rounded-full blur-[180px] animate-move-reverse">
-          </div>
+      <div class="flex items-center justify-between relative">
+        <p class="text-white text-6xl font-semibold">What we offer?</p>
+        <a href="./contact.html"></a>
+        <!-- ellipse -->
+        <div
+          class="absolute left-[450px] top-0 size-[100px] bg-[#3BF7E7] rounded-full blur-[140px]">
         </div>
-      
-        <section class="grid grid-cols-2 gap-5 px-5 urbanist-semibold">
-          <a class="flex-1" href="#">
-            <div
-              class="py-10 px-5 flex flex-col items-center gap-5 rounded-xl bg-[#1a1a1a]/10 border border-white/10 relative hover:border-white/20 group">
-              <img class="size-20" src="./img/dstay.svg" alt="stay">
-              <p>Find Your Dream Stay</p>
-              <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" stroke-width="1.5"
-                stroke="currentColor"
-                class="size-6 absolute top-5 right-5 opacity-60 group-hover:top-3 group-hover:translate-x-2 group-hover:-translate-y-0.5 transition-all duration-300 ease-in-out">
-                <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
-              </svg>
-            </div>
-          </a>
-          <a class="flex-1" href="#">
-            <div
-              class="py-10 px-5 flex flex-col items-center gap-5 rounded-xl bg-[#1a1a1a]/10 border border-white/10 relative hover:border-white/20 group">
-              <img class="size-20" src="./img/package.svg" alt="stay">
-              <p>Find Your Dream Stay</p>
-              <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" stroke-width="1.5"
-                stroke="currentColor"
-                class="size-6 absolute top-5 right-5 opacity-60 group-hover:top-3 group-hover:translate-x-2 group-hover:-translate-y-0.5 transition-all duration-300 ease-in-out">
-                <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
-              </svg>
-            </div>
-          </a>
-          <a class="flex-1" href="#">
-            <div
-              class="py-10 px-5 flex flex-col items-center gap-5 rounded-xl bg-[#1a1a1a]/10 border border-white/10 relative hover:border-white/20 group">
-              <img class="size-20 group-hover:animate-bell" src="./img/building.svg" alt="stay">
-              <p>Cheap Holiday Packages</p>
-              <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" stroke-width="1.5"
-                stroke="currentColor"
-                class="size-6 absolute top-5 right-5 opacity-60 group-hover:top-3 group-hover:translate-x-2 group-hover:-translate-y-0.5 transition-all duration-300 ease-in-out">
-                <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
-              </svg>
-            </div>
-          </a>
-          <a class="flex-1" href="#">
-            <div
-              class="py-10 px-5 flex flex-col items-center gap-5 rounded-xl bg-[#1a1a1a]/10 border border-white/10 relative hover:border-white/20 group">
-              <img class="size-20 group-hover:animate-bell" src="./img/sun.svg" alt="stay">
-              <p>Cheap Holiday Packages</p>
-              <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" stroke-width="1.5"
-                stroke="currentColor"
-                class="size-6 absolute top-5 right-5 opacity-60 group-hover:top-3 group-hover:translate-x-2 group-hover:-translate-y-0.5 transition-all duration-300 ease-in-out">
-                <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
-              </svg>
-            </div>
-          </a>
-        </section>
-      </section>
+      </div>
 
-      <!-- ad hook -->
+      <section class="grid grid-cols-2 gap-5 px-5 urbanist-semibold relative">
+        <!-- ellipse -->
+        <div class="absolute left-[25%] bottom-[10%] size-[120px] bg-[#33FF00] rounded-full blur-[180px] elipse animate-move-reverse">
+        </div>
+        <div class="absolute -right-[15%] top-[15%] size-[300px] bg-[#703BF7] rounded-full blur-[180px] elipse animate-move">
+        </div>
+
+        <!-- offer cards containing information about our offers for customers -->
+        <a class="flex-1" href="#">
+          <div
+            class="py-10 px-5 flex flex-col items-center gap-5 rounded-xl bg-[#1a1a1a]/10 border border-white/10 relative hover:border-white/20 group">
+            <img class="size-20" src="./img/dstay.svg" alt="stay">
+            <p>Find Your Dream Stay</p>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" stroke-width="1.5"
+              stroke="currentColor"
+              class="size-6 absolute top-5 right-5 opacity-60 group-hover:top-3 group-hover:translate-x-2 group-hover:-translate-y-0.5 transition-all duration-300 ease-in-out">
+              <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
+            </svg>
+          </div>
+        </a>
+        <a class="flex-1" href="#">
+          <div
+            class="py-10 px-5 flex flex-col items-center gap-5 rounded-xl bg-[#1a1a1a]/10 border border-white/10 relative hover:border-white/20 group">
+            <img class="size-20" src="./img/package.svg" alt="stay">
+            <p>Find Your Dream Stay</p>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" stroke-width="1.5"
+              stroke="currentColor"
+              class="size-6 absolute top-5 right-5 opacity-60 group-hover:top-3 group-hover:translate-x-2 group-hover:-translate-y-0.5 transition-all duration-300 ease-in-out">
+              <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
+            </svg>
+          </div>
+        </a>
+        <a class="flex-1" href="#">
+          <div
+            class="py-10 px-5 flex flex-col items-center gap-5 rounded-xl bg-[#1a1a1a]/10 border border-white/10 relative hover:border-white/20 group">
+            <img class="size-20 group-hover:animate-bell" src="./img/building.svg" alt="stay">
+            <p>Cheap Holiday Packages</p>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" stroke-width="1.5"
+              stroke="currentColor"
+              class="size-6 absolute top-5 right-5 opacity-60 group-hover:top-3 group-hover:translate-x-2 group-hover:-translate-y-0.5 transition-all duration-300 ease-in-out">
+              <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
+            </svg>
+          </div>
+        </a>
+        <a class="flex-1" href="#">
+          <div
+            class="py-10 px-5 flex flex-col items-center gap-5 rounded-xl bg-[#1a1a1a]/10 border border-white/10 relative hover:border-white/20 group">
+            <img class="size-20 group-hover:animate-bell" src="./img/sun.svg" alt="stay">
+            <p>Cheap Holiday Packages</p>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" stroke-width="1.5"
+              stroke="currentColor"
+              class="size-6 absolute top-5 right-5 opacity-60 group-hover:top-3 group-hover:translate-x-2 group-hover:-translate-y-0.5 transition-all duration-300 ease-in-out">
+              <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
+            </svg>
+          </div>
+        </a>
+      </section>
+    </section>
+
+    <!-- ad hook -->
     <section class="px-24 py-[100px] flex items-center justify-between gap-14 border-t-2 border-b-2 border-[#262626] ">
 
-        <article class="space-y-3 max-w-[820px]">
-          <h1 class="urbanist-semibold text-5xl leading-[150%]">
-            Start Your Real Around The World Journey Today
-          </h1>
-          <p class="urbanist-medium text-[#999999] text-lg leading-[150%]">Your dream place is just a click away. Whether
-            you're looking for a new place, a historial place, or a chill place,
-            Estatein is here to assist you every step of the way. Take the first step towards your real trip planner and
-            explore our
-            available properties or get in touch with our team for personalized assistance.</p>
-        </article>
-        <button
-          class="cursor-pointer px-6 py-4 rounded-xl bg-[#703BF7] text-lg transition-all duration-200 ease-in-out hover:shadow-[0_0_15px_5px_rgba(112,59,247,0.5)] hover:text-shadow-[0_0_10px_rgba(112,59,247,0.8),0_0_20px_rgba(112,59,247,0.9)] whitespace-nowrap">
-          Explore Places
-        </button>
-  
-      </section>
-  
-      
+      <article class="space-y-3 max-w-[820px]">
+        <h1 class="urbanist-semibold text-5xl leading-[150%]">
+          Start Your Real Around The World Journey Today
+        </h1>
+        <p class="urbanist-medium text-[#999999] text-lg leading-[150%]">Your dream place is just a click away. Whether
+          you're looking for a new place, a historial place, or a chill place,
+          Estatein is here to assist you every step of the way. Take the first step towards your real trip planner and
+          explore our
+          available properties or get in touch with our team for personalized assistance.</p>
+      </article>
+      <button onclick="window.location.href=`./places.html`"
+        class="cursor-pointer px-6 py-4 rounded-xl bg-[#703BF7] text-lg transition-all duration-200 ease-in-out hover:shadow-[0_0_15px_5px_rgba(112,59,247,0.5)] hover:text-shadow-[0_0_10px_rgba(112,59,247,0.8),0_0_20px_rgba(112,59,247,0.9)] whitespace-nowrap">
+        Explore Places
+      </button>
+
+    </section>
+
+
     <!-- footer -->
     <footer class="px-24 py-[100px] flex items-start justify-between gap-20">
-
+    
       <!-- email us -->
-      <div class="flex flex-col items-start justify-normal gap-8">
-        <a href="./home.html"><img src="./img/logo.svg" alt="logo"></a>
+      <div class="flex flex-col items-start justify-normal gap-8 relative">
+        <!-- ellipse -->
         <div
-          class="flex itemscenter gap-2.5 py-4 px-6 rounded-xl bg-[#141414]/10 ring ring-inset ring-white/20 backdrop-blur-md">
+          class="absolute left-[30%] -top-[20%] size-[140px] bg-[#33FF00] rounded-full blur-[200px] elipse animate-move-reverse">
+        </div>
+        <!-- logo -->
+        <a href="./home.html" class=" flex items-end gap-4 urbanist-extrabold text-3xl">
+          <img src="./img/logo.svg" alt="">
+          Uzbekation
+        </a>
+        <div
+          class="flex itemscenter gap-2.5 py-4 px-6 rounded-xl bg-[#141414]/10 ring-1 focus-within:ring-[#703BF7] ring-inset ring-white/20 backdrop-blur-md">
           <label id="email-icon" for="email" class="cursor-pointer"><img src="./img/email.svg" alt=""></label>
           <input id="email" autocomplete="off" type="email" name="email" id="email" placeholder="Enter Your Email"
-            class="w-[300px] pr-2 bg-transparent border-none ring-none focus:outline-none focus:border-transparent focus:ring-0 caret-[#999999] placeholder-[#999999] urbanist-medium text-lg leading-6 tracking-[-0.6%]">
+            class="w-[300px] pr-2 bg-transparent border-none ring-none focus:outline-none focus:border-transparent focus:ring-0 caret-[#703BF7] placeholder-[#999999] urbanist-medium text-lg leading-6 tracking-[-0.6%]">
           <button type="submit" class="cursor-pointer" id="send-btn">
             <img src="./img/Iconly/Bulk/Send.svg" alt="send">
           </button>
         </div>
       </div>
-
+    
       <!-- menu links -->
-
-      <div class="flex items-start justify-between gap-10">
-
+    
+      <div class="flex items-start justify-between gap-10 relative">
+        <!-- ellipse -->
+        <div class="absolute right-[25%] top-[30%] size-[180px] bg-[#F7743B] rounded-full blur-[180px] elipse animate-move">
+        </div>
+    
         <div class="space-y-8 urbanist-medium tracking-[-0.6%]">
           <p class=" text-[#999999] text-xl">Places</p>
           <div class="flex flex-col items-start gap-5 text-lg  leading-6 ">
-            <a class="cursor-pointer hover:underline" href="#">Trending Places</a>
-            <a class="cursor-pointer hover:underline" href="#">Unexplored Places</a>
-            <a class="cursor-pointer hover:underline" href="#">Historial Places</a>
-            <a class="cursor-pointer hover:underline" href="#">Familiy Trip Places</a>
-            <a class="cursor-pointer hover:underline" href="#">FAQ’s</a>
-
+            <!-- links of places -->
+            <a class="cursor-pointer hover:underline" href="./places.html#trending">Trending Places</a>
+            <a class="cursor-pointer hover:underline" href="./places.html#unexplored">Unexplored Places</a>
+            <a class="cursor-pointer hover:underline" href="./places.html#historical">Historical Places</a>
+            <a class="cursor-pointer hover:underline" href="./places.html#familytrip">Family Trip Places</a>
+            <a class="cursor-pointer hover:underline" href="./places.html#faqs">FAQ’s</a>
+    
           </div>
         </div>
-
+    
         <div class="space-y-8 urbanist-medium tracking-[-0.6%]">
           <p class=" text-[#999999] text-xl">About Us</p>
           <div class="flex flex-col items-start gap-5 text-lg  leading-6 ">
-            <a class="cursor-pointer hover:underline" href="#">Our Story</a>
-            <a class="cursor-pointer hover:underline" href="#">Our Works</a>
-            <a class="cursor-pointer hover:underline" href="#">How It Works</a>
-            <a class="cursor-pointer hover:underline" href="#">Our Team</a>
-            <a class="cursor-pointer hover:underline" href="#">Our Clients</a>
-
+            <!-- links for information about us -->
+            <a class="cursor-pointer hover:underline" href="./about_us.html#ourstory">Our Story</a>
+            <a class="cursor-pointer hover:underline" href="./services.html">Our Works</a>
+            <a class="cursor-pointer hover:underline" href="./about_us.html#ourteam">Our Team</a>
+            <a class="cursor-pointer hover:underline" href="./home.html#reviews">Our Clients</a>
+    
           </div>
         </div>
-
+    
         <div class="space-y-8 urbanist-medium tracking-[-0.6%]">
           <p class=" text-[#999999] text-xl">Packages</p>
           <div class="flex flex-col items-start gap-5 text-lg  leading-6 ">
-            <a class="cursor-pointer hover:underline" href="#">Premium Packages</a>
-            <a class="cursor-pointer hover:underline" href="#">Budget Packages</a>
+            <!-- links for our trip packages -->
+            <a class="cursor-pointer hover:underline" href="./places.html#premiumplaces">Premium Packages</a>
+            <a class="cursor-pointer hover:underline" href="./places.html#budgetplaces">Budget Packages</a>
           </div>
         </div>
-
+    
         <div class="space-y-8 urbanist-medium tracking-[-0.6%]">
           <p class=" text-[#999999] text-xl">Contact Us</p>
           <div class="flex flex-col items-start gap-5 text-lg  leading-6 ">
-            <a class="cursor-pointer hover:underline" href="#">Contact Form</a>
-            <a class="cursor-pointer hover:underline" href="#">Our Officess</a>
+            <!-- links for contacting with us -->
+            <a class="cursor-pointer hover:underline" href="./contact_us.html#contactform">Contact Form</a>
+            <a class="cursor-pointer hover:underline" href="./contact_us.html#getintouch">Our Officess</a>
           </div>
         </div>
-
+    
       </div>
     </footer>
   </main>
 
   <!-- footer: copyright and social links -->
-  <section class="bg-[#1A1A1A] py-4 px-24 flex items-center justify-between">
+  <section class="bg-[#1A1A1A] py-4 px-24 flex items-center justify-between ">
     <div class="flex items-center gap-10 py-2.5 urbanist-medium tracking-[-0.6%] text-lg leading-6">
       <p>@20234Tripsy. All Rights Reserved.</p>
+      <!-- terms and conditions -->
       <a class="cursor-pointer hover:underline" href="#">Terms & Conditions</a>
     </div>
 
     <div class="flex items-center gap-2.5">
+      <!-- meet us on social media -->
       <a href="#"
         class="rounded-full p-4 bg-[#141414] overflow-hidden object-cover object-center hover:scale-110 hover:ring hover:ring-white/10 transition-transform duration-100 ease-in-out">
         <img class="size-6" src="./img/socials/facebook.svg" alt="facebook">

@@ -61,22 +61,24 @@
       Uzbekation
     </a>
     <nav>
-      <ul class="flex items-center justify-center gap-8 urbanist-medium">
-        <a href="./home.html" class="px-6 py-4 text-lg leading-[150%] rounded-lg cursor-pointer nav-link"
+      <ul class="flex items-center justify-center gap-6 urbanist-medium">
+        <a href="./home.html" class="px-6 py-3 text-base leading-[150%] rounded-md cursor-pointer nav-link"
           data-page="home">Home</a>
-        <a href="./about_us.html" class="px-6 py-4 text-lg leading-[150%] rounded-lg cursor-pointer  nav-link"
+        <a href="./about_us.html" class="px-6 py-3 text-base leading-[150%] rounded-md cursor-pointer nav-link"
           data-page="about_us">About
           Us</a>
-        <a href="./places.html" class="px-6 py-4 text-lg leading-[150%] rounded-lg cursor-pointer  nav-link"
+        <a href="./places.html" class="px-6 py-3 text-base leading-[150%] rounded-md cursor-pointer nav-link"
           data-page="places">Places</a>
-        <a href="./services.html" class="px-6 py-4 text-lg leading-[150%] rounded-lg cursor-pointer nav-link"
+        <a href="./services.html" class="px-6 py-3 text-base leading-[150%] rounded-md cursor-pointer nav-link"
           data-page="services">Services</a>
+        <a href="./contact_us.html" class="px-6 py-3 text-base leading-[150%] rounded-md cursor-pointer nav-link"
+          data-page="contact_us">Contact us</a>
       </ul>
     </nav>
-    <button
-      class="text-white px-6 py-4 text-lg leading-[150%] bg-[#4a4a4a]/10 rounded-[10px] backdrop-blur-md border border-white/10  hover:border-white/20 hover:bg-[#4a4a4a]/20 transition duration-200 ease-in-out">
-      <a href="./contact_us.html">Contact Us</a>
-    </button>
+    <a href="./profile.html"
+      class="text-white px-5 py-3 text-base leading-[150%] bg-[#4a4a4a]/10 rounded-[10px] backdrop-blur-md border border-white/10  hover:border-white/20 hover:bg-[#4a4a4a]/20 transition duration-200 ease-in-out">
+      <img src="./img/profile.svg" alt="profile">
+    </a>
   </header>
 
   <!-- main part -->
@@ -351,78 +353,77 @@
 
     <!-- footer -->
     <footer class="px-24 py-[100px] flex items-start justify-between gap-20">
-
+    
       <!-- email us -->
       <div class="flex flex-col items-start justify-normal gap-8 relative">
         <!-- ellipse -->
         <div
           class="absolute left-[30%] top-[50%] size-[140px] bg-[#33FF00] rounded-full blur-[200px] elipse animate-move-reverse">
         </div>
-
+        <!-- logo -->
         <a href="./home.html" class=" flex items-end gap-4 urbanist-extrabold text-3xl">
           <img src="./img/logo.svg" alt="">
           Uzbekation
         </a>
         <div
-          class="flex itemscenter gap-2.5 py-4 px-6 rounded-xl bg-[#141414]/10 ring ring-inset ring-white/20 backdrop-blur-md">
+          class="flex itemscenter gap-2.5 py-4 px-6 rounded-xl bg-[#141414]/10 ring-1 focus-within:ring-[#703BF7] ring-inset ring-white/20 backdrop-blur-md">
           <label id="email-icon" for="email" class="cursor-pointer"><img src="./img/email.svg" alt=""></label>
           <input id="email" autocomplete="off" type="email" name="email" id="email" placeholder="Enter Your Email"
-            class="w-[300px] pr-2 bg-transparent border-none ring-none focus:outline-none focus:border-transparent focus:ring-0 caret-[#999999] placeholder-[#999999] urbanist-medium text-lg leading-6 tracking-[-0.6%]">
+            class="w-[300px] pr-2 bg-transparent border-none ring-none focus:outline-none focus:border-transparent focus:ring-0 caret-[#703BF7] placeholder-[#999999] urbanist-medium text-lg leading-6 tracking-[-0.6%]">
           <button type="submit" class="cursor-pointer" id="send-btn">
             <img src="./img/Iconly/Bulk/Send.svg" alt="send">
           </button>
         </div>
       </div>
-
+    
       <!-- menu links -->
-
+    
       <div class="flex items-start justify-between gap-10 relative">
         <!-- ellipse -->
         <div
           class="absolute right-[25%] -top-[50%] size-[200px] bg-[#F43BF7] rounded-full blur-[220px] elipse animate-move-reverse">
         </div>
-
-
+    
+    
         <div class="space-y-8 urbanist-medium tracking-[-0.6%]">
           <p class=" text-[#999999] text-xl">Places</p>
           <div class="flex flex-col items-start gap-5 text-lg  leading-6 ">
-            <a class="cursor-pointer hover:underline" href="#">Trending Places</a>
-            <a class="cursor-pointer hover:underline" href="#">Unexplored Places</a>
-            <a class="cursor-pointer hover:underline" href="#">Historial Places</a>
-            <a class="cursor-pointer hover:underline" href="#">Familiy Trip Places</a>
-            <a class="cursor-pointer hover:underline" href="#">FAQ’s</a>
-
+            <a class="cursor-pointer hover:underline" href="./places.html#trending">Trending Places</a>
+            <a class="cursor-pointer hover:underline" href="./places.html#unexplored">Unexplored Places</a>
+            <a class="cursor-pointer hover:underline" href="./places.html#historical">Historical Places</a>
+            <a class="cursor-pointer hover:underline" href="./places.html#familytrip">Family Trip Places</a>
+            <a class="cursor-pointer hover:underline" href="./places.html#faqs">FAQ’s</a>
+    
           </div>
         </div>
-
+    
         <div class="space-y-8 urbanist-medium tracking-[-0.6%]">
           <p class=" text-[#999999] text-xl">About Us</p>
           <div class="flex flex-col items-start gap-5 text-lg  leading-6 ">
-            <a class="cursor-pointer hover:underline" href="#">Our Story</a>
-            <a class="cursor-pointer hover:underline" href="#">Our Works</a>
-            <a class="cursor-pointer hover:underline" href="#">How It Works</a>
-            <a class="cursor-pointer hover:underline" href="#">Our Team</a>
-            <a class="cursor-pointer hover:underline" href="#">Our Clients</a>
-
+            <a class="cursor-pointer hover:underline" href="./about_us.html#ourstory">Our Story</a>
+            <a class="cursor-pointer hover:underline" href="./services.html">Our Works</a>
+            <a class="cursor-pointer hover:underline" href="./about_us.html#ourteam">Our Team</a>
+            <a class="cursor-pointer hover:underline" href="./home.html#reviews">Our Clients</a>
+    
           </div>
         </div>
-
+    
         <div class="space-y-8 urbanist-medium tracking-[-0.6%]">
           <p class=" text-[#999999] text-xl">Packages</p>
           <div class="flex flex-col items-start gap-5 text-lg  leading-6 ">
-            <a class="cursor-pointer hover:underline" href="#">Premium Packages</a>
-            <a class="cursor-pointer hover:underline" href="#">Budget Packages</a>
+            <a class="cursor-pointer hover:underline" href="./places.html#premiumplaces">Premium Packages</a>
+            <a class="cursor-pointer hover:underline" href="./places.html#budgetplaces">Budget Packages</a>
           </div>
         </div>
-
+    
         <div class="space-y-8 urbanist-medium tracking-[-0.6%]">
           <p class=" text-[#999999] text-xl">Contact Us</p>
           <div class="flex flex-col items-start gap-5 text-lg  leading-6 ">
-            <a class="cursor-pointer hover:underline" href="#">Contact Form</a>
-            <a class="cursor-pointer hover:underline" href="#">Our Officess</a>
+            <a class="cursor-pointer hover:underline" href="./contact_us.html#contactform">Contact Form</a>
+            <a class="cursor-pointer hover:underline" href="./contact_us.html#getintouch">Our Officess</a>
           </div>
         </div>
-
+    
       </div>
     </footer>
   </main>
