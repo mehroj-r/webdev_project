@@ -67,3 +67,70 @@ html, body,main {
 .scrollbar-none {
   -ms-overflow-style: none;
 }
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(60px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(60px);
+    /* Start 30px to the left */
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+    /* End at original position */
+  }
+}
+
+/* Base class for elements to animate */
+.fade-in {
+  opacity: 0;
+  animation: fadeInUp 1s ease-out forwards;
+  animation-play-state: paused;
+  /* Paused until triggered */
+}
+
+/* Base class for elements to animate */
+.fade{
+  opacity: 0;
+  animation: fade 1s ease-out forwards;
+  animation-play-state: paused;
+  /* Paused until triggered */
+}
+
+/* Class for left fade-in animation */
+.fade-in-left {
+  opacity: 0;
+  animation: fadeInLeft 0.8s ease-out forwards;
+  /* Uses fadeInLeft */
+  animation-play-state: paused;
+}
+
+.fade-in.visible, .fade-in-left.visible, .fade.visible {
+  animation-play-state: running;
+  /* Play when visible */
+}
+
+

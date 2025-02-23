@@ -1,730 +1,1125 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Uzbekation</title>
+    <link rel="stylesheet" href="../../styles/fonts.css" />
+    <link rel="stylesheet" href="../../styles/main.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Uzbekation</title>
-  <link rel="stylesheet" href="../../styles/fonts.css">
-  <link rel="stylesheet" href="../../styles/main.css">
-  <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          screens: {
+            // 'xl': {'max': '1500px'},
+            // // => @media (max-width: 1535px) { ... }
 
-  <script>
-    tailwind.config = {
-      theme: {
-        screens: {
-          // 'xl': {'max': '1500px'},
-          // // => @media (max-width: 1535px) { ... }
+            lg: { max: "1024px" },
+            // => @media (max-width: 1024px) { ... }
 
-          lg: { max: "1024px" },
-          // => @media (max-width: 1024px) { ... }
+            md: { max: "768px" },
+            // => @media (max-width: 768px) { ... }
 
-          md: { max: "768px" },
-          // => @media (max-width: 768px) { ... }
+            hamvisible: { max: "700px" },
+            // => @media (max-width: 650px) { ... }
 
-          hamvisible: { max: "700px" },
-          // => @media (max-width: 650px) { ... }
+            sm: { max: "425px" },
+            // => @media (max-width: 425px) { ... }
 
-          sm: { max: "425px" },
-          // => @media (max-width: 425px) { ... }
+            xs: { max: "375px" },
+            // => @media (max-width: 375px) { ... }
 
-          xs: { max: "375px" },
-          // => @media (max-width: 375px) { ... }
-
-          s: { max: "320px" },
-          // => @media (max-width: 375px) { ... }
-        },
-        extend: {
-          colors: {
-            // search icon colors
-            lightpurple: "#A585FA",
-            mainpurple: "#4600FF",
-            // places to go card colors
-            endblue: "#05073C",
+            s: { max: "320px" },
+            // => @media (max-width: 375px) { ... }
+          },
+          extend: {
+            colors: {
+              // search icon colors
+              lightpurple: "#A585FA",
+              mainpurple: "#4600FF",
+              // places to go card colors
+              endblue: "#05073C",
+            },
           },
         },
-      },
-    };
-  </script>
+      };
+    </script>
+  </head>
 
-</head>
+  <body
+    class="bg-[#141414] text-white scroll-smooth overscroll-auto scrollbar-hidden"
+  >
+    <!-- header -->
+    <header
+      class="group flex items-center justify-between fixed top-0 left-0 right-0 px-24 py-5 backdrop-blur-[10px] border-b border-white/10 urbanist-medium z-50"
+    >
+      <!-- logo -->
+      <a
+        href="./home.html"
+        class="fade-in flex items-end gap-4 urbanist-extrabold text-3xl"
+      >
+        <img src="./img/logo.svg" alt="" />
+        Uzbekation
+      </a>
+      <nav>
+        <ul class="flex items-center justify-center gap-8 urbanist-medium">
+          <a
+            href="./home.html"
+            class="fade-in px-6 py-4 text-lg leading-[150%] rounded-lg cursor-pointer nav-link"
+            data-page="home"
+            >Home</a
+          >
+          <a
+            href="./about_us.html"
+            class="fade-in px-6 py-4 text-lg leading-[150%] rounded-lg cursor-pointer nav-link"
+            data-page="about_us"
+            >About Us</a
+          >
+          <a
+            href="./places.html"
+            class="fade-in px-6 py-4 text-lg leading-[150%] rounded-lg cursor-pointer nav-link"
+            data-page="places"
+            >Places</a
+          >
+          <a
+            href="./services.html"
+            class="fade-in px-6 py-4 text-lg leading-[150%] rounded-lg cursor-pointer nav-link"
+            data-page="services"
+            >Services</a
+          >
+        </ul>
+      </nav>
+      <button
+        class="fade-in text-white px-6 py-4 text-lg leading-[150%] bg-[#4a4a4a]/10 rounded-[10px] backdrop-blur-md border border-white/10 hover:border-white/20 hover:bg-[#4a4a4a]/20 transition duration-200 ease-in-out"
+      >
+        <a href="./contact_us.html">Contact Us</a>
+      </button>
+    </header>
 
-<body class="bg-[#141414] text-white scroll-smooth overscroll-auto scrollbar-hidden">
+    <!-- main part -->
+    <main>
+      <!--mainstage hook -->
+      <section class="flex flex-col items-start justify-center relative mb-10">
+        <div
+          class="absolute inset-0 bg-gradient-to-r from-[#141414] to-transparent"
+        ></div>
+        <div
+          class="absolute inset-x-0 bottom-0 h-[80px] bg-gradient-to-t from-[#141414] to-transparent"
+        ></div>
+        <img class="w-full -z-10" src="./img/bg-registan.png" alt="" />
 
-  <!-- header -->
-  <header
-    class="flex items-center justify-between fixed top-0 left-0 right-0 px-24 py-5 backdrop-blur-[10px] border-b border-white/10 urbanist-medium z-50">
-    <!-- logo -->
-    <a href="./home.html" class=" flex items-end gap-4 urbanist-extrabold text-3xl">
-      <img src="./img/logo.svg" alt="">
-      Uzbekation
-    </a>
-    <nav>
-      <ul class="flex items-center justify-center gap-8 urbanist-medium">
-        <a href="./home.html" class="px-6 py-4 text-lg leading-[150%] rounded-lg cursor-pointer nav-link"
-          data-page="home">Home</a>
-        <a href="./about_us.html" class="px-6 py-4 text-lg leading-[150%] rounded-lg cursor-pointer  nav-link"
-          data-page="about_us">About
-          Us</a>
-        <a href="./places.html" class="px-6 py-4 text-lg leading-[150%] rounded-lg cursor-pointer  nav-link"
-          data-page="places">Places</a>
-        <a href="./services.html" class="px-6 py-4 text-lg leading-[150%] rounded-lg cursor-pointer nav-link"
-          data-page="services">Services</a>
-      </ul>
-    </nav>
-    <button
-      class="text-white px-6 py-4 text-lg leading-[150%] bg-[#4a4a4a]/10 rounded-[10px] backdrop-blur-md border border-white/10  hover:border-white/20 hover:bg-[#4a4a4a]/20 transition duration-200 ease-in-out">
-      <a href="./contact_us.html">Contact Us</a>
-    </button>
-  </header>
-
-  <!-- main part -->
-  <main>
-    <!--mainstage hook -->
-    <section class="flex flex-col items-start justify-center relative mb-10">
-      <div class="absolute inset-0 bg-gradient-to-r from-[#141414] to-transparent "></div>
-      <div class="absolute inset-x-0 bottom-0 h-[80px] bg-gradient-to-t from-[#141414] to-transparent "></div>
-      <img class=" w-full -z-10" src="./img/bg-registan.png" alt="">
-
-      <div class="flex flex-col items-start justify-start gap-20 absolute ccontainer">
-        <!-- main info of event -->
-        <div class="flex flex-col items-start justify-center gap-4 max-w-[600px]">
-          <div class="text-5xl waterbrush-regular">
-            Explorer and Travel
+        <div
+          class="group flex flex-col items-start justify-start gap-20 absolute ccontainer"
+        >
+          <!-- main info of event -->
+          <div
+            class="fade-in-left group flex flex-col items-start justify-center gap-4 max-w-[600px]"
+          >
+            <div class="fade-in-left text-5xl waterbrush-regular">
+              Explorer and Travel
+            </div>
+            <div class="fade-in-left text-[86px] worksans-bold">
+              Let’s Go Now
+            </div>
+            <div class="fade-in-left text-base urbanist-medium">
+              The Registan Square is a real gem located in the very heart of the
+              ancient city of Samarkand. It has gained its worldwide fame thanks
+              to the great architectural ensemble that has become a monument of
+              the oriental architecture.
+            </div>
           </div>
-          <div class="text-[86px] worksans-bold">Let’s Go Now</div>
-          <div class="text-base urbanist-medium">
-            The Registan Square is a real gem located in the very heart of the ancient city of Samarkand. It has gained its
-            worldwide fame thanks to the great architectural ensemble that has become a monument of the oriental architecture.
+          <!-- locations info -->
+          <div
+            class="fade-in-left px-6 py-4 rounded-[28px] bg-black/10 backdrop-blur-sm border border-white/20 flex items-center gap-16"
+          >
+            <div class="flex items-center justify-between gap-10">
+              <div class="flex items-center gap-4 worksans-regular">
+                <button
+                  class="cursor-pointer hover:scale-110 transition duration-100 ease-in-out animate-bell"
+                  id="locationBtn"
+                  title="click me"
+                >
+                  <img src="./img/location.svg" alt="location" />
+                </button>
+                <div class="flex flex-col items-start justify-center gap-1">
+                  <label for="locationInput" class="text-base">Location</label>
+                  <input
+                    id="locationInput"
+                    type="text"
+                    autocomplete="off"
+                    value="Samarkand"
+                    class="max-w-36 bg-transparent border-none ring-none focus:outline-none focus:border-transparent focus:ring-0 text-xl worksans-bold text-white"
+                  />
+                </div>
+              </div>
+              <div class="border border-r border-white h-7 rounded-full"></div>
+              <div class="flex items-center gap-4 worksans-regular">
+                <label for="dateInput" id="dateBtn">
+                  <img src="./img/date.svg" alt="date" />
+                </label>
+                <div class="flex flex-col items-start justify-center gap-1">
+                  <label for="dateInput" class="text-base">Date</label>
+                  <input
+                    id="dateInput"
+                    type="text"
+                    autocomplete="off"
+                    value="13 May, 2025"
+                    class="inline-block max-w-36 bg-transparent border-none ring-none focus:outline-none focus:border-transparent focus:ring-0 text-xl worksans-bold text-white border-white border-r-2"
+                  />
+                </div>
+              </div>
+            </div>
+            <!-- search button -->
+            <a
+              href="../locations/registan.html"
+              id="searchBtn"
+              class="grid place-content-center p-5 rounded-2xl bg-gradient-to-r from-[#A585FA] to-[#4600FF] cursor-pointer transition-all duration-200 ease-in-out hover:shadow-[0_0_15px_5px_rgba(112,59,247,0.5)] hover:text-shadow-[0_0_10px_rgba(112,59,247,0.8),0_0_20px_rgba(112,59,247,0.9)]"
+            >
+              <img src="./img/searchicon.svg" alt="search" />
+            </a>
+          </div>
+          <!-- locations modal with popular travel locations -->
+          <div
+            id="locationModal"
+            class="hidden absolute top-[102%] -left-10 z-50 w-96 max-h-64 bg-black/10 backdrop-blur-sm border border-white/20 rounded-xl shadow-lg overflow-hidden transition-opacity duration-200 overflow-y-auto overscroll-y-none scrollbar-hidden"
+          >
+            <div
+              class="flex flex-col overflow-y-auto justify-start gap-y-2 py-3 px-5 scrollbar-hidden"
+            >
+              <!-- links to locations -->
+              <a
+                href="../locations/registan.html"
+                class="flex items-center space-x-3 rounded-lg p-3 shadow-sm bg-transparent backdrop-blur-sm border border-white/20 hover:border-white/30 cursor-pointer hover:scale-105 transition duration-200 ease-in-out"
+              >
+                <div
+                  class="flex-shrink-0 object-cover object-center overflow-hidden"
+                >
+                  <img
+                    class="h-14 w-20 rounded-sm"
+                    src="./img/bg-registan.png"
+                    alt="location"
+                  />
+                </div>
+                <div class="min-w-0 flex-1">
+                  <p class="text-sm font-semibold">Registan, Samarkand</p>
+                </div>
+              </a>
+              <a
+                href="../locations/khiva.html"
+                class="flex items-center space-x-3 rounded-lg p-3 shadow-sm bg-transparent backdrop-blur-sm border border-white/20 hover:border-white/30 cursor-pointer hover:scale-105 transition duration-200 ease-in-out"
+              >
+                <div
+                  class="flex-shrink-0 object-cover object-center overflow-hidden"
+                >
+                  <img
+                    class="h-14 w-20 rounded-sm"
+                    src="./img/khiva.webp"
+                    alt="location"
+                  />
+                </div>
+                <div class="min-w-0 flex-1">
+                  <p class="text-sm font-semibold">Khiva, Khorezm</p>
+                </div>
+              </a>
+              <a
+                href="../locations/chimgan.html"
+                class="flex items-center space-x-3 rounded-lg p-3 shadow-sm bg-transparent backdrop-blur-sm border border-white/20 hover:border-white/30 cursor-pointer hover:scale-105 transition duration-200 ease-in-out"
+              >
+                <div
+                  class="flex-shrink-0 object-cover object-center overflow-hidden"
+                >
+                  <img
+                    class="h-14 w-20 rounded-sm"
+                    src="./img/chimgan-skiing.jpg"
+                    alt="location"
+                  />
+                </div>
+                <div class="min-w-0 flex-1">
+                  <p class="text-sm font-semibold">Chimgan, Tashkent</p>
+                </div>
+              </a>
+            </div>
           </div>
         </div>
-        <!-- locations info -->
-        <div
-          class="px-6 py-4 rounded-[28px] bg-black/10 backdrop-blur-sm border border-white/20 flex items-center gap-16">
-          <div class="flex items-center justify-between gap-10">
-            <div class="flex items-center gap-4 worksans-regular">
-              <button class="cursor-pointer hover:scale-110 transition duration-100 ease-in-out animate-bell" id="locationBtn" title="click me">
-                <img src="./img/location.svg" alt="location">
-              </button>
-              <div class="flex flex-col items-start justify-center gap-1">
-                <label for="locationInput" class="text-base">Location</label>
-                <input id="locationInput" type="text" autocomplete="off" value="Samarkand"
-                  class="max-w-36 bg-transparent border-none ring-none focus:outline-none focus:border-transparent focus:ring-0 text-xl worksans-bold text-white">
-              </div>
-            </div>
-            <div class="border border-r border-white h-7 rounded-full"></div>
-            <div class="flex items-center gap-4 worksans-regular">
-              <label for="dateInput" id="dateBtn">
-                <img src="./img/date.svg" alt="date">
-              </label>
-              <div class="flex flex-col items-start justify-center gap-1">
-                <label for="dateInput" class="text-base">Date</label>
-                <input id="dateInput" type="text" autocomplete="off" value="13 May, 2025"
-                  class="inline-block max-w-36 bg-transparent border-none ring-none focus:outline-none focus:border-transparent focus:ring-0 text-xl worksans-bold text-white border-white border-r-2">
-              </div>
-            </div>
+      </section>
+
+      <!-- offers -->
+      <section class="group px-5 flex gap-5 urbanist-semibold mb-20">
+        <a class="fade-in flex-1" href="#">
+          <div
+            class="py-10 px-5 flex flex-col items-center gap-5 rounded-xl bg-[#1a1a1a]/10 border border-white/10 relative hover:border-white/20 group hover:scale-[103%] transition duration-200 ease-in-out"
+          >
+            <img class="size-20" src="./img/dstay.svg" alt="stay" />
+            <p>Find Your Dream Stay</p>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="white"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="size-6 absolute top-5 right-5 opacity-60 group-hover:top-3 group-hover:translate-x-2 group-hover:-translate-y-0.5 transition-all duration-300 ease-in-out"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25"
+              />
+            </svg>
+            <!-- ellipse -->
+            <div
+              class="absolute left-6 top-0 size-[200px] bg-[#703BF7] rounded-full blur-[180px] elipse animate-move"
+            ></div>
           </div>
-          <!-- search button -->
-          <a href="../locations/registan.html" id="searchBtn"
-            class="grid place-content-center p-5 rounded-2xl bg-gradient-to-r from-[#A585FA] to-[#4600FF] cursor-pointer transition-all duration-200 ease-in-out hover:shadow-[0_0_15px_5px_rgba(112,59,247,0.5)] hover:text-shadow-[0_0_10px_rgba(112,59,247,0.8),0_0_20px_rgba(112,59,247,0.9)]">
-            <img src="./img/searchicon.svg" alt="search">
+        </a>
+        <a class="fade-in flex-1" href="#">
+          <div
+            class="py-10 px-5 flex flex-col items-center gap-5 rounded-xl bg-[#1a1a1a]/10 border border-white/10 relative hover:border-white/20 group hover:scale-[103%] transition duration-200 ease-in-out"
+          >
+            <img class="size-20" src="./img/package.svg" alt="stay" />
+            <p>Cheap Holiday Packages</p>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="white"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="size-6 absolute top-5 right-5 opacity-60 group-hover:top-3 group-hover:translate-x-2 group-hover:-translate-y-0.5 transition-all duration-300 ease-in-out"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25"
+              />
+            </svg>
+          </div>
+        </a>
+        <a class="fade-in flex-1" href="#">
+          <div
+            class="py-10 px-5 flex flex-col items-center gap-5 rounded-xl bg-[#1a1a1a]/10 border border-white/10 relative hover:border-white/20 group hover:scale-[103%] transition duration-200 ease-in-out"
+          >
+            <img
+              class="size-20 group-hover:animate-bell"
+              src="./img/building.svg"
+              alt="stay"
+            />
+            <p>Effortless Check-in</p>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="white"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="size-6 absolute top-5 right-5 opacity-60 group-hover:top-3 group-hover:translate-x-2 group-hover:-translate-y-0.5 transition-all duration-300 ease-in-out"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25"
+              />
+            </svg>
+          </div>
+        </a>
+        <a class="fade-in flex-1" href="#">
+          <div
+            class="py-10 px-5 flex flex-col items-center gap-5 rounded-xl bg-[#1a1a1a]/10 border border-white/10 relative hover:border-white/20 group hover:scale-[103%] transition duration-200 ease-in-out"
+          >
+            <img
+              class="size-20 group-hover:animate-bell"
+              src="./img/sun.svg"
+              alt="stay"
+            />
+            <p>Explore Places</p>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="white"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="size-6 absolute top-5 right-5 opacity-60 group-hover:top-3 group-hover:translate-x-2 group-hover:-translate-y-0.5 transition-all duration-300 ease-in-out"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25"
+              />
+            </svg>
+            <!-- ellipse -->
+            <div
+              class="absolute right-16 top-5 size-[180px] bg-[#F43BF7] rounded-full blur-[220px] elipse animate-move-reverse"
+            ></div>
+            <div
+              class="absolute right-10 top-10 size-[180px] bg-[#703BF7] rounded-full blur-[220px] elipse animate-move"
+            ></div>
+          </div>
+        </a>
+      </section>
+
+      <!-- popular places to go -->
+      <section class="group ccontainer mb-20 space-y-20">
+        <div class="fade-in flex items-center justify-between relative">
+          <p class="urbanist-bold text-5xl">Popular things to do</p>
+          <a href="./contact.html">
+            <button
+              class="text-white px-6 py-4 text-xl leading-[150%] cursor-pointer bg-[#1a1a1a]/10 rounded-lg border border-white/10 hover:border-white/20"
+            >
+              See all
+            </button>
+          </a>
+          <div
+            class="absolute left-[450px] top-0 size-[120px] bg-[#3BF7E7] rounded-full blur-[180px] animate-move-reverse"
+          ></div>
+        </div>
+        <div class="fade-in group flex items-center justify-between gap-9">
+          <a
+            href="#"
+            class="fade-in-left max-w-56 h-80 backdrop-opacity-80 flex flex-1 flex-col items-center justify-between px-5 py-6 rounded-xl overflow-hidden relative hover:scale-105 shadow-lg transition-all duration-300 ease-in-out hover:backdrop-blur-[20px] hover:shadow-[0_0_15px_5px_rgba(255,255,255,0.1)] hover:text-shadow-[0_0_10px_rgba(112,59,247,0.8),0_0_20px_rgba(112,59,247,0.9)]"
+          >
+            <img
+              src="./img/place1.png"
+              alt=""
+              class="absolute inset-0 -z-10 h-full w-full object-cover"
+            />
+            <p class="urbanist-medium text-4xl text-center">
+              City <br />
+              Tours
+            </p>
+            <p class="urbanist-regular text-3xl">150+ Tours</p>
+            <div
+              class="absolute w-full inset-0 -z-10 bg-gradient-to-t from-gray-900/90 to-[#05073C]/0"
+            ></div>
+          </a>
+          <a
+            href="#"
+            class="fade-in-left max-w-56 h-80 backdrop-opacity-80 bg-cover bg-no-repeat bg-center flex flex-1 flex-col items-center justify-between px-5 py-6 rounded-xl overflow-hidden relative hover:scale-105 shadow-lg transition-all duration-300 ease-in-out hover:backdrop-blur-[20px] hover:shadow-[0_0_15px_5px_rgba(255,255,255,0.1)] hover:text-shadow-[0_0_10px_rgba(112,59,247,0.8),0_0_20px_rgba(112,59,247,0.9)]"
+          >
+            <img
+              src="./img/place2.png"
+              alt=""
+              class="absolute inset-0 -z-10 h-full w-full object-cover"
+            />
+            <p class="urbanist-medium text-4xl text-center">
+              Cultural <br />
+              Towels
+            </p>
+            <p class="urbanist-regular text-3xl">50+ Tours</p>
+            <div
+              class="absolute inset-0 w-full -z-10 bg-gradient-to-t from-gray-900/90 to-[#05073C]/0"
+            ></div>
+          </a>
+          <a
+            href="#"
+            class="fade-in-left max-w-56 h-80 backdrop-opacity-80 bg-cover bg-no-repeat bg-center flex flex-1 flex-col items-center justify-between px-5 py-6 rounded-xl overflow-hidden relative hover:scale-105 shadow-lg transition-all duration-300 ease-in-out hover:backdrop-blur-[20px] hover:shadow-[0_0_15px_5px_rgba(255,255,255,0.1)] hover:text-shadow-[0_0_10px_rgba(112,59,247,0.8),0_0_20px_rgba(112,59,247,0.9)]"
+          >
+            <img
+              src="./img/place3.png"
+              alt=""
+              class="absolute inset-0 -z-10 h-full w-full object-cover"
+            />
+            <p class="urbanist-medium text-4xl text-center">
+              Day <br />
+              Cruises
+            </p>
+            <p class="urbanist-regular text-3xl">100+ Tours</p>
+            <div
+              class="absolute inset-0 w-full -z-10 bg-gradient-to-t from-gray-900/90 to-[#05073C]/0"
+            ></div>
+          </a>
+          <a
+            href="#"
+            class="fade-in-left max-w-56 h-80 backdrop-opacity-80 bg-cover bg-no-repeat bg-center flex flex-1 flex-col items-center justify-between px-5 py-6 rounded-xl overflow-hidden relative hover:scale-105 shadow-lg transition-all duration-300 ease-in-out hover:backdrop-blur-[20px] hover:shadow-[0_0_15px_5px_rgba(255,255,255,0.1)] hover:text-shadow-[0_0_10px_rgba(112,59,247,0.8),0_0_20px_rgba(112,59,247,0.9)]"
+          >
+            <img
+              src="./img/place4.png"
+              alt=""
+              class="absolute inset-0 -z-10 h-full w-full object-cover"
+            />
+            <p class="urbanist-medium text-4xl text-center">
+              Bus <br />
+              Tours
+            </p>
+            <p class="urbanist-regular text-3xl">200+ Tours</p>
+            <div
+              class="absolute inset-0 w-full -z-10 bg-gradient-to-t from-gray-900/90 to-[#05073C]/0"
+            ></div>
+          </a>
+          <a
+            href="#"
+            class="fade-in-left max-w-56 h-80 backdrop-opacity-80 bg-cover bg-no-repeat bg-center flex flex-1 flex-col items-center justify-between px-5 py-6 rounded-xl overflow-hidden relative hover:scale-105 shadow-lg transition-all duration-300 ease-in-out hover:backdrop-blur-[20px] hover:shadow-[0_0_15px_5px_rgba(255,255,255,0.1)] hover:text-shadow-[0_0_10px_rgba(112,59,247,0.8),0_0_20px_rgba(112,59,247,0.9)]"
+          >
+            <img
+              src="./img/place5.png"
+              alt=""
+              class="absolute inset-0 -z-10 h-full w-full object-cover"
+            />
+            <p class="urbanist-medium text-4xl text-center">
+              Beach <br />
+              Tours
+            </p>
+            <p class="urbanist-regular text-3xl">80+ Tours</p>
+            <div
+              class="absolute inset-0 w-full -z-10 bg-gradient-to-t from-gray-900/90 to-[#05073C]/0"
+            ></div>
           </a>
         </div>
-        <!-- locations modal with popular travel locations -->
-        <div id="locationModal"
-          class="hidden absolute top-[102%] -left-10 z-50 w-96 max-h-64 bg-black/10 backdrop-blur-sm border border-white/20 rounded-xl shadow-lg overflow-hidden transition-opacity duration-200 overflow-y-auto overscroll-y-none scrollbar-hidden">
+      </section>
 
-          <div class="flex flex-col overflow-y-auto justify-start gap-y-2 py-3 px-5 scrollbar-hidden">
-            <!-- links to locations -->
-            <a href="../locations/registan.html"
-              class="flex items-center space-x-3 rounded-lg p-3 shadow-sm bg-transparent backdrop-blur-sm border border-white/20 hover:border-white/30 cursor-pointer hover:scale-105 transition duration-200 ease-in-out">
-              <div class="flex-shrink-0 object-cover object-center overflow-hidden">
-                <img class="h-14 w-20 rounded-sm" src="./img/bg-registan.png" alt="location" />
-              </div>
-              <div class="min-w-0 flex-1">
-                <p class="text-sm font-semibold">
-                  Registan, Samarkand
-                </p>
-              </div>
-            </a>
-            <a href="../locations/khiva.html"
-              class="flex items-center space-x-3 rounded-lg p-3 shadow-sm bg-transparent backdrop-blur-sm border border-white/20 hover:border-white/30 cursor-pointer hover:scale-105 transition duration-200 ease-in-out">
-              <div class="flex-shrink-0 object-cover object-center overflow-hidden">
-                <img class="h-14 w-20 rounded-sm" src="./img/khiva.webp" alt="location" />
-              </div>
-              <div class="min-w-0 flex-1">
-                <p class="text-sm font-semibold">
-                  Khiva, Khorezm
-                </p>
-              </div>
-            </a>
-            <a href="../locations/chimgan.html"
-              class="flex items-center space-x-3 rounded-lg p-3 shadow-sm bg-transparent backdrop-blur-sm border border-white/20 hover:border-white/30 cursor-pointer hover:scale-105 transition duration-200 ease-in-out">
-              <div class="flex-shrink-0 object-cover object-center overflow-hidden">
-                <img class="h-14 w-20 rounded-sm" src="./img/chimgan-skiing.jpg" alt="location" />
-              </div>
-              <div class="min-w-0 flex-1">
-                <p class="text-sm font-semibold">
-                  Chimgan, Tashkent
-                </p>
-              </div>
-            </a>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- offers -->
-    <section class="px-5 flex gap-5 urbanist-semibold mb-20">
-      <a class="flex-1" href="#">
-        <div
-          class="py-10 px-5 flex flex-col items-center gap-5 rounded-xl bg-[#1a1a1a]/10 border border-white/10 relative hover:border-white/20 group hover:scale-[103%] transition duration-200 ease-in-out">
-          <img class="size-20" src="./img/dstay.svg" alt="stay">
-          <p>Find Your Dream Stay</p>
-          <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" stroke-width="1.5"
-            stroke="currentColor"
-            class="size-6 absolute top-5 right-5 opacity-60 group-hover:top-3 group-hover:translate-x-2 group-hover:-translate-y-0.5 transition-all duration-300 ease-in-out">
-            <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
-          </svg>
-          <!-- ellipse -->
-          <div class="absolute left-6 top-0 size-[200px] bg-[#703BF7] rounded-full blur-[180px] elipse animate-move">
-          </div>
-        </div>
-      </a>
-      <a class="flex-1" href="#">
-        <div
-          class="py-10 px-5 flex flex-col items-center gap-5 rounded-xl bg-[#1a1a1a]/10 border border-white/10 relative hover:border-white/20 group hover:scale-[103%] transition duration-200 ease-in-out">
-          <img class="size-20" src="./img/package.svg" alt="stay">
-          <p>Cheap Holiday Packages</p>
-          <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" stroke-width="1.5"
-            stroke="currentColor"
-            class="size-6 absolute top-5 right-5 opacity-60 group-hover:top-3 group-hover:translate-x-2 group-hover:-translate-y-0.5 transition-all duration-300 ease-in-out">
-            <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
-          </svg>
-        </div>
-      </a>
-      <a class="flex-1" href="#">
-        <div
-          class="py-10 px-5 flex flex-col items-center gap-5 rounded-xl bg-[#1a1a1a]/10 border border-white/10 relative hover:border-white/20 group hover:scale-[103%] transition duration-200 ease-in-out">
-          <img class="size-20 group-hover:animate-bell" src="./img/building.svg" alt="stay">
-          <p>Effortless Check-in</p>
-          <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" stroke-width="1.5"
-            stroke="currentColor"
-            class="size-6 absolute top-5 right-5 opacity-60 group-hover:top-3 group-hover:translate-x-2 group-hover:-translate-y-0.5 transition-all duration-300 ease-in-out">
-            <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
-          </svg>
-        </div>
-      </a>
-      <a class="flex-1" href="#">
-        <div
-          class="py-10 px-5 flex flex-col items-center gap-5 rounded-xl bg-[#1a1a1a]/10 border border-white/10 relative hover:border-white/20 group hover:scale-[103%] transition duration-200 ease-in-out">
-          <img class="size-20 group-hover:animate-bell" src="./img/sun.svg" alt="stay">
-          <p>Explore Places</p>
-          <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" stroke-width="1.5"
-            stroke="currentColor"
-            class="size-6 absolute top-5 right-5 opacity-60 group-hover:top-3 group-hover:translate-x-2 group-hover:-translate-y-0.5 transition-all duration-300 ease-in-out">
-            <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
-          </svg>
+      <!-- featured trips -->
+      <section class="mb-20">
+        <div class="group ccontainer space-y-4 mb-20 relative">
+          <p class="fade-in urbanist-bold text-5xl leading-[150%]">
+            Featured Trips
+          </p>
+          <p
+            class="fade-in urbanist-medium text-xl leading-[150%] text-[#999999]"
+          >
+            Explore our handpicked selection of featured Trips.Each listing
+            offers a glimpse into exceptional Places available through Estatein
+          </p>
           <!-- ellipse -->
           <div
-            class="absolute right-16 top-5 size-[180px] bg-[#F43BF7] rounded-full blur-[220px] elipse animate-move-reverse">
-          </div>
-          <div class="absolute right-10 top-10 size-[180px] bg-[#703BF7] rounded-full blur-[220px] elipse animate-move">
-          </div>
-
+            class="absolute left-[25%] top-10 size-[180px] bg-[#33FF00] rounded-full blur-[220px] elipse animate-move-reverse"
+          ></div>
+          <div
+            class="absolute right-0 -top-5 size-[320px] bg-[#703BF7] rounded-full blur-[200px] elipse animate-move"
+          ></div>
         </div>
-      </a>
-    </section>
 
-    <!-- popular places to go -->
-    <section class="ccontainer mb-20 space-y-20">
-      <div class="flex items-center justify-between relative">
-        <p class="urbanist-bold text-5xl">Popular things to do</p>
-        <a href="./contact.html">
-          <button
-            class="text-white px-6 py-4 text-xl leading-[150%] cursor-pointer bg-[#1a1a1a]/10 rounded-lg border border-white/10 hover:border-white/20 ">
-            See all
-          </button>
-        </a>
         <div
-          class="absolute left-[450px] top-0 size-[120px] bg-[#3BF7E7] rounded-full blur-[180px] animate-move-reverse">
-        </div>
-      </div>
-      <div class="flex items-center justify-between gap-9">
-        <a href="#"
-          class="max-w-56 h-80 backdrop-opacity-80 flex flex-1 flex-col items-center justify-between px-5 py-6 rounded-xl overflow-hidden relative hover:scale-105 shadow-lg transition-all duration-300 ease-in-out hover:backdrop-blur-[20px] hover:shadow-[0_0_15px_5px_rgba(255,255,255,0.1)] hover:text-shadow-[0_0_10px_rgba(112,59,247,0.8),0_0_20px_rgba(112,59,247,0.9)]">
-          <img src="./img/place1.png" alt="" class="absolute inset-0 -z-10 h-full w-full object-cover">
-          <p class="urbanist-medium text-4xl text-center">City <br> Tours</p>
-          <p class="urbanist-regular text-3xl">150+ Tours</p>
-          <div class="absolute w-full inset-0 -z-10 bg-gradient-to-t from-gray-900/90 to-[#05073C]/0"></div>
-        </a>
-        <a href="#"
-          class="max-w-56 h-80 backdrop-opacity-80 bg-cover bg-no-repeat bg-center flex flex-1 flex-col items-center justify-between px-5 py-6 rounded-xl overflow-hidden relative hover:scale-105 shadow-lg transition-all duration-300 ease-in-out hover:backdrop-blur-[20px] hover:shadow-[0_0_15px_5px_rgba(255,255,255,0.1)] hover:text-shadow-[0_0_10px_rgba(112,59,247,0.8),0_0_20px_rgba(112,59,247,0.9)]">
-          <img src="./img/place2.png" alt="" class="absolute inset-0 -z-10 h-full w-full object-cover">
-          <p class="urbanist-medium text-4xl text-center">Cultural <br> Towels</p>
-          <p class="urbanist-regular text-3xl">50+ Tours</p>
-          <div class="absolute inset-0 w-full -z-10 bg-gradient-to-t from-gray-900/90 to-[#05073C]/0"></div>
-        </a>
-        <a href="#"
-          class="max-w-56 h-80 backdrop-opacity-80 bg-cover bg-no-repeat bg-center flex flex-1 flex-col items-center justify-between px-5 py-6 rounded-xl overflow-hidden relative hover:scale-105 shadow-lg transition-all duration-300 ease-in-out hover:backdrop-blur-[20px] hover:shadow-[0_0_15px_5px_rgba(255,255,255,0.1)] hover:text-shadow-[0_0_10px_rgba(112,59,247,0.8),0_0_20px_rgba(112,59,247,0.9)]">
-          <img src="./img/place3.png" alt="" class="absolute inset-0 -z-10 h-full w-full object-cover">
-          <p class="urbanist-medium text-4xl text-center">Day <br> Cruises</p>
-          <p class="urbanist-regular text-3xl">100+ Tours</p>
-          <div class="absolute inset-0 w-full -z-10 bg-gradient-to-t from-gray-900/90 to-[#05073C]/0"></div>
-        </a>
-        <a href="#"
-          class="max-w-56 h-80 backdrop-opacity-80 bg-cover bg-no-repeat bg-center flex flex-1 flex-col items-center justify-between px-5 py-6 rounded-xl overflow-hidden relative hover:scale-105 shadow-lg transition-all duration-300 ease-in-out hover:backdrop-blur-[20px] hover:shadow-[0_0_15px_5px_rgba(255,255,255,0.1)] hover:text-shadow-[0_0_10px_rgba(112,59,247,0.8),0_0_20px_rgba(112,59,247,0.9)]">
-          <img src="./img/place4.png" alt="" class="absolute inset-0 -z-10 h-full w-full object-cover">
-          <p class="urbanist-medium text-4xl text-center">Bus <br> Tours</p>
-          <p class="urbanist-regular text-3xl">200+ Tours</p>
-          <div class="absolute inset-0 w-full -z-10 bg-gradient-to-t from-gray-900/90 to-[#05073C]/0"></div>
-        </a>
-        <a href="#"
-          class="max-w-56 h-80 backdrop-opacity-80 bg-cover bg-no-repeat bg-center flex flex-1 flex-col items-center justify-between px-5 py-6 rounded-xl overflow-hidden relative hover:scale-105 shadow-lg transition-all duration-300 ease-in-out hover:backdrop-blur-[20px] hover:shadow-[0_0_15px_5px_rgba(255,255,255,0.1)] hover:text-shadow-[0_0_10px_rgba(112,59,247,0.8),0_0_20px_rgba(112,59,247,0.9)]">
-          <img src="./img/place5.png" alt="" class="absolute inset-0 -z-10 h-full w-full object-cover">
-          <p class="urbanist-medium text-4xl text-center">Beach <br> Tours</p>
-          <p class="urbanist-regular text-3xl">80+ Tours</p>
-          <div class="absolute inset-0 w-full -z-10 bg-gradient-to-t from-gray-900/90 to-[#05073C]/0"></div>
-        </a>
-      </div>
-    </section>
+          class="group flex items-center gap-8 px-24 overflow-auto scrollbar-hidden snap-x snap-mandatory scroll-pl-24 relative"
+        >
+          <!-- ellipse -->
+          <div
+            class="absolute left-[15%] size-[190px] bg-[#F2FF41] rounded-full blur-[200px] elipse animate-move-reverse"
+          ></div>
 
-    <!-- featured trips -->
-    <section class="mb-20">
-
-      <div class=" ccontainer space-y-4 mb-20 relative">
-        <p class="urbanist-bold text-5xl leading-[150%]">Featured Trips</p>
-        <p class="urbanist-medium text-xl leading-[150%] text-[#999999]">Explore our handpicked selection of featured
-          Trips.Each
-          listing offers a glimpse into exceptional Places available
-          through Estatein</p>
-        <!-- ellipse -->
-        <div class="absolute left-[25%] top-10 size-[180px] bg-[#33FF00] rounded-full blur-[220px] elipse animate-move-reverse">
-        </div>
-        <div class="absolute right-0 -top-5 size-[320px] bg-[#703BF7] rounded-full blur-[200px] elipse animate-move">
-        </div>
-      </div>
-
-
-
-      <div class="flex items-center gap-8 px-24 overflow-auto scrollbar-hidden snap-x snap-mandatory scroll-pl-24 relative">
-        <!-- ellipse -->
-        <div class="absolute left-[15%] size-[190px] bg-[#F2FF41] rounded-full blur-[200px] elipse animate-move-reverse">
-        </div>
-
-        <div onclick="openCityPage('khiva')"
-          class="space-y-[30px] w-fit p-10 rounded-xl bg-[#141414]/10 border border-white/20 hover:border-white/30 hover:bg-[#141414]/40 transition duration-300 ease-in-out backdrop-blur-md snap-start snap-always cursor-pointer">
-          <img class="rounded-t-lg w-full h-[300px] object-cover" src="./img/khiva.webp" alt="trip">
-          <div class="flex flex-col gap-8">
-            <div class="flex flex-col items-start gap-1.5">
-              <p id="locationName" class="text-4xl urbanist-semibold">Khiva, Khorezm</p>
-              <p class="urbanist-medium text-2xl whitespace-normal w-[432px]">Ancient Walled City – Open-Air Museum</p>
-            </div>
-            <div class="flex items-center jusfity-between gap-[50px]">
-              <div class="flex flex-col items-start gap-0.5">
-                <p class="text-[#999999] text-3xl urbanist-medium">From</p>
-                <p class="urbanist-semibold text-2xl">$ 57</p>
+          <div
+            onclick="openCityPage('khiva')"
+            class="fade space-y-[30px] w-fit p-10 rounded-xl bg-[#141414]/10 border border-white/20 hover:border-white/30 hover:bg-[#141414]/40 transition duration-300 ease-in-out backdrop-blur-md snap-start snap-always cursor-pointer"
+          >
+            <img
+              class="rounded-t-lg w-full h-[300px] object-cover"
+              src="./img/khiva.webp"
+              alt="trip"
+            />
+            <div class="flex flex-col gap-8">
+              <div class="flex flex-col items-start gap-1.5">
+                <p id="locationName" class="text-4xl urbanist-semibold">
+                  Khiva, Khorezm
+                </p>
+                <p class="urbanist-medium text-2xl whitespace-normal w-[432px]">
+                  Ancient Walled City – Open-Air Museum
+                </p>
               </div>
-              <button onclick="openCityPage('khiva')"
-                class="cursor-pointer flex-1 px-6 py-4 rounded-xl bg-[#703BF7] text-lg transition-all duration-200 ease-in-out hover:shadow-[0_0_15px_5px_rgba(112,59,247,0.5)] hover:text-shadow-[0_0_10px_rgba(112,59,247,0.8),0_0_20px_rgba(112,59,247,0.9)] whitespace-nowrap">
-                View Trip Details
-              </button>
+              <div class="flex items-center jusfity-between gap-[50px]">
+                <div class="flex flex-col items-start gap-0.5">
+                  <p class="text-[#999999] text-3xl urbanist-medium">From</p>
+                  <p class="urbanist-semibold text-2xl">$ 57</p>
+                </div>
+                <button
+                  onclick="openCityPage('khiva')"
+                  class="cursor-pointer flex-1 px-6 py-4 rounded-xl bg-[#703BF7] text-lg transition-all duration-200 ease-in-out hover:shadow-[0_0_15px_5px_rgba(112,59,247,0.5)] hover:text-shadow-[0_0_10px_rgba(112,59,247,0.8),0_0_20px_rgba(112,59,247,0.9)] whitespace-nowrap"
+                >
+                  View Trip Details
+                </button>
+              </div>
+              <div class="grid place-content-center">
+                <p class="urbanist-regular text-2xl">4.8 (243)</p>
+              </div>
             </div>
-            <div class="grid place-content-center">
-              <p class="urbanist-regular text-2xl">4.8 (243)</p>
+          </div>
+          <div
+            onclick="openCityPage('registan')"
+            class="fade flex flex-col items-center gap-[30px] w-fit p-10 rounded-xl bg-[#141414]/10 border border-white/20 hover:border-white/30 hover:bg-[#141414]/40 transition duration-300 ease-in-out backdrop-blur-md snap-start snap-always cursor-pointer"
+          >
+            <div class="flex-1">
+              <img
+                class="rounded-t-lg w-full h-[300px] object-cover"
+                src="./img/registanpic.jpg"
+                alt="trip"
+              />
+            </div>
+            <div class="flex flex-col gap-8">
+              <div class="flex flex-col items-start gap-1.5">
+                <p id="locationName" class="text-4xl urbanist-semibold">
+                  Registan, Samarkand
+                </p>
+                <p
+                  class="urbanist-medium text-2xl whitespace-normal w-[432px] max-w-[430px]"
+                >
+                  Pearl of the Silk Road
+                </p>
+              </div>
+              <div class="flex items-center jusfity-between gap-[50px]">
+                <div class="flex flex-col items-start gap-0.5">
+                  <p class="text-[#999999] text-3xl urbanist-medium">From</p>
+                  <p class="urbanist-semibold text-2xl">$ 42</p>
+                </div>
+                <button
+                  onclick="openCityPage('registan')"
+                  class="cursor-pointer flex-1 px-6 py-4 rounded-xl bg-[#703BF7] text-lg transition-all duration-200 ease-in-out hover:shadow-[0_0_15px_5px_rgba(112,59,247,0.5)] hover:text-shadow-[0_0_10px_rgba(112,59,247,0.8),0_0_20px_rgba(112,59,247,0.9)] whitespace-nowrap"
+                >
+                  View Trip Details
+                </button>
+              </div>
+              <div class="grid place-content-center">
+                <p class="urbanist-medium text-2xl">4.5 (168)</p>
+              </div>
+            </div>
+          </div>
+          <div
+            onclick="openCityPage('chimgan')"
+            class="fade space-y-[30px] w-fit p-10 rounded-xl bg-[#141414]/10 border border-white/20 hover:border-white/30 hover:bg-[#141414]/40 transition duration-300 ease-in-out backdrop-blur-md snap-start snap-always cursor-pointer"
+          >
+            <img
+              class="rounded-t-lg w-full h-[300px] object-cover"
+              src="./img/chimgan-skiing.jpg"
+              alt="trip"
+            />
+            <div class="flex flex-col gap-8">
+              <div class="flex flex-col items-start gap-1.5">
+                <p id="locationName" class="text-4xl urbanist-semibold">
+                  Chimgan, tashkent
+                </p>
+                <p
+                  class="urbanist-medium text-2xl whitespace-normal w-[432px] max-w-[430px]"
+                >
+                  "Uzbek Switzerland" - Chimgan!
+                </p>
+              </div>
+              <div class="flex items-center jusfity-between gap-[50px]">
+                <div class="flex flex-col items-start gap-0.5">
+                  <p class="text-[#999999] text-3xl urbanist-medium">From</p>
+                  <p class="urbanist-semibold text-2xl">$ 45</p>
+                </div>
+                <button
+                  onclick="openCityPage('chimgan')"
+                  class="cursor-pointer flex-1 px-6 py-4 rounded-xl bg-[#703BF7] text-lg transition-all duration-200 ease-in-out hover:shadow-[0_0_15px_5px_rgba(112,59,247,0.5)] hover:text-shadow-[0_0_10px_rgba(112,59,247,0.8),0_0_20px_rgba(112,59,247,0.9)] whitespace-nowrap"
+                >
+                  View Trip Details
+                </button>
+              </div>
+              <div class="grid place-content-center">
+                <p class="urbanist-medium text-2xl">4.76 (343)</p>
+              </div>
             </div>
           </div>
         </div>
-        <div  onclick="openCityPage('registan')"
-          class="flex flex-col items-center gap-[30px] w-fit p-10 rounded-xl bg-[#141414]/10 border border-white/20 hover:border-white/30 hover:bg-[#141414]/40 transition duration-300 ease-in-out backdrop-blur-md snap-start snap-always cursor-pointer">
-          <div class="flex-1">
-            <img class="rounded-t-lg w-full h-[300px] object-cover" src="./img/registanpic.jpg" alt="trip">
+
+        <div
+          class="group flex items-center justify-between ccontainer border-[#262626] border-t-2 mt-[50px] pt-5 relative"
+        >
+          <!-- ellipse -->
+          <div
+            class="absolute right-[25%] -top-20 size-[180px] bg-[#F7743B] rounded-full blur-[220px] elipse animate-move"
+          ></div>
+
+          <div class="fade-in flex items-center justify-center gap-2">
+            <p class="text-white urbanist-medium text-xl">01</p>
+            <p class="urbanist-medium text-[#999999] text-xl">of 60</p>
           </div>
-          <div class="flex flex-col gap-8">
-            <div class="flex flex-col items-start gap-1.5">
-              <p id="locationName" class="text-4xl urbanist-semibold">Registan, Samarkand</p>
-              <p class="urbanist-medium text-2xl whitespace-normal w-[432px] max-w-[430px]">
-                Pearl of the Silk Road
+          <div class="fade-in flex items-center gap-2">
+            <button
+              class="rounded-full p-4 border border-[#262626] cursor-pointer hover:border-white/20"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="white"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="size-6 opacity-60"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18"
+                />
+              </svg>
+            </button>
+            <button
+              class="bg-[#1A1A1A] rounded-full p-4 border border-[#262626] cursor-pointer hover:border-white/20"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="white"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="size-6"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- reviews -->
+      <section id="reviews" class="mb-12">
+        <div class="group ccontainer space-y-4 mb-20 relative">
+          <!-- ellipse -->
+          <div
+            class="absolute left-[25%] -bottom-[160%] size-[320px] bg-[#703BF7] rounded-full blur-[200px] elipse animate-move-reverse"
+          ></div>
+
+          <p class="fade-in urbanist-bold text-5xl leading-[150%]">
+            What Our Clients Say
+          </p>
+          <p
+            class="fade-in urbanist-medium text-xl leading-[150%] text-[#999999]"
+          >
+            Read the success stories and heartfelt testimonials from our valued
+            clients. Discover why they chose Estatein for their Trip planning
+          </p>
+        </div>
+
+        <div
+          class="group flex items-center gap-8 px-24 overflow-scroll scrollbar-none snap-x snap-mandatory scroll-pl-24"
+        >
+          <div
+            class="fade flex flex-col items-start gap-10 w-fit p-[50px] rounded-xl bg-[#141414]/10 border border-white/20 backdrop-blur-md snap-start snap-always"
+          >
+            <!-- satisfaction level (stars)-->
+            <div class="flex items-center justify-start gap-2.5">
+              <div
+                class="bg-[#1A1A1A] rounded-full p-4 border border-[#262626]"
+              >
+                <img src="./img/start.svg" alt="review" />
+              </div>
+              <div
+                class="bg-[#1A1A1A] rounded-full p-4 border border-[#262626]"
+              >
+                <img src="./img/start.svg" alt="review" />
+              </div>
+              <div
+                class="bg-[#1A1A1A] rounded-full p-4 border border-[#262626]"
+              >
+                <img src="./img/start.svg" alt="review" />
+              </div>
+              <div
+                class="bg-[#1A1A1A] rounded-full p-4 border border-[#262626]"
+              >
+                <img src="./img/start.svg" alt="review" />
+              </div>
+              <div
+                class="bg-[#1A1A1A] rounded-full p-4 border border-[#262626]"
+              >
+                <img src="./img/start.svg" alt="review" />
+              </div>
+            </div>
+
+            <!-- review content -->
+            <div class="space-y-3 w-[412px]">
+              <p class="urbanist-semibold text-2xl leading-[150%]">
+                Exceptional Service!
+              </p>
+              <p class="urbanist-medium text-lg leading-[150%] text-left">
+                Our experience with Estatein was outstanding. Their team's
+                dedication and professionalism made organizing our trip like a
+                breeze. Highly recommended!
               </p>
             </div>
-            <div class="flex items-center jusfity-between gap-[50px]">
-              <div class="flex flex-col items-start gap-0.5">
-                <p class="text-[#999999] text-3xl urbanist-medium">From</p>
-                <p class="urbanist-semibold text-2xl">$ 42</p>
+
+            <!-- user information -->
+            <div class="flex items-center justify-center gap-3">
+              <div
+                class="size-[60px] rounded-full overflow-hidden cursor-pointer object-cover object-center"
+              >
+                <img src="./img/wade.png" alt="user" />
               </div>
-              <button onclick="openCityPage('registan')"
-                class="cursor-pointer flex-1 px-6 py-4 rounded-xl bg-[#703BF7] text-lg transition-all duration-200 ease-in-out hover:shadow-[0_0_15px_5px_rgba(112,59,247,0.5)] hover:text-shadow-[0_0_10px_rgba(112,59,247,0.8),0_0_20px_rgba(112,59,247,0.9)] whitespace-nowrap">
-                View Trip Details
-              </button>
-            </div>
-            <div class="grid place-content-center">
-              <p class="urbanist-medium text-2xl">4.5 (168)</p>
+              <div class="space-y-0.5">
+                <p class="urbanist-medium text-xl leading-[150%]">
+                  Wade Warren
+                </p>
+                <p
+                  class="urbanist-medium text-lg text-[#999999] leading-[150%]"
+                >
+                  USA, California
+                </p>
+              </div>
             </div>
           </div>
-        </div>
-        <div onclick="openCityPage('chimgan')"
-          class="space-y-[30px] w-fit p-10 rounded-xl bg-[#141414]/10 border border-white/20 hover:border-white/30 hover:bg-[#141414]/40 transition duration-300 ease-in-out backdrop-blur-md snap-start snap-always cursor-pointer">
-          <img class="rounded-t-lg w-full h-[300px] object-cover" src="./img/chimgan-skiing.jpg" alt="trip">
-          <div class="flex flex-col gap-8">
-            <div class="flex flex-col items-start gap-1.5">
-              <p id="locationName" class="text-4xl urbanist-semibold">Chimgan, tashkent</p>
-              <p class="urbanist-medium text-2xl whitespace-normal w-[432px] max-w-[430px]">
-                "Uzbek Switzerland" - Chimgan!
+          <div
+            class="fade flex flex-col items-start gap-10 w-fit p-[50px] rounded-xl bg-[#141414]/10 border border-white/20 backdrop-blur-md snap-start snap-always"
+          >
+            <!-- satisfaction level (stars)-->
+            <div class="flex items-center justify-start gap-2.5">
+              <div
+                class="bg-[#1A1A1A] rounded-full p-4 border border-[#262626]"
+              >
+                <img src="./img/start.svg" alt="review" />
+              </div>
+              <div
+                class="bg-[#1A1A1A] rounded-full p-4 border border-[#262626]"
+              >
+                <img src="./img/start.svg" alt="review" />
+              </div>
+              <div
+                class="bg-[#1A1A1A] rounded-full p-4 border border-[#262626]"
+              >
+                <img src="./img/start.svg" alt="review" />
+              </div>
+              <div
+                class="bg-[#1A1A1A] rounded-full p-4 border border-[#262626]"
+              >
+                <img src="./img/start.svg" alt="review" />
+              </div>
+              <div
+                class="bg-[#1A1A1A] rounded-full p-4 border border-[#262626]"
+              >
+                <img src="./img/start.svg" alt="review" />
+              </div>
+            </div>
+
+            <!-- review content -->
+            <div class="space-y-3 w-[412px]">
+              <p class="urbanist-semibold text-2xl leading-[150%]">
+                Efficient and Reliable
+              </p>
+              <p class="urbanist-medium text-lg leading-[150%] text-left">
+                Our experience with Estatein was outstanding. The tours in this
+                website are great. I had been really enjoy with my family! Will
+                surely recommend to my freind to join this company!
               </p>
             </div>
-            <div class="flex items-center jusfity-between gap-[50px]">
-              <div class="flex flex-col items-start gap-0.5">
-                <p class="text-[#999999] text-3xl urbanist-medium">From</p>
-                <p class="urbanist-semibold text-2xl">$ 45</p>
+
+            <!-- user information -->
+            <div class="flex items-center justify-center gap-3">
+              <div
+                class="size-[60px] rounded-full overflow-hidden cursor-pointer object-cover object-center"
+              >
+                <img src="./img/emelie.png" alt="user" />
               </div>
-              <button onclick="openCityPage('chimgan')"
-                class="cursor-pointer flex-1 px-6 py-4 rounded-xl bg-[#703BF7] text-lg transition-all duration-200 ease-in-out hover:shadow-[0_0_15px_5px_rgba(112,59,247,0.5)] hover:text-shadow-[0_0_10px_rgba(112,59,247,0.8),0_0_20px_rgba(112,59,247,0.9)] whitespace-nowrap">
-                View Trip Details
-              </button>
+              <div class="space-y-0.5">
+                <p class="urbanist-medium text-xl leading-[150%]">
+                  Emelie Thomson
+                </p>
+                <p
+                  class="urbanist-medium text-lg text-[#999999] leading-[150%]"
+                >
+                  USA, Florida
+                </p>
+              </div>
             </div>
-            <div class="grid place-content-center">
-              <p class="urbanist-medium text-2xl">4.76 (343)</p>
+          </div>
+          <div
+            class="fade flex flex-col items-start gap-10 w-fit p-[50px] rounded-xl bg-[#141414]/10 border border-white/20 backdrop-blur-md snap-start snap-always"
+          >
+            <!-- satisfaction level (stars)-->
+            <div class="flex items-center justify-start gap-2.5">
+              <div
+                class="bg-[#1A1A1A] rounded-full p-4 border border-[#262626]"
+              >
+                <img src="./img/start.svg" alt="review" />
+              </div>
+              <div
+                class="bg-[#1A1A1A] rounded-full p-4 border border-[#262626]"
+              >
+                <img src="./img/start.svg" alt="review" />
+              </div>
+              <div
+                class="bg-[#1A1A1A] rounded-full p-4 border border-[#262626]"
+              >
+                <img src="./img/start.svg" alt="review" />
+              </div>
+              <div
+                class="bg-[#1A1A1A] rounded-full p-4 border border-[#262626]"
+              >
+                <img src="./img/start.svg" alt="review" />
+              </div>
+              <div
+                class="bg-[#1A1A1A] rounded-full p-4 border border-[#262626]"
+              >
+                <img src="./img/start.svg" alt="review" />
+              </div>
+            </div>
+
+            <!-- review content -->
+            <div class="space-y-3 w-[412px]">
+              <p class="urbanist-semibold text-2xl leading-[150%]">
+                Trusted Advisors
+              </p>
+              <p class="urbanist-medium text-lg leading-[150%] text-left">
+                Our experience with Estatein was outstanding. The Estatein team
+                guided us through the entire Planning process. Their knowledge
+                and commitment to our needs were impressive. Thank you for your
+                support!
+              </p>
+            </div>
+
+            <!-- user information -->
+            <div class="flex items-center justify-center gap-3">
+              <div
+                class="size-[60px] rounded-full overflow-hidden cursor-pointer object-cover object-center"
+              >
+                <img src="./img/john.png" alt="user" />
+              </div>
+              <div class="space-y-0.5">
+                <p class="urbanist-medium text-xl leading-[150%]">John Mans</p>
+                <p
+                  class="urbanist-medium text-lg text-[#999999] leading-[150%]"
+                >
+                  USA, Nevada
+                </p>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-
-      <div class="flex items-center justify-between ccontainer border-[#262626] border-t-2 mt-[50px] pt-5 relative">
-        <!-- ellipse -->
-        <div class="absolute right-[25%] -top-20 size-[180px] bg-[#F7743B] rounded-full blur-[220px] elipse animate-move">
-        </div>
-
-        <div class="flex items-center justify-center gap-2">
-          <p class="text-white urbanist-medium text-xl">01</p>
-          <p class="urbanist-medium text-[#999999] text-xl">of 60</p>
-        </div>
-        <div class="flex items-center gap-2">
-          <button class="rounded-full p-4 border border-[#262626] cursor-pointer hover:border-white/20">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" stroke-width="1.5"
-              stroke="currentColor" class="size-6 opacity-60">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" />
-            </svg>
-          </button>
-          <button class="bg-[#1A1A1A] rounded-full p-4 border border-[#262626] cursor-pointer hover:border-white/20">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" stroke-width="1.5"
-              stroke="currentColor" class="size-6">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
-            </svg>
-          </button>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- reviews -->
-    <section id="reviews" class="mb-12">
-      <div class=" ccontainer space-y-4 mb-20 relative">
-        <!-- ellipse -->
-        <div class="absolute left-[25%] -bottom-[160%] size-[320px] bg-[#703BF7] rounded-full blur-[200px] elipse animate-move-reverse">
-        </div>
-
-        <p class="urbanist-bold text-5xl leading-[150%]">What Our Clients Say</p>
-        <p class="urbanist-medium text-xl leading-[150%] text-[#999999]">Read the success stories and heartfelt
-          testimonials from our valued clients. Discover why they chose Estatein for their
-          Trip planning</p>
-      </div>
-
-      <div class="flex items-center gap-8 px-24 overflow-scroll scrollbar-none snap-x snap-mandatory scroll-pl-24">
 
         <div
-          class="flex flex-col items-start gap-10 w-fit p-[50px] rounded-xl bg-[#141414]/10 border border-white/20 backdrop-blur-md snap-start snap-always">
-
-          <!-- satisfaction level (stars)-->
-          <div class="flex items-center justify-start gap-2.5">
-            <div class="bg-[#1A1A1A] rounded-full p-4 border border-[#262626]">
-              <img src="./img/start.svg" alt="review">
-            </div>
-            <div class="bg-[#1A1A1A] rounded-full p-4 border border-[#262626]">
-              <img src="./img/start.svg" alt="review">
-            </div>
-            <div class="bg-[#1A1A1A] rounded-full p-4 border border-[#262626]">
-              <img src="./img/start.svg" alt="review">
-            </div>
-            <div class="bg-[#1A1A1A] rounded-full p-4 border border-[#262626]">
-              <img src="./img/start.svg" alt="review">
-            </div>
-            <div class="bg-[#1A1A1A] rounded-full p-4 border border-[#262626]">
-              <img src="./img/start.svg" alt="review">
-            </div>
-
+          class="group flex items-center justify-between ccontainer border-[#262626] border-t-2 mt-[50px] pt-5"
+        >
+          <div class="fade-in flex items-center justify-center gap-2">
+            <p class="text-white urbanist-medium text-xl">01</p>
+            <p class="urbanist-medium text-[#999999] text-xl">of 180</p>
           </div>
-
-          <!-- review content -->
-          <div class="space-y-3 w-[412px]">
-            <p class="urbanist-semibold text-2xl leading-[150%]">
-              Exceptional Service!
-            </p>
-            <p class="urbanist-medium text-lg leading-[150%] text-left">Our experience with Estatein was outstanding.
-              Their team's dedication and professionalism made organizing
-              our trip like
-              a breeze. Highly recommended!</p>
+          <div class="fade-in flex items-center gap-2">
+            <button
+              class="rounded-full p-4 border border-[#262626] cursor-pointer hover:border-white/20"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="white"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="size-6 opacity-60"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18"
+                />
+              </svg>
+            </button>
+            <button
+              class="bg-[#1A1A1A] rounded-full p-4 border border-[#262626] cursor-pointer hover:border-white/20"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="white"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="size-6"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"
+                />
+              </svg>
+            </button>
           </div>
-
-          <!-- user information -->
-          <div class="flex items-center justify-center gap-3">
-            <div class="size-[60px] rounded-full overflow-hidden cursor-pointer object-cover object-center">
-              <img src="./img/wade.png" alt="user">
-            </div>
-            <div class="space-y-0.5">
-              <p class="urbanist-medium text-xl leading-[150%]">Wade Warren</p>
-              <p class="urbanist-medium text-lg text-[#999999] leading-[150%]">USA, California</p>
-            </div>
-          </div>
-
         </div>
-        <div
-          class="flex flex-col items-start gap-10 w-fit p-[50px] rounded-xl bg-[#141414]/10 border border-white/20 backdrop-blur-md snap-start snap-always">
+      </section>
 
-          <!-- satisfaction level (stars)-->
-          <div class="flex items-center justify-start gap-2.5">
-            <div class="bg-[#1A1A1A] rounded-full p-4 border border-[#262626]">
-              <img src="./img/start.svg" alt="review">
-            </div>
-            <div class="bg-[#1A1A1A] rounded-full p-4 border border-[#262626]">
-              <img src="./img/start.svg" alt="review">
-            </div>
-            <div class="bg-[#1A1A1A] rounded-full p-4 border border-[#262626]">
-              <img src="./img/start.svg" alt="review">
-            </div>
-            <div class="bg-[#1A1A1A] rounded-full p-4 border border-[#262626]">
-              <img src="./img/start.svg" alt="review">
-            </div>
-            <div class="bg-[#1A1A1A] rounded-full p-4 border border-[#262626]">
-              <img src="./img/start.svg" alt="review">
-            </div>
+      <!-- ad hook -->
+      <section
+        class="group px-24 py-[100px] flex items-center justify-between gap-14 border-t-2 border-b-2 border-[#262626]"
+      >
+        <article class="space-y-3 max-w-[820px]">
+          <h1 class="fade-in urbanist-semibold text-5xl leading-[150%]">
+            Start Your Real Around The World Journey Today
+          </h1>
+          <p
+            class="fade-in urbanist-medium text-[#999999] text-lg leading-[150%]"
+          >
+            Your dream place is just a click away. Whether you're looking for a
+            new place, a historial place, or a chill place, Estatein is here to
+            assist you every step of the way. Take the first step towards your
+            real trip planner and explore our available properties or get in
+            touch with our team for personalized assistance.
+          </p>
+        </article>
+        <button
+          onclick="window.location.href=`./places.html`"
+          class="fade-in cursor-pointer px-6 py-4 rounded-xl bg-[#703BF7] text-lg transition-all duration-200 ease-in-out hover:shadow-[0_0_15px_5px_rgba(112,59,247,0.5)] hover:text-shadow-[0_0_10px_rgba(112,59,247,0.8),0_0_20px_rgba(112,59,247,0.9)] whitespace-nowrap"
+        >
+          Explore Places
+        </button>
+      </section>
 
+      <!-- footer -->
+      <footer
+        class="group px-24 py-[100px] flex items-start justify-between gap-20"
+      >
+        <!-- email us -->
+        <div class="flex flex-col items-start justify-normal gap-8 relative">
+          <!-- ellipse -->
+          <div
+            class="absolute left-[30%] top-[50%] size-[140px] bg-[#33FF00] rounded-full blur-[200px] elipse animate-move-reverse"
+          ></div>
+
+          <a
+            href="./home.html"
+            class="fade-in-left flex items-end gap-4 urbanist-extrabold text-3xl"
+          >
+            <img src="./img/logo.svg" alt="" />
+            Uzbekation
+          </a>
+          <div
+            class="fade-in-left flex itemscenter gap-2.5 py-4 px-6 rounded-xl bg-[#141414]/10 ring ring-inset ring-white/20 backdrop-blur-md"
+          >
+            <label id="email-icon" for="email" class="cursor-pointer"
+              ><img src="./img/email.svg" alt=""
+            /></label>
+            <input
+              id="email"
+              autocomplete="off"
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Enter Your Email"
+              class="w-[300px] pr-2 bg-transparent border-none ring-none focus:outline-none focus:border-transparent focus:ring-0 caret-[#999999] placeholder-[#999999] urbanist-medium text-lg leading-6 tracking-[-0.6%]"
+            />
+            <button type="submit" class="cursor-pointer" id="send-btn">
+              <img src="./img/Iconly/Bulk/Send.svg" alt="send" />
+            </button>
           </div>
-
-          <!-- review content -->
-          <div class="space-y-3 w-[412px]">
-            <p class="urbanist-semibold text-2xl leading-[150%]">
-              Efficient and Reliable
-            </p>
-            <p class="urbanist-medium text-lg leading-[150%] text-left">Our experience with Estatein was outstanding.
-              The tours in this website are great. I had been really enjoy with my family! Will surely
-              recommend to my freind to join this company!
-            </p>
-          </div>
-
-          <!-- user information -->
-          <div class="flex items-center justify-center gap-3">
-            <div class="size-[60px] rounded-full overflow-hidden cursor-pointer object-cover object-center">
-              <img src="./img/emelie.png" alt="user">
-            </div>
-            <div class="space-y-0.5">
-              <p class="urbanist-medium text-xl leading-[150%]">Emelie Thomson</p>
-              <p class="urbanist-medium text-lg text-[#999999] leading-[150%]">USA, Florida</p>
-            </div>
-          </div>
-
-        </div>
-        <div
-          class="flex flex-col items-start gap-10 w-fit p-[50px] rounded-xl bg-[#141414]/10 border border-white/20 backdrop-blur-md snap-start snap-always">
-
-          <!-- satisfaction level (stars)-->
-          <div class="flex items-center justify-start gap-2.5">
-            <div class="bg-[#1A1A1A] rounded-full p-4 border border-[#262626]">
-              <img src="./img/start.svg" alt="review">
-            </div>
-            <div class="bg-[#1A1A1A] rounded-full p-4 border border-[#262626]">
-              <img src="./img/start.svg" alt="review">
-            </div>
-            <div class="bg-[#1A1A1A] rounded-full p-4 border border-[#262626]">
-              <img src="./img/start.svg" alt="review">
-            </div>
-            <div class="bg-[#1A1A1A] rounded-full p-4 border border-[#262626]">
-              <img src="./img/start.svg" alt="review">
-            </div>
-            <div class="bg-[#1A1A1A] rounded-full p-4 border border-[#262626]">
-              <img src="./img/start.svg" alt="review">
-            </div>
-
-          </div>
-
-          <!-- review content -->
-          <div class="space-y-3 w-[412px]">
-            <p class="urbanist-semibold text-2xl leading-[150%]">
-              Trusted Advisors
-            </p>
-            <p class="urbanist-medium text-lg leading-[150%] text-left">Our experience with Estatein was outstanding.
-              The Estatein team guided us through the entire Planning process. Their knowledge and commitment to our
-              needs were
-              impressive. Thank you for your support!
-            </p>
-          </div>
-
-          <!-- user information -->
-          <div class="flex items-center justify-center gap-3">
-            <div class="size-[60px] rounded-full overflow-hidden cursor-pointer object-cover object-center">
-              <img src="./img/john.png" alt="user">
-            </div>
-            <div class="space-y-0.5">
-              <p class="urbanist-medium text-xl leading-[150%]">John Mans</p>
-              <p class="urbanist-medium text-lg text-[#999999] leading-[150%]">USA, Nevada</p>
-            </div>
-          </div>
-
         </div>
 
+        <!-- menu links -->
+
+        <div class="group flex items-start justify-between gap-10 relative">
+          <!-- ellipse -->
+          <div
+            class="absolute right-[25%] -top-[50%] size-[200px] bg-[#F43BF7] rounded-full blur-[220px] elipse animate-move-reverse"
+          ></div>
+
+          <div class="fade-in space-y-8 urbanist-medium tracking-[-0.6%]">
+            <p class="text-[#999999] text-xl">Places</p>
+            <div class="flex flex-col items-start gap-5 text-lg leading-6">
+              <a
+                class="cursor-pointer hover:underline"
+                href="./places.html#trending"
+                >Trending Places</a
+              >
+              <a
+                class="cursor-pointer hover:underline"
+                href="./places.html#unexplored"
+                >Unexplored Places</a
+              >
+              <a
+                class="cursor-pointer hover:underline"
+                href="./places.html#historical"
+                >Historical Places</a
+              >
+              <a
+                class="cursor-pointer hover:underline"
+                href="./places.html#familytrip"
+                >Family Trip Places</a
+              >
+              <a
+                class="cursor-pointer hover:underline"
+                href="./places.html#faqs"
+                >FAQ’s</a
+              >
+            </div>
+          </div>
+
+          <div class="fade-in space-y-8 urbanist-medium tracking-[-0.6%]">
+            <p class="text-[#999999] text-xl">About Us</p>
+            <div class="flex flex-col items-start gap-5 text-lg leading-6">
+              <a
+                class="cursor-pointer hover:underline"
+                href="./about_us.html#ourstory"
+                >Our Story</a
+              >
+              <a class="cursor-pointer hover:underline" href="./services.html"
+                >Our Works</a
+              >
+              <a
+                class="cursor-pointer hover:underline"
+                href="./about_us.html#ourteam"
+                >Our Team</a
+              >
+              <a class="cursor-pointer hover:underline" href="#reviews"
+                >Our Clients</a
+              >
+            </div>
+          </div>
+
+          <div class="fade-in space-y-8 urbanist-medium tracking-[-0.6%]">
+            <p class="text-[#999999] text-xl">Packages</p>
+            <div class="flex flex-col items-start gap-5 text-lg leading-6">
+              <a
+                class="cursor-pointer hover:underline"
+                href="./places.html#premiumplaces"
+                >Premium Packages</a
+              >
+              <a
+                class="cursor-pointer hover:underline"
+                href="./places.html#budgetplaces"
+                >Budget Packages</a
+              >
+            </div>
+          </div>
+
+          <div class="fade-in space-y-8 urbanist-medium tracking-[-0.6%]">
+            <p class="text-[#999999] text-xl">Contact Us</p>
+            <div class="flex flex-col items-start gap-5 text-lg leading-6">
+              <a
+                class="cursor-pointer hover:underline"
+                href="./contact_us.html#contactform"
+                >Contact Form</a
+              >
+              <a
+                class="cursor-pointer hover:underline"
+                href="./contact_us.html#getintouch"
+                >Our Officess</a
+              >
+            </div>
+          </div>
+        </div>
+      </footer>
+    </main>
+
+    <!-- footer: copyright and social links -->
+    <section class="bg-[#1A1A1A] py-4 px-24 flex items-center justify-between">
+      <div
+        class="group flex items-center gap-10 py-2.5 urbanist-medium tracking-[-0.6%] text-lg leading-6"
+      >
+        <p class="fade">@20234Tripsy. All Rights Reserved.</p>
+        <a class="fade cursor-pointer hover:underline" href="#"
+          >Terms & Conditions</a
+        >
       </div>
 
-      <div class="flex items-center justify-between ccontainer border-[#262626] border-t-2 mt-[50px] pt-5">
-        <div class="flex items-center justify-center gap-2">
-          <p class="text-white urbanist-medium text-xl">01</p>
-          <p class="urbanist-medium text-[#999999] text-xl">of 180</p>
-        </div>
-        <div class="flex items-center gap-2">
-          <button class="rounded-full p-4 border border-[#262626] cursor-pointer hover:border-white/20">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" stroke-width="1.5"
-              stroke="currentColor" class="size-6 opacity-60">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" />
-            </svg>
-          </button>
-          <button class="bg-[#1A1A1A] rounded-full p-4 border border-[#262626] cursor-pointer hover:border-white/20">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" stroke-width="1.5"
-              stroke="currentColor" class="size-6">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
-            </svg>
-          </button>
-        </div>
-
-      </div>
-
-    </section>
-
-    <!-- ad hook -->
-    <section class="px-24 py-[100px] flex items-center justify-between gap-14 border-t-2 border-b-2 border-[#262626] ">
-
-      <article class="space-y-3 max-w-[820px]">
-        <h1 class="urbanist-semibold text-5xl leading-[150%]">
-          Start Your Real Around The World Journey Today
-        </h1>
-        <p class="urbanist-medium text-[#999999] text-lg leading-[150%]">Your dream place is just a click away. Whether
-          you're looking for a new place, a historial place, or a chill place,
-          Estatein is here to assist you every step of the way. Take the first step towards your real trip planner and
-          explore our
-          available properties or get in touch with our team for personalized assistance.</p>
-      </article>
-      <button onclick="window.location.href=`./places.html`"
-        class="cursor-pointer px-6 py-4 rounded-xl bg-[#703BF7] text-lg transition-all duration-200 ease-in-out hover:shadow-[0_0_15px_5px_rgba(112,59,247,0.5)] hover:text-shadow-[0_0_10px_rgba(112,59,247,0.8),0_0_20px_rgba(112,59,247,0.9)] whitespace-nowrap">
-        Explore Places
-      </button>
-
-    </section>
-
-    <!-- footer -->
-    <footer class="px-24 py-[100px] flex items-start justify-between gap-20">
-
-      <!-- email us -->
-      <div class="flex flex-col items-start justify-normal gap-8 relative">
-        <!-- ellipse -->
-        <div
-          class="absolute left-[30%] top-[50%] size-[140px] bg-[#33FF00] rounded-full blur-[200px] elipse animate-move-reverse">
-        </div>
-
-        <a href="./home.html" class=" flex items-end gap-4 urbanist-extrabold text-3xl">
-          <img src="./img/logo.svg" alt="">
-          Uzbekation
+      <div class="group flex items-center gap-2.5">
+        <a
+          href="#"
+          class="fade rounded-full p-4 bg-[#141414] overflow-hidden object-cover object-center hover:scale-110 hover:ring hover:ring-white/10 transition-transform duration-100 ease-in-out"
+        >
+          <img class="size-6" src="./img/socials/facebook.svg" alt="facebook" />
         </a>
-        <div
-          class="flex itemscenter gap-2.5 py-4 px-6 rounded-xl bg-[#141414]/10 ring ring-inset ring-white/20 backdrop-blur-md">
-          <label id="email-icon" for="email" class="cursor-pointer"><img src="./img/email.svg" alt=""></label>
-          <input id="email" autocomplete="off" type="email" name="email" id="email" placeholder="Enter Your Email"
-            class="w-[300px] pr-2 bg-transparent border-none ring-none focus:outline-none focus:border-transparent focus:ring-0 caret-[#999999] placeholder-[#999999] urbanist-medium text-lg leading-6 tracking-[-0.6%]">
-          <button type="submit" class="cursor-pointer" id="send-btn">
-            <img src="./img/Iconly/Bulk/Send.svg" alt="send">
-          </button>
-        </div>
+        <a
+          href="#"
+          class="fade rounded-full p-4 bg-[#141414] overflow-hidden object-cover object-center hover:scale-110 hover:ring hover:ring-white/10 transition-transform duration-100 ease-in-out"
+        >
+          <img class="size-6" src="./img/socials/twitter.svg" alt="facebook" />
+        </a>
+        <a
+          href="#"
+          class="fade rounded-full p-4 bg-[#141414] overflow-hidden object-cover object-center hover:scale-110 hover:ring hover:ring-white/10 transition-transform duration-100 ease-in-out"
+        >
+          <img class="size-6" src="./img/socials/linkedin.svg" alt="facebook" />
+        </a>
+        <a
+          href="#"
+          class="fade rounded-full p-4 bg-[#141414] overflow-hidden object-cover object-center hover:scale-110 hover:ring hover:ring-white/10 transition-transform duration-100 ease-in-out"
+        >
+          <img class="size-6" src="./img/socials/youtube.svg" alt="facebook" />
+        </a>
       </div>
+    </section>
 
-      <!-- menu links -->
-
-      <div class="flex items-start justify-between gap-10 relative">
-        <!-- ellipse -->
-        <div
-          class="absolute right-[25%] -top-[50%] size-[200px] bg-[#F43BF7] rounded-full blur-[220px] elipse animate-move-reverse">
-        </div>
-        
-
-        <div class="space-y-8 urbanist-medium tracking-[-0.6%]">
-          <p class=" text-[#999999] text-xl">Places</p>
-          <div class="flex flex-col items-start gap-5 text-lg  leading-6 ">
-            <a class="cursor-pointer hover:underline" href="./places.html#trending">Trending Places</a>
-            <a class="cursor-pointer hover:underline" href="./places.html#unexplored">Unexplored Places</a>
-            <a class="cursor-pointer hover:underline" href="./places.html#historical">Historical Places</a>
-            <a class="cursor-pointer hover:underline" href="./places.html#familytrip">Family Trip Places</a>
-            <a class="cursor-pointer hover:underline" href="./places.html#faqs">FAQ’s</a>
-
-          </div>
-        </div>
-
-        <div class="space-y-8 urbanist-medium tracking-[-0.6%]">
-          <p class=" text-[#999999] text-xl">About Us</p>
-          <div class="flex flex-col items-start gap-5 text-lg  leading-6 ">
-            <a class="cursor-pointer hover:underline" href="./about_us.html#ourstory">Our Story</a>
-            <a class="cursor-pointer hover:underline" href="./services.html">Our Works</a>
-            <a class="cursor-pointer hover:underline" href="./about_us.html#ourteam">Our Team</a>
-            <a class="cursor-pointer hover:underline" href="#reviews">Our Clients</a>
-
-          </div>
-        </div>
-
-        <div class="space-y-8 urbanist-medium tracking-[-0.6%]">
-          <p class=" text-[#999999] text-xl">Packages</p>
-          <div class="flex flex-col items-start gap-5 text-lg  leading-6 ">
-            <a class="cursor-pointer hover:underline" href="./places.html#premiumplaces">Premium Packages</a>
-            <a class="cursor-pointer hover:underline" href="./places.html#budgetplaces">Budget Packages</a>
-          </div>
-        </div>
-
-        <div class="space-y-8 urbanist-medium tracking-[-0.6%]">
-          <p class=" text-[#999999] text-xl">Contact Us</p>
-          <div class="flex flex-col items-start gap-5 text-lg  leading-6 ">
-            <a class="cursor-pointer hover:underline" href="./contact_us.html#contactform">Contact Form</a>
-            <a class="cursor-pointer hover:underline" href="./contact_us.html#getintouch">Our Officess</a>
-          </div>
-        </div>
-
-      </div>
-    </footer>
-  </main>
-
-  <!-- footer: copyright and social links -->
-  <section class="bg-[#1A1A1A] py-4 px-24 flex items-center justify-between">
-    <div class="flex items-center gap-10 py-2.5 urbanist-medium tracking-[-0.6%] text-lg leading-6">
-      <p>@20234Tripsy. All Rights Reserved.</p>
-      <a class="cursor-pointer hover:underline" href="#">Terms & Conditions</a>
-    </div>
-
-    <div class="flex items-center gap-2.5">
-      <a href="#"
-        class="rounded-full p-4 bg-[#141414] overflow-hidden object-cover object-center hover:scale-110 hover:ring hover:ring-white/10 transition-transform duration-100 ease-in-out">
-        <img class="size-6" src="./img/socials/facebook.svg" alt="facebook">
-      </a>
-      <a href="#"
-        class="rounded-full p-4 bg-[#141414] overflow-hidden object-cover object-center hover:scale-110 hover:ring hover:ring-white/10 transition-transform duration-100 ease-in-out">
-        <img class="size-6" src="./img/socials/twitter.svg" alt="facebook">
-      </a>
-      <a href="#"
-        class="rounded-full p-4 bg-[#141414] overflow-hidden object-cover object-center hover:scale-110 hover:ring hover:ring-white/10 transition-transform duration-100 ease-in-out">
-        <img class="size-6" src="./img/socials/linkedin.svg" alt="facebook">
-      </a>
-      <a href="#"
-        class="rounded-full p-4 bg-[#141414] overflow-hidden object-cover object-center hover:scale-110 hover:ring hover:ring-white/10 transition-transform duration-100 ease-in-out">
-        <img class="size-6" src="./img/socials/youtube.svg" alt="facebook">
-      </a>
-    </div>
-
-  </section>
-
-  <script src="./js/main.js"></script>
-  <script src="./js/sendmail.js"></script>
-</body>
-
+    <script src="./js/main.js"></script>
+    <script src="./js/sendmail.js"></script>
+  </body>
 </html>

@@ -119,3 +119,34 @@ try {
   console.log(err);
   
 }
+
+// Select all sections
+const sections = document.querySelectorAll('.group');
+
+// Create an Intersection Observer
+const observer = new IntersectionObserver((entries, observer) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      // Get all fade-in elements (both types) in this section
+      const fadeElements = entry.target.querySelectorAll('.fade-in, .fade-in-left, .fade');
+
+      // Wait 1 second (1000ms) before starting animations
+      setTimeout(() => {
+        // Stagger animations with 300ms delay between each element
+        fadeElements.forEach((element, index) => {
+          setTimeout(() => {
+            element.classList.add('visible');
+          }, index * 200);
+        });
+      }, 500); // 1s initial delay
+
+      // Stop observing this section
+      observer.unobserve(entry.target);
+    }
+  });
+}, {
+  threshold: 0.6 // Trigger when 10% of the section is visible
+});
+
+// Observe each section
+sections.forEach(section => observer.observe(section));
