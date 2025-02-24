@@ -1,0 +1,173 @@
+/* modal styles */
+.modal {
+  position: absolute;
+  top: 15%;
+  left: 100%;
+  opacity: 0;
+  transition: transform 0.5s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.modal.active {
+  left: 30%;
+  opacity: 1;
+}
+
+.final-modal.active {
+  left: 40%;
+  top:25%;
+  opacity: 1;
+}
+
+.modal.exit-left {
+  transform: translateX(-100%);
+  opacity: 0;
+}
+
+.modal.enter-right {
+  transform: translateX(100%);
+}
+
+/* styles for custom dropdown menu in booking form modal */
+.select-button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0.675em 1em;
+  border: 1px solid #000;
+  border-radius: 0.25rem;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.arrow {
+  display: inline-block;
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  border-top: 16px solid #a685fa;
+  transition: transform ease-in-out 0.3s;
+}
+
+.select-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  list-style: none;
+  padding: 10px;
+  margin: 10px 0 0;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.select-dropdown::-webkit-scrollbar {
+  display: none;
+}
+.select-dropdown::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 25px;
+}
+
+.select-dropdown::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 25px;
+}
+
+.select-dropdown li {
+  padding: 10px;
+  cursor: pointer;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+/* Highlight the selected option */
+.select-dropdown li.selected {
+  background-color: #a585fa;
+  border-radius: 4px;
+}
+
+.select-button[aria-expanded="true"] .arrow {
+  transform: rotate(180deg);
+}
+
+/*styles for radio inputs in additional details modal */
+.form-control {
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 0.5em;
+}
+
+.form-control + .form-control {
+  margin-top: 1em;
+}
+
+.form-control:focus-within {
+  color: #a585fa;
+}
+
+input[type="checkbox"] {
+  /* Add if not using autoprefixer */
+  -webkit-appearance: none;
+  /* Remove most all native input styles */
+  appearance: none;
+  /* For iOS < 15 */
+  background-color: transparent;
+  /* Not removed via appearance */
+  margin: 0;
+
+  font-size: 24px;
+  color: #a585fa;
+  width: 1.15em;
+  height: 1.15em;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 30%;
+  transform: translateY(-0.075em);
+  margin-top: 5px;
+  display: grid;
+  place-content: center;
+}
+
+input[type="checkbox"]::before {
+  content: "";
+  width: 0.7em;
+  height: 0.7em;
+  border-radius: 30%;
+  transform: scale(0);
+  transition: 120ms transform ease-in-out;
+  box-shadow: inset 1em 1em #a585fa;
+  /* Windows High Contrast Mode */
+  background-color: CanvasText;
+}
+
+input[type="checkbox"]:checked::before {
+  transform: scale(1);
+}
+
+
+/* styles for billing details modal */
+.payment-option {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    background-color: white;
+    border-radius: 12px;
+    padding: 10px 15px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+    cursor: pointer;
+  }
+
+  .payment-option:hover {
+    transform: scale(1.02);
+  }
+
+  .selected {
+    background-color: #9B51E0; /* Light Purple */
+    color: white;
+  }
