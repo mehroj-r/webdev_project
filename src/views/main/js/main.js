@@ -118,3 +118,28 @@ try {
 } catch (err) {
   console.log(err);
 }
+
+// Animation trigger
+const sections = document.querySelectorAll('.groups');
+
+const observer = new IntersectionObserver((entries, observer) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const fadeElements = entry.target.querySelectorAll('.fade-in, .fade-in-left, .fade');
+
+      setTimeout(() => {
+        fadeElements.forEach((element, index) => {
+          setTimeout(() => {
+            element.classList.add('visible');
+          }, index * 400);
+        });
+      }, 500);
+
+      observer.unobserve(entry.target);
+    }
+  });
+}, {
+  threshold: 0.6
+});
+
+sections.forEach(section => observer.observe(section));

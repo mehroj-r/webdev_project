@@ -89,7 +89,7 @@
   <main>
 
     <!--mainstage hook -->
-    <section class="flex flex-col items-start justify-center relative">
+    <section class="flex flex-col items-start justify-center relative groups">
       <div class="absolute inset-0 bg-gradient-to-r from-[#141414] to-transparent "></div>
       <div class="absolute inset-x-0 bottom-0 h-[80px] bg-gradient-to-t from-[#141414] to-transparent "></div>
       <img class=" w-full -z-10" src="./img/bg-places.png" alt="">
@@ -97,11 +97,11 @@
       <div class="flex flex-col items-start justify-start gap-20 absolute ccontainer top-[40%]">
         <!-- main info of event -->
         <div class="flex flex-col items-start justify-center gap-4 max-w-[600px]">
-          <div class="text-5xl waterbrush-regular">
+          <div class="text-5xl waterbrush-regular fade-in-left">
             Explorer and Travel
           </div>
-          <div class="text-[86px] worksans-bold">Places</div>
-          <div class="text-base urbanist-medium">
+          <div class="text-[86px] worksans-bold fade-in-left">Places</div>
+          <div class="text-base urbanist-medium fade-in-left">
             ✨ Discover. Experience. Remember.
           </div>
         </div>
@@ -109,8 +109,8 @@
     </section>
 
     <!-- top places -->
-    <section id="trending" class="px-20 mb-24">
-      <h1 class="text text-white text-5xl md:text-7xl font-semibold mb-10 ml-8">
+    <section id="trending" class="px-20 mb-24 groups">
+      <h1 class="text text-white text-5xl md:text-7xl font-semibold mb-10 ml-8 fade-in-left">
         Top places
       </h1>
       <div class="grid grid-cols-3 md:grid-cols-1 gap-5 urbanist-semibold relative">
@@ -123,7 +123,7 @@
         <div class="absolute right-10 top-10 size-[180px] bg-[#703BF7] rounded-full blur-[220px] elipse animate-move">
         </div>
         <div onclick="openCityPage('mirarab')"
-          class="space-y-5 md:p-5 p-8 rounded-xl bg-[#141414]/10 border border-white/20 hover:border-white/30 hover:bg-[#141414]/40 hover:scale-[102%] transition duration-300 ease-in-out backdrop-blur-md cursor-pointer group">
+          class="space-y-5 md:p-5 p-8 rounded-xl bg-[#141414]/10 border border-white/20 hover:border-white/30 hover:bg-[#141414]/40 hover:scale-[102%] transition duration-300 ease-in-out backdrop-blur-md cursor-pointer group fade">
           <img class="rounded-md w-full object-cover" src="./img/places/mirarab.png" alt="trip">
           <div class="flex items-center justify-between">
             <p class="text-xl urbanist-semibold text-left">Mir Arab madrasah</p>
@@ -135,7 +135,7 @@
           </div>
         </div>
         <div onclick="openCityPage('registan')"
-          class="space-y-5 md:p-5 p-8 rounded-xl bg-[#141414]/10 border border-white/20 hover:border-white/30 hover:bg-[#141414]/40 hover:scale-[102%] transition duration-300 ease-in-out backdrop-blur-md cursor-pointer group">
+          class="space-y-5 md:p-5 p-8 rounded-xl bg-[#141414]/10 border border-white/20 hover:border-white/30 hover:bg-[#141414]/40 hover:scale-[102%] transition duration-300 ease-in-out backdrop-blur-md cursor-pointer group fade">
           <img class="rounded-md w-full object-cover" src="./img/places/registan.png" alt="trip">
           <div class="flex items-center justify-between">
             <p class="text-xl urbanist-semibold text-left">Registan Square</p>
@@ -147,7 +147,7 @@
           </div>
         </div>
         <div onclick="openCityPage('khiva')"
-          class="space-y-5 md:p-5 p-8 rounded-xl bg-[#141414]/10 border border-white/20 hover:border-white/30 hover:bg-[#141414]/40 hover:scale-[102%] transition duration-300 ease-in-out backdrop-blur-md cursor-pointer group">
+          class="space-y-5 md:p-5 p-8 rounded-xl bg-[#141414]/10 border border-white/20 hover:border-white/30 hover:bg-[#141414]/40 hover:scale-[102%] transition duration-300 ease-in-out backdrop-blur-md cursor-pointer group fade">
           <img class="rounded-md w-full object-cover" src="./img/places/khiva.png" alt="trip">
           <div class="flex items-center justify-between">
             <p class="text-xl urbanist-semibold text-left"> Castle "Ichan"</p>
@@ -162,8 +162,8 @@
     </section>
 
     <!-- unexplored places -->
-    <section id="unexplored" class="px-20 mb-24">
-      <h1 class="text text-white text-5xl md:text-7xl font-semibold mb-10 ml-8">
+    <section id="unexplored" class="px-20 mb-24 groups">
+      <h1 class="text text-white text-5xl md:text-7xl font-semibold mb-10 ml-8 fade-in-left">
         Unexplored places
       </h1>
       <div class="grid grid-cols-3 md:grid-cols-1 gap-5 urbanist-semibold mb-20 relative">
@@ -173,7 +173,7 @@
         <div class="absolute -right-20 -bottom-20 size-[320px] bg-[#703BF7] rounded-full blur-[180px] elipse animate-move">
         </div>
         <div onclick="openCityPage('aralsea')"
-          class="space-y-5 md:p-5 p-8 rounded-xl bg-[#141414]/10 border border-white/20 hover:border-white/30 hover:bg-[#141414]/40 hover:scale-[102%] transition duration-300 ease-in-out backdrop-blur-md cursor-pointer group">
+          class="space-y-5 md:p-5 p-8 rounded-xl bg-[#141414]/10 border border-white/20 hover:border-white/30 hover:bg-[#141414]/40 hover:scale-[102%] transition duration-300 ease-in-out backdrop-blur-md cursor-pointer group fade">
           <img class="rounded-md w-full object-cover" src="./img/places/aralsea.png" alt="trip">
           <div class="flex items-center justify-between">
             <p class="text-xl urbanist-semibold text-left">Aral Sea</p>
@@ -185,7 +185,7 @@
           </div>
         </div>
         <div onclick="openCityPage('labikhovuz')"
-          class="space-y-5 md:p-5 p-8 rounded-xl bg-[#141414]/10 border border-white/20 hover:border-white/30 hover:bg-[#141414]/40 hover:scale-[102%] transition duration-300 ease-in-out backdrop-blur-md cursor-pointer group">
+          class="space-y-5 md:p-5 p-8 rounded-xl bg-[#141414]/10 border border-white/20 hover:border-white/30 hover:bg-[#141414]/40 hover:scale-[102%] transition duration-300 ease-in-out backdrop-blur-md cursor-pointer group fade">
           <img class="rounded-md w-full object-cover" src="./img/places/labikhovuz.png" alt="trip">
           <div class="flex items-center justify-between">
             <p class="text-xl urbanist-semibold text-left">Labi Khovuz Ensemble</p>
@@ -197,7 +197,7 @@
           </div>
         </div>
         <div onclick="openCityPage('ark')"
-          class="space-y-5 md:p-5 p-8 rounded-xl bg-[#141414]/10 border border-white/20 hover:border-white/30 hover:bg-[#141414]/40 hover:scale-[102%] transition duration-300 ease-in-out backdrop-blur-md cursor-pointer group">
+          class="space-y-5 md:p-5 p-8 rounded-xl bg-[#141414]/10 border border-white/20 hover:border-white/30 hover:bg-[#141414]/40 hover:scale-[102%] transition duration-300 ease-in-out backdrop-blur-md cursor-pointer group fade">
           <img class="rounded-md w-full object-cover" src="./img/places/ark.png" alt="trip">
           <div class="flex items-center justify-between">
             <p class="text-xl urbanist-semibold text-left">Ark in Bukhara</p>
@@ -213,8 +213,8 @@
     </section>
 
     <!-- Historical places -->
-    <section id="historical" class="px-20 mb-24">
-      <h1 class="text text-white text-5xl md:text-7xl font-semibold mb-10 ml-8">
+    <section id="historical" class="px-20 mb-24 groups">
+      <h1 class="text text-white text-5xl md:text-7xl font-semibold mb-10 ml-8 fade-in-left">
         Historical places
       </h1>
       <div class="grid grid-cols-3 md:grid-cols-1 gap-5 urbanist-semibold mb-20 relative">
@@ -222,7 +222,7 @@
         <div class="absolute -left-[10%] -bottom-[15%] size-[160px] bg-[#F2FF41] rounded-full blur-[200px] elipse animate-move-reverse">
         </div>
         <div onclick="openCityPage('kalyan')"
-          class="space-y-5 md:p-5 p-8 rounded-xl bg-[#141414]/10 border border-white/20 hover:border-white/30 hover:bg-[#141414]/40 hover:scale-[102%] transition duration-300 ease-in-out backdrop-blur-md cursor-pointer group">
+          class="space-y-5 md:p-5 p-8 rounded-xl bg-[#141414]/10 border border-white/20 hover:border-white/30 hover:bg-[#141414]/40 hover:scale-[102%] transition duration-300 ease-in-out backdrop-blur-md cursor-pointer group fade">
           <img class="rounded-md w-full object-cover" src="./img/places/kalyan.png" alt="trip">
           <div class="flex items-center justify-between">
             <p class="text-xl urbanist-semibold text-left">Tower "Kalyan"</p>
@@ -234,7 +234,7 @@
           </div>
         </div>
         <div onclick="openCityPage('bibikhonim')"
-          class="space-y-5 md:p-5 p-8 rounded-xl bg-[#141414]/10 border border-white/20 hover:border-white/30 hover:bg-[#141414]/40 hover:scale-[102%] transition duration-300 ease-in-out backdrop-blur-md cursor-pointer group">
+          class="space-y-5 md:p-5 p-8 rounded-xl bg-[#141414]/10 border border-white/20 hover:border-white/30 hover:bg-[#141414]/40 hover:scale-[102%] transition duration-300 ease-in-out backdrop-blur-md cursor-pointer group fade">
           <img class="rounded-md w-full object-cover" src="./img/places/bibikhonim.png" alt="trip">
           <div class="flex items-center justify-between">
             <p class="text-xl urbanist-semibold text-left">Bibikhonim Mosque</p>
@@ -246,7 +246,7 @@
           </div>
         </div>
         <div onclick="openCityPage('shokhizinda')"
-          class="space-y-5 md:p-5 p-8 rounded-xl bg-[#141414]/10 border border-white/20 hover:border-white/30 hover:bg-[#141414]/40 hover:scale-[102%] transition duration-300 ease-in-out backdrop-blur-md cursor-pointer group">
+          class="space-y-5 md:p-5 p-8 rounded-xl bg-[#141414]/10 border border-white/20 hover:border-white/30 hover:bg-[#141414]/40 hover:scale-[102%] transition duration-300 ease-in-out backdrop-blur-md cursor-pointer group fade">
           <img class="rounded-md w-full object-cover" src="./img/places/shokhizinda.png" alt="trip">
           <div class="flex items-center justify-between">
             <p class="text-xl urbanist-semibold text-left">"Shokhi Zinda" Mausoleum</p>
@@ -261,8 +261,8 @@
     </section>
 
     <!-- family trip places -->
-    <section id="familytrip" class="px-20 mb-24">
-      <h1 class="text text-white text-5xl md:text-7xl font-semibold mb-10 ml-8">
+    <section id="familytrip" class="px-20 mb-24 groups">
+      <h1 class="text text-white text-5xl md:text-7xl font-semibold mb-10 ml-8 fade-in-left">
         Family Trip places
       </h1>
       <div class="grid grid-cols-3 md:grid-cols-1 gap-5 urbanist-semibold mb-20 relative">
@@ -274,7 +274,7 @@
         </div>
         <!-- cards -->
         <div onclick="openCityPage('charvak')"
-          class="space-y-5 md:p-5 p-8 rounded-xl bg-[#141414]/10 border border-white/20 hover:border-white/30 hover:bg-[#141414]/40 hover:scale-[102%] transition duration-300 ease-in-out backdrop-blur-md cursor-pointer group">
+          class="space-y-5 md:p-5 p-8 rounded-xl bg-[#141414]/10 border border-white/20 hover:border-white/30 hover:bg-[#141414]/40 hover:scale-[102%] transition duration-300 ease-in-out backdrop-blur-md cursor-pointer group fade">
           <img class="rounded-md w-full object-cover" src="./img/places/charvak.png" alt="trip">
           <div class="flex items-center justify-between">
             <p class="text-xl urbanist-semibold text-left"> Charvak resort</p>
@@ -286,7 +286,7 @@
           </div>
         </div>
         <div onclick="openCityPage('fergana')"
-          class="space-y-5 md:p-5 p-8 rounded-xl bg-[#141414]/10 border border-white/20 hover:border-white/30 hover:bg-[#141414]/40 hover:scale-[102%] transition duration-300 ease-in-out backdrop-blur-md cursor-pointer group">
+          class="space-y-5 md:p-5 p-8 rounded-xl bg-[#141414]/10 border border-white/20 hover:border-white/30 hover:bg-[#141414]/40 hover:scale-[102%] transition duration-300 ease-in-out backdrop-blur-md cursor-pointer group fade">
           <img class="rounded-md w-full object-cover" src="./img/places/fergana.png" alt="trip">
           <div class="flex items-center justify-between">
             <p class="text-xl urbanist-semibold text-left">Fergana Valley</p>
@@ -298,7 +298,7 @@
           </div>
         </div>
         <div onclick="openCityPage('chimgan')"
-          class="space-y-5 md:p-5 p-8 rounded-xl bg-[#141414]/10 border border-white/20 hover:border-white/30 hover:bg-[#141414]/40 hover:scale-[102%] transition duration-300 ease-in-out backdrop-blur-md cursor-pointer group">
+          class="space-y-5 md:p-5 p-8 rounded-xl bg-[#141414]/10 border border-white/20 hover:border-white/30 hover:bg-[#141414]/40 hover:scale-[102%] transition duration-300 ease-in-out backdrop-blur-md cursor-pointer group fade">
           <img class="rounded-md w-full object-cover" src="./img/places/chimgan.png" alt="trip">
           <div class="flex items-center justify-between">
             <p class="text-xl urbanist-semibold text-left">Chimgan Mountains</p>
@@ -313,16 +313,16 @@
     </section>
 
     <!-- faqs section -->
-    <section id="faqs" class="px-24 py-[100px] flex flex-col items-center justify-between gap-8 border-t-2 border-b-2 border-[#262626]">
+    <section id="faqs" class="px-24 py-[100px] flex flex-col items-center justify-between gap-8 border-t-2 border-b-2 border-[#262626] groups">
 
-      <h1 class="text text-white text-5xl md:text-7xl font-semibold">
+      <h1 class="text text-white text-5xl md:text-7xl font-semibold fade-in">
         FAQs
       </h1>
 
       <div class="faq-section">
         <div class="faq">
           <div class="faq-question-container">
-            <span class="faq-question">What is your return policy?</span>
+            <span class="faq-question fade-in-left">What is your return policy?</span>
             <svg class="openimg opacity-70" alt="Toggle Answer" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
               class="size-6">
               <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
@@ -338,7 +338,7 @@
       
         <div class="faq">
           <div class="faq-question-container">
-            <span class="faq-question">How long does everage trip take?</span>
+            <span class="faq-question fade-in-left">How long does everage trip take?</span>
             <svg class="openimg opacity-70" alt="Toggle Answer" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
               stroke-width="2" stroke="currentColor" class="size-6">
               <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
@@ -356,7 +356,7 @@
     </section>
 
     <!-- footer -->
-    <footer class="px-24 py-[100px] flex items-start justify-between gap-20">
+    <footer class="px-24 py-[100px] flex items-start justify-between gap-20 groups">
     
       <!-- email us -->
       <div class="flex flex-col items-start justify-normal gap-8 relative">
@@ -365,12 +365,12 @@
           class="absolute left-[30%] top-[50%] size-[140px] bg-[#33FF00] rounded-full blur-[200px] elipse animate-move-reverse">
         </div>
         <!-- logo -->
-        <a href="./home.html" class=" flex items-end gap-4 urbanist-extrabold text-3xl">
+        <a href="./home.html" class=" flex items-end gap-4 urbanist-extrabold text-3xl fade-in-left">
           <img src="./img/logo.svg" alt="">
           Uzbekation
         </a>
         <div
-          class="flex itemscenter gap-2.5 py-4 px-6 rounded-xl bg-[#141414]/10 ring-1 focus-within:ring-[#703BF7] ring-inset ring-white/20 backdrop-blur-md">
+          class="flex itemscenter gap-2.5 py-4 px-6 rounded-xl bg-[#141414]/10 ring-1 focus-within:ring-[#703BF7] ring-inset ring-white/20 backdrop-blur-md fade-in-left">
           <label id="email-icon" for="email" class="cursor-pointer"><img src="./img/email.svg" alt=""></label>
           <input id="email" autocomplete="off" type="email" name="email" id="email" placeholder="Enter Your Email"
             class="w-[300px] pr-2 bg-transparent border-none ring-none focus:outline-none focus:border-transparent focus:ring-0 caret-[#703BF7] placeholder-[#999999] urbanist-medium text-lg leading-6 tracking-[-0.6%]">
@@ -389,7 +389,7 @@
         </div>
     
     
-        <div class="space-y-8 urbanist-medium tracking-[-0.6%]">
+        <div class="space-y-8 urbanist-medium tracking-[-0.6%] fade-in">
           <p class=" text-[#999999] text-xl">Places</p>
           <div class="flex flex-col items-start gap-5 text-lg  leading-6 ">
             <a class="cursor-pointer hover:underline" href="./places.html#trending">Trending Places</a>
@@ -401,7 +401,7 @@
           </div>
         </div>
     
-        <div class="space-y-8 urbanist-medium tracking-[-0.6%]">
+        <div class="space-y-8 urbanist-medium tracking-[-0.6%] fade-in">
           <p class=" text-[#999999] text-xl">About Us</p>
           <div class="flex flex-col items-start gap-5 text-lg  leading-6 ">
             <a class="cursor-pointer hover:underline" href="./about_us.html#ourstory">Our Story</a>
@@ -412,7 +412,7 @@
           </div>
         </div>
     
-        <div class="space-y-8 urbanist-medium tracking-[-0.6%]">
+        <div class="space-y-8 urbanist-medium tracking-[-0.6%] fade-in">
           <p class=" text-[#999999] text-xl">Packages</p>
           <div class="flex flex-col items-start gap-5 text-lg  leading-6 ">
             <a class="cursor-pointer hover:underline" href="./places.html#premiumplaces">Premium Packages</a>
@@ -420,7 +420,7 @@
           </div>
         </div>
     
-        <div class="space-y-8 urbanist-medium tracking-[-0.6%]">
+        <div class="space-y-8 urbanist-medium tracking-[-0.6%] fade-in">
           <p class=" text-[#999999] text-xl">Contact Us</p>
           <div class="flex flex-col items-start gap-5 text-lg  leading-6 ">
             <a class="cursor-pointer hover:underline" href="./contact_us.html#contactform">Contact Form</a>
@@ -433,27 +433,27 @@
   </main>
 
   <!-- footer: copyright and social links -->
-  <section class="bg-[#1A1A1A] py-4 px-24 flex items-center justify-between">
+  <section class="bg-[#1A1A1A] py-4 px-24 flex items-center justify-between groups">
     <div class="flex items-center gap-10 py-2.5 urbanist-medium tracking-[-0.6%] text-lg leading-6">
-      <p>@20234Tripsy. All Rights Reserved.</p>
-      <a class="cursor-pointer hover:underline" href="#">Terms & Conditions</a>
+      <p class="fade">@20234Tripsy. All Rights Reserved.</p>
+      <a class="cursor-pointer hover:underline fade" href="#">Terms & Conditions</a>
     </div>
 
     <div class="flex items-center gap-2.5">
       <a href="#"
-        class="rounded-full p-4 bg-[#141414] overflow-hidden object-cover object-center hover:scale-110 hover:ring hover:ring-white/10 transition-transform duration-100 ease-in-out">
+        class="rounded-full p-4 bg-[#141414] overflow-hidden object-cover object-center hover:scale-110 hover:ring hover:ring-white/10 transition-transform duration-100 ease-in-out fade">
         <img class="size-6" src="./img/socials/facebook.svg" alt="facebook">
       </a>
       <a href="#"
-        class="rounded-full p-4 bg-[#141414] overflow-hidden object-cover object-center hover:scale-110 hover:ring hover:ring-white/10 transition-transform duration-100 ease-in-out">
+        class="rounded-full p-4 bg-[#141414] overflow-hidden object-cover object-center hover:scale-110 hover:ring hover:ring-white/10 transition-transform duration-100 ease-in-out fade">
         <img class="size-6" src="./img/socials/twitter.svg" alt="facebook">
       </a>
       <a href="#"
-        class="rounded-full p-4 bg-[#141414] overflow-hidden object-cover object-center hover:scale-110 hover:ring hover:ring-white/10 transition-transform duration-100 ease-in-out">
+        class="rounded-full p-4 bg-[#141414] overflow-hidden object-cover object-center hover:scale-110 hover:ring hover:ring-white/10 transition-transform duration-100 ease-in-out fade">
         <img class="size-6" src="./img/socials/linkedin.svg" alt="facebook">
       </a>
       <a href="#"
-        class="rounded-full p-4 bg-[#141414] overflow-hidden object-cover object-center hover:scale-110 hover:ring hover:ring-white/10 transition-transform duration-100 ease-in-out">
+        class="rounded-full p-4 bg-[#141414] overflow-hidden object-cover object-center hover:scale-110 hover:ring hover:ring-white/10 transition-transform duration-100 ease-in-out fade">
         <img class="size-6" src="./img/socials/youtube.svg" alt="facebook">
       </a>
     </div>
