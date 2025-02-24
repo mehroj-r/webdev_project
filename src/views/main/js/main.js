@@ -118,21 +118,3 @@ try {
 } catch (err) {
   console.log(err);
 }
-
-try {
-  function getCookie(name) {
-    const cookies = document.cookie.split("; ");
-    for (let cookie of cookies) {
-      const [key, value] = cookie.split("=");
-      if (key === name) return value;
-    }
-    return null;
-  }
-
-  if (!getCookie("user")) {
-    alert("You must be logged in to access this page.");
-    window.location.href = "../auth/signin.html";
-  }
-} catch (err) {
-  console.log(err);
-}

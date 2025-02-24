@@ -3,12 +3,22 @@ document.getElementById("signinBtn").addEventListener("click", function (e) {
 
   const email = document.getElementById("emailInput").value;
   const password = document.getElementById("passwordInput").value;
+
+  if (!email || !password) {
+    alert("Please enter both email and password.");
+    return;
+  }
+
+  // Retrieve user from localStorage
   const user = JSON.parse(localStorage.getItem(email));
 
   if (user && user.password === password) {
-    document.cookie = `user=${email}; path=/; max-age=86400`; // saving session cookie for 1 day
     alert("Login successful!");
-    window.location.href = "../main/home.html"; // Redirect to a protected page
+
+    // Save logged-in user email to localStorage
+    localStorage.setItem("loggedInUser", email);
+
+    window.location.href = "../main/home.html"; // Redirect to home page
   } else {
     alert("Invalid email or password.");
   }
