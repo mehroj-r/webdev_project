@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Uzbekation | Profile</title>
+  <link rel="stylesheet" href="../../styles/fonts.css">
+  <link rel="stylesheet" href="../../styles/main.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="../auth/js/auth.js"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        screens: {
+          // 'xl': {'max': '1500px'},
+          // // => @media (max-width: 1535px) { ... }
+
+          lg: { max: "1024px" },
+          // => @media (max-width: 1024px) { ... }
+
+          md: { max: "768px" },
+          // => @media (max-width: 768px) { ... }
+
+          hamvisible: { max: "700px" },
+          // => @media (max-width: 650px) { ... }
+
+          sm: { max: "425px" },
+          // => @media (max-width: 425px) { ... }
+
+          xs: { max: "375px" },
+          // => @media (max-width: 375px) { ... }
+
+          s: { max: "320px" },
+          // => @media (max-width: 375px) { ... }
+        },
+        extend: {
+          colors: {
+            // search icon colors
+            lightpurple: "#A585FA",
+            mainpurple: "#703BF7",
+            // places to go card colors
+            endblue: "#05073C",
+          },
+        },
+      },
+    };
+  </script>
+
+</head>
+
+<body class="relative h-screen bg-cover bg-center text-white scroll-smooth overscroll-auto scrollbar-hidden">
+  <!-- Background Image Wrapper -->
+  <div
+    class="absolute inset-0 bg-[url('./img/khiva.webp')] bg-cover bg-center filter brightness-50 contrast-125 saturate-100 sepia-10 hue-rotate-15">
+  </div>
+  <!-- Overlay for Better Readability -->
+  <div class="absolute inset-0 bg-black opacity-40"></div>
+
+  <!-- Content -->
+  <section class="relative z-10 flex flex-col items-start justify-start h-full px-8 py-6">
+    <!-- button for going back -->
+    <button onclick="window.location.href='./home.html'"
+      class="text-lg sfpro-display-bold flex items-center justify-center gap-1.5 py-2 px-4 bg-mainpurple rounded-xl transition-all duration-200 ease-in-out hover:shadow-[0_0_15px_5px_rgba(112,59,247,0.5)] hover:text-shadow-[0_0_10px_rgba(112,59,247,0.8),0_0_20px_rgba(112,59,247,0.9)] whitespace-nowrap">
+      <img class="size-4" src="./img/profile/back.svg" alt="back">
+      Back
+    </button>
+
+    <!-- modal -->
+    <div class="w-full flex-1 grid place-content-center">
+      <div
+        class="flex flex-col items-center justify-center rounded-3xl px-8 py-7  bg-[#OAOAOA]/50 border border-1 border-white/20 backdrop-blur-md">
+
+        <!-- Profile Information -->
+
+        <!-- profile picture -->
+        <div class="relative">
+          <div
+            class="bg-transparent rounded-full overflow-hidden object-cover object-center border border-1 border-white/10">
+            <img class="" src="./img/profile/user.png" alt="user">
+          </div>
+          <!-- button for editing profile image -->
+          <button
+            class="absolute right-0 bottom-0 z-50 size-10 rounded-full object-center object-cover overflow-hidden">
+            <img src="./img/profile/editbtn.svg" alt="edit">
+          </button>
+        </div>
+        <form action="#" class="flex flex-col items-center justify-center ">
+          <div class="p-5 space-y-5">
+            <!-- Name -->
+            <div class="relative flex-1 items-center">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="#A685FA" class="size-5 absolute left-4 top-1/2 -translate-y-1/2 w-8 h-8 md:w-[34px] md:h-[34px]">>
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M15 9h3.75M15 12h3.75M15 15h3.75M4.5 19.5h15a2.25 2.25 0 0 0 2.25-2.25V6.75A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25v10.5A2.25 2.25 0 0 0 4.5 19.5Zm6-10.125a1.875 1.875 0 1 1-3.75 0 1.875 1.875 0 0 1 3.75 0Zm1.294 6.336a6.721 6.721 0 0 1-3.17.789 6.721 6.721 0 0 1-3.168-.789 3.376 3.376 0 0 1 6.338 0Z" />
+              </svg>
+
+              <input id="nameInput" type="text" placeholder="Name" value="" disabled
+                class="w-full urbanist-regular text-2xl pl-16 pr-4 py-3 md:py-4 text-white/50 md:text-[30px] font-normal bg-transparent border border-white/20 rounded-lg placeholder-white/50 focus:outline-none focus:ring-1 focus:ring-purple-500" />
+            </div>
+            <!-- Email  -->
+            <div class="relative flex-1 items-center">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#A685FA"
+                class="size-5 absolute left-4 top-1/2 -translate-y-1/2 w-8 h-8 md:w-[34px] md:h-[34px]">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M16.5 12a4.5 4.5 0 1 1-9 0 4.5 4.5 0 0 1 9 0Zm0 0c0 1.657 1.007 3 2.25 3S21 13.657 21 12a9 9 0 1 0-2.636 6.364M16.5 12V8.25" />
+              </svg>
+
+              <input id="emailInput" type="text" placeholder="Email" value="" disabled
+                class="w-full urbanist-regular text-2xl pl-16 pr-4 py-3 md:py-4 text-white/50 md:text-[30px] font-normal bg-transparent border border-white/20 rounded-lg placeholder-white/50 focus:outline-none focus:ring-1 focus:ring-purple-500" />
+            </div>
+            <!-- Passsword  -->
+            <div class="relative flex-1 items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#A685FA"
+                class="size-5 absolute left-4 top-1/2 -translate-y-1/2 w-8 h-8 md:w-[34px] md:h-[34px]">
+                  <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M15.75 5.25a3 3 0 0 1 3 3m3 0a6 6 0 0 1-7.029 5.912c-.563-.097-1.159.026-1.563.43L10.5 17.25H8.25v2.25H6v2.25H2.25v-2.818c0-.597.237-1.17.659-1.591l6.499-6.499c.404-.404.527-1 .43-1.563A6 6 0 1 1 21.75 8.25Z" />
+                </svg>
+
+              <input id="passwordInput" type="text" placeholder="Password" value="" disabled
+                class="w-full urbanist-regular text-2xl pl-16 pr-4 py-3 md:py-4 text-white/50 md:text-[30px] font-normal bg-transparent border border-white/20 rounded-lg placeholder-white/50 focus:outline-none focus:ring-1 focus:ring-purple-500" />
+            </div>
+            <!-- Phone -->
+            <div class="relative flex-1 items-center">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#A685FA"
+                class="size-5 absolute left-4 top-1/2 -translate-y-1/2 w-8 h-8 md:w-[34px] md:h-[34px]">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z" />
+              </svg>
+
+              <input id="phoneInput" type="text" placeholder="Phone" value="" disabled
+                class="w-full urbanist-regular text-2xl pl-16 pr-4 py-3 md:py-4 text-white/50 md:text-[30px] font-normal bg-transparent border border-white/20 rounded-lg placeholder-white/50 focus:outline-none focus:ring-1 focus:ring-purple-500" />
+            </div>
+          </div>
+
+          <!-- button for updating credentials -->
+          <button id="editBtn" type="submit"
+            class="text-lg sfpro-display py-2.5 px-10 bg-mainpurple rounded-xl transition-all duration-200 ease-in-out hover:shadow-[0_0_15px_5px_rgba(112,59,247,0.5)] hover:text-shadow-[0_0_10px_rgba(112,59,247,0.8),0_0_20px_rgba(112,59,247,0.9)] whitespace-nowrap">
+            Update
+          </button>
+
+        </form>
+
+      </div>
+    </div>
+
+  </section>
+
+  <script>
+    const loggedInUser = localStorage.getItem("loggedInUser"); // Get logged-in user email
+    if (loggedInUser) {
+      const user = JSON.parse(localStorage.getItem(loggedInUser)); // Get user object
+      if (user) {
+        document.getElementById("nameInput").value = user.name; // Set name input value
+        document.getElementById("emailInput").value = user.email; // Set email input value
+        document.getElementById("passwordInput").value = user.password; // Set password input value
+        document.getElementById("phoneInput").value = user.phone; // Set phone input value
+      }
+    }
+  </script>
+</body>
+
+
+</html>

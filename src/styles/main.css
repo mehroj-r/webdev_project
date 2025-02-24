@@ -44,11 +44,25 @@ html, body,main {
   border: 1px solid rgba(255, 255, 255, 0.1) !important;
   backdrop-filter: blur(10px) !important;
   border-radius: 10px;
-  padding: 14px 24px;
   font-weight: 600;
 }
 
 
 .nav-link.active::after {
   display: none;
+}
+
+/* Hide scrollbar for Webkit browsers (Chrome, Safari) */
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for Firefox */
+.scrollbar-none {
+  scrollbar-width: none;
+}
+
+/* Hide scrollbar for Edge and IE */
+.scrollbar-none {
+  -ms-overflow-style: none;
 }
