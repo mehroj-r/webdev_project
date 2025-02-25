@@ -1,0 +1,81 @@
+@import url("https://fonts.googleapis.com/css2?family=Urbanist:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Water+Brush&display=swap");
+
+.urbanist-regular {
+  font-family: "Urbanist", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.urbanist-medium {
+  font-family: "Urbanist", serif;
+  font-weight: 500;
+  font-style: normal;
+}
+.urbanist-semibold {
+  font-family: "Urbanist", serif;
+  font-weight: 600;
+  font-style: normal;
+}
+.urbanist-bold {
+  font-family: "Urbanist", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+.urbanist-extrabold {
+  font-family: "Urbanist", serif;
+  font-weight: 800;
+  font-style: normal;
+}
+.worksans-regular {
+  font-family: "Work Sans", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.worksans-medium {
+  font-family: "Work Sans", serif;
+  font-weight: 500;
+  font-style: normal;
+}
+.worksans-bold {
+  font-family: "Work Sans", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+.waterbrush-regular {
+  font-family: "Water Brush", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Regular Brush" ,serif;
+  src: url(./assets/fonts/RegularBrush-Rpnro.otf);
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "SF Pro Display";
+  src: url('./assets/fonts/SFPRODISPLAYREGULAR.OTF');
+  font-style: normal;
+  font-weight: 400;
+}
+@font-face {
+  font-family: "SF Pro Display";
+  src: url('./assets/fonts/SFPRODISPLAYBOLD.OTF');
+  font-style: normal;
+  font-weight: 700;
+}
+
+.regular-brush{
+  font-family: "Regular Brush" , serif;
+  font-weight: 400;
+}
+.sfpro-display{
+  font-family: "SF Pro Display", serif;
+  font-weight: 400;
+}
+.sfpro-display-bold{
+  font-family: "SF Pro Display", serif;
+  font-weight: 700;
+}

@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Uzbekation | Places</title>
+  <link rel="stylesheet" href="../../styles/fonts.css">
+  <link rel="stylesheet" href="../../styles/main.css">
+  <link rel="stylesheet" href="./style/faq_section.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="../auth/js/auth.js"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        screens: {
+          // 'xl': {'max': '1500px'},
+          // // => @media (max-width: 1535px) { ... }
+
+          lg: { max: "1024px" },
+          // => @media (max-width: 1024px) { ... }
+
+          md: { max: "768px" },
+          // => @media (max-width: 768px) { ... }
+
+          hamvisible: { max: "700px" },
+          // => @media (max-width: 650px) { ... }
+
+          sm: { max: "425px" },
+          // => @media (max-width: 425px) { ... }
+
+          xs: { max: "375px" },
+          // => @media (max-width: 375px) { ... }
+
+          s: { max: "320px" },
+          // => @media (max-width: 375px) { ... }
+        },
+        extend: {
+          colors: {
+            // search icon colors
+            lightpurple: "#A585FA",
+            mainpurple: "#4600FF",
+            // places to go card colors
+            endblue: "#05073C",
+          },
+        },
+      },
+    };
+  </script>
+
+</head>
+
+<body class="bg-[#141414] text-white scroll-smooth overscroll-auto scrollbar-hidden">
+
+  <!-- header -->
+  <header
+    class="flex items-center justify-between fixed top-0 left-0 right-0 px-24 py-5 backdrop-blur-[10px] border-b border-white/10 urbanist-medium z-50">
+    <!-- logo -->
+    <a href="./home.html" class=" flex items-end gap-4 urbanist-extrabold text-3xl">
+      <img src="./img/logo.svg" alt="">
+      Uzbekation
+    </a>
+    <nav>
+      <ul class="flex items-center justify-center gap-6 urbanist-medium">
+        <a href="./home.html" class="px-6 py-3 text-base leading-[150%] rounded-md cursor-pointer nav-link"
+          data-page="home">Home</a>
+        <a href="./about_us.html" class="px-6 py-3 text-base leading-[150%] rounded-md cursor-pointer nav-link"
+          data-page="about_us">About
+          Us</a>
+        <a href="./places.html" class="px-6 py-3 text-base leading-[150%] rounded-md cursor-pointer nav-link"
+          data-page="places">Places</a>
+        <a href="./services.html" class="px-6 py-3 text-base leading-[150%] rounded-md cursor-pointer nav-link"
+          data-page="services">Services</a>
+        <a href="./contact_us.html" class="px-6 py-3 text-base leading-[150%] rounded-md cursor-pointer nav-link"
+          data-page="contact_us">Contact us</a>
+      </ul>
+    </nav>
+    <a id="profileLink"
+      class="text-white px-5 py-3 text-base leading-[150%] bg-[#4a4a4a]/10 rounded-[10px] backdrop-blur-md border border-white/10 hover:border-white/20 hover:bg-[#4a4a4a]/20 transition duration-200 ease-in-out">
+      <span id="profileIconContainer">
+        <!-- Default profile icon -->
+        <img src="./img/profile.svg" alt="profile">
+      </span>
+    </a>
+  </header>
+
+  <!-- main part -->
+  <main>
+
+    <!--mainstage hook -->
+    <section class="flex flex-col items-start justify-center relative groups">
+      <div class="absolute inset-0 bg-gradient-to-r from-[#141414] to-transparent "></div>
+      <div class="absolute inset-x-0 bottom-0 h-[80px] bg-gradient-to-t from-[#141414] to-transparent "></div>
+      <img class=" w-full -z-10" src="./img/bg-places.png" alt="">
+
+      <div class="flex flex-col items-start justify-start gap-20 absolute ccontainer top-[30%]">
+        <!-- main info of event -->
+        <div class="flex flex-col items-start justify-center gap-4 max-w-[600px]">
+          <div class="text-5xl waterbrush-regular fade-in-left">
+            Explorer and Travel
+          </div>
+          <div class="text-[86px] worksans-bold fade-in-left">Places</div>
+          <div class="text-base urbanist-medium fade-in-left">
+            <p class="text-xl md:text-2xl leading-[1.8] text-gray-300">
+              Discover the most enchanting places that make Uzbekistan a true travel gem. From ancient cities rich in history to breathtaking natural wonders, each destination offers a unique blend of culture, adventure, and timeless beauty.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- top places -->
+    <section id="trending" class="px-20 mb-24 groups">
+      <h1 class="text text-white text-5xl md:text-7xl font-semibold mb-10 ml-8 fade-in-left">
+        Top places
+      </h1>
+      <div class="grid grid-cols-3 md:grid-cols-1 gap-5 urbanist-semibold relative">
+        <!-- ellipse -->
+        <div class="absolute left-6 top-0 size-[240px] bg-[#703BF7] rounded-full blur-[180px] elipse animate-move">
+        </div>
+        <div
+          class="absolute right-16 top-5 size-[180px] bg-[#F43BF7] rounded-full blur-[220px] elipse animate-move-reverse">
+        </div>
+        <div class="absolute right-10 top-10 size-[180px] bg-[#703BF7] rounded-full blur-[220px] elipse animate-move">
+        </div>
+        <div onclick="openCityPage('mirarab')"
+            class="space-y-5 md:p-5 p-8 rounded-xl bg-[#141414]/10 border border-white/20 hover:border-white/30 hover:bg-[#141414]/40 hover:scale-[102%] transition duration-300 ease-in-out backdrop-blur-md cursor-pointer group fade">
+          <div class="relative">
+            <img class="rounded-md w-full object-cover" src="./img/places/mirarab.png" alt="trip">
+            <div class="absolute top-3 right-3 bg-black/60 text-white px-2 py-1 rounded-md backdrop-blur-sm flex items-center space-x-1">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="gold" viewBox="0 0 24 24" stroke-width="0" stroke="currentColor" class="size-4">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z" />
+              </svg>
+              <span class="text-sm">4.8</span>
+            </div>
+          </div>
+          <div class="flex items-center justify-between">
+            <p class="text-xl urbanist-semibold text-left">Mir Arab madrasah</p>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" stroke-width="1.5"
+              stroke="currentColor"
+              class="size-6 opacity-60 group-hover:translate-x-2 group-hover:-translate-y-0.5 transition-all duration-300 ease-in-out">
+              <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
+            </svg>
+          </div>
+        </div>
+        <div onclick="openCityPage('registan')"
+          class="space-y-5 md:p-5 p-8 rounded-xl bg-[#141414]/10 border border-white/20 hover:border-white/30 hover:bg-[#141414]/40 hover:scale-[102%] transition duration-300 ease-in-out backdrop-blur-md cursor-pointer group fade">
+          <div class="relative">
+            <img class="rounded-md w-full object-cover" src="./img/places/registan.png" alt="trip">
+            <div class="absolute top-3 right-3 bg-black/60 text-white px-2 py-1 rounded-md backdrop-blur-sm flex items-center space-x-1">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="gold" viewBox="0 0 24 24" stroke-width="0" stroke="currentColor" class="size-4">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z" />
+              </svg>
+              <span class="text-sm">5.0</span>
+            </div>
+          </div>
+          <div class="flex items-center justify-between">
+            <p class="text-xl urbanist-semibold text-left">Registan Square</p>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" stroke-width="1.5"
+              stroke="currentColor"
+              class="size-6 opacity-60 group-hover:translate-x-2 group-hover:-translate-y-0.5 transition-all duration-300 ease-in-out">
+              <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
+            </svg>
+          </div>
+        </div>
+        <div onclick="openCityPage('khiva')"
+          class="space-y-5 md:p-5 p-8 rounded-xl bg-[#141414]/10 border border-white/20 hover:border-white/30 hover:bg-[#141414]/40 hover:scale-[102%] transition duration-300 ease-in-out backdrop-blur-md cursor-pointer group fade">
+          <div class="relative">
+            <img class="rounded-md w-full object-cover" src="./img/places/khiva.png" alt="trip">
+            <div class="absolute top-3 right-3 bg-black/60 text-white px-2 py-1 rounded-md backdrop-blur-sm flex items-center space-x-1">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="gold" viewBox="0 0 24 24" stroke-width="0" stroke="currentColor" class="size-4">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z" />
+              </svg>
+              <span class="text-sm">4.7</span>
+            </div>
+          </div>
+          <div class="flex items-center justify-between">
+            <p class="text-xl urbanist-semibold text-left"> Castle "Ichan"</p>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" stroke-width="1.5"
+              stroke="currentColor"
+              class="size-6 opacity-60 group-hover:translate-x-2 group-hover:-translate-y-0.5 transition-all duration-300 ease-in-out">
+              <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- unexplored places -->
+    <section id="unexplored" class="px-20 mb-24 groups">
+      <h1 class="text text-white text-5xl md:text-7xl font-semibold mb-10 ml-8 fade-in-left">
+        Unexplored places
+      </h1>
+      <div class="grid grid-cols-3 md:grid-cols-1 gap-5 urbanist-semibold mb-20 relative">
+        <!-- ellipse -->
+        <div class="absolute left-[25%] top-10 size-[160px] bg-[#33FF00] rounded-full blur-[200px] elipse animate-move-reverse">
+        </div>
+        <div class="absolute -right-20 -bottom-20 size-[320px] bg-[#703BF7] rounded-full blur-[180px] elipse animate-move">
+        </div>
+        <div onclick="openCityPage('aralsea')"
+          class="space-y-5 md:p-5 p-8 rounded-xl bg-[#141414]/10 border border-white/20 hover:border-white/30 hover:bg-[#141414]/40 hover:scale-[102%] transition duration-300 ease-in-out backdrop-blur-md cursor-pointer group fade">
+          <div class="relative">
+            <img class="rounded-md w-full object-cover" src="./img/places/aralsea.png" alt="trip">
+            <div class="absolute top-3 right-3 bg-black/60 text-white px-2 py-1 rounded-md backdrop-blur-sm flex items-center space-x-1">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="gold" viewBox="0 0 24 24" stroke-width="0" stroke="currentColor" class="size-4">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z" />
+              </svg>
+              <span class="text-sm">4.4</span>
+            </div>
+          </div>
+          <div class="flex items-center justify-between">
+            <p class="text-xl urbanist-semibold text-left">Aral Sea</p>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" stroke-width="1.5"
+              stroke="currentColor"
+              class="size-6 opacity-60 group-hover:translate-x-2 group-hover:-translate-y-0.5 transition-all duration-300 ease-in-out">
+              <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
+            </svg>
+          </div>
+        </div>
+        <div onclick="openCityPage('labikhovuz')"
+          class="space-y-5 md:p-5 p-8 rounded-xl bg-[#141414]/10 border border-white/20 hover:border-white/30 hover:bg-[#141414]/40 hover:scale-[102%] transition duration-300 ease-in-out backdrop-blur-md cursor-pointer group fade">
+          <div class="relative">
+            <img class="rounded-md w-full object-cover" src="./img/places/labikhovuz.png" alt="trip">
+            <div class="absolute top-3 right-3 bg-black/60 text-white px-2 py-1 rounded-md backdrop-blur-sm flex items-center space-x-1">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="gold" viewBox="0 0 24 24" stroke-width="0" stroke="currentColor" class="size-4">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z" />
+              </svg>
+              <span class="text-sm">4.6</span>
+            </div>
+          </div>
+          <div class="flex items-center justify-between">
+            <p class="text-xl urbanist-semibold text-left">Labi Khovuz Ensemble</p>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" stroke-width="1.5"
+              stroke="currentColor"
+              class="size-6 opacity-60 group-hover:translate-x-2 group-hover:-translate-y-0.5 transition-all duration-300 ease-in-out">
+              <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
+            </svg>
+          </div>
+        </div>
+        <div onclick="openCityPage('ark')"
+          class="space-y-5 md:p-5 p-8 rounded-xl bg-[#141414]/10 border border-white/20 hover:border-white/30 hover:bg-[#141414]/40 hover:scale-[102%] transition duration-300 ease-in-out backdrop-blur-md cursor-pointer group fade">
+          <div class="relative">
+            <img class="rounded-md w-full object-cover" src="./img/places/ark.png" alt="trip">
+            <div class="absolute top-3 right-3 bg-black/60 text-white px-2 py-1 rounded-md backdrop-blur-sm flex items-center space-x-1">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="gold" viewBox="0 0 24 24" stroke-width="0" stroke="currentColor" class="size-4">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z" />
+              </svg>
+              <span class="text-sm">4.7</span>
+            </div>
+          </div>
+          <div class="flex items-center justify-between">
+            <p class="text-xl urbanist-semibold text-left">Ark in Bukhara</p>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" stroke-width="1.5"
+              stroke="currentColor"
+              class="size-6 opacity-60 group-hover:translate-x-2 group-hover:-translate-y-0.5 transition-all duration-300 ease-in-out">
+              <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
+            </svg>
+          </div>
+        </div>
+    
+      </div>
+    </section>
+
+    <!-- Historical places -->
+    <section id="historical" class="px-20 mb-24 groups">
+      <h1 class="text text-white text-5xl md:text-7xl font-semibold mb-10 ml-8 fade-in-left">
+        Historical places
+      </h1>
+      <div class="grid grid-cols-3 md:grid-cols-1 gap-5 urbanist-semibold mb-20 relative">
+        <!-- ellipse -->
+        <div class="absolute -left-[10%] -bottom-[15%] size-[160px] bg-[#F2FF41] rounded-full blur-[200px] elipse animate-move-reverse">
+        </div>
+        <div onclick="openCityPage('kalyan')"
+          class="space-y-5 md:p-5 p-8 rounded-xl bg-[#141414]/10 border border-white/20 hover:border-white/30 hover:bg-[#141414]/40 hover:scale-[102%] transition duration-300 ease-in-out backdrop-blur-md cursor-pointer group fade">
+          <div class="relative">
+            <img class="rounded-md w-full object-cover" src="./img/places/kalyan.png" alt="trip">
+            <div class="absolute top-3 right-3 bg-black/60 text-white px-2 py-1 rounded-md backdrop-blur-sm flex items-center space-x-1">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="gold" viewBox="0 0 24 24" stroke-width="0" stroke="currentColor" class="size-4">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z" />
+              </svg>
+              <span class="text-sm">4.9</span>
+            </div>
+          </div>
+          <div class="flex items-center justify-between">
+            <p class="text-xl urbanist-semibold text-left">Tower "Kalyan"</p>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" stroke-width="1.5"
+              stroke="currentColor"
+              class="size-6 opacity-60 group-hover:translate-x-2 group-hover:-translate-y-0.5 transition-all duration-300 ease-in-out">
+              <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
+            </svg>
+          </div>
+        </div>
+        <div onclick="openCityPage('bibikhonim')"
+          class="space-y-5 md:p-5 p-8 rounded-xl bg-[#141414]/10 border border-white/20 hover:border-white/30 hover:bg-[#141414]/40 hover:scale-[102%] transition duration-300 ease-in-out backdrop-blur-md cursor-pointer group fade">
+          <div class="relative">
+            <img class="rounded-md w-full object-cover" src="./img/places/bibikhonim.png" alt="trip">
+            <div class="absolute top-3 right-3 bg-black/60 text-white px-2 py-1 rounded-md backdrop-blur-sm flex items-center space-x-1">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="gold" viewBox="0 0 24 24" stroke-width="0" stroke="currentColor" class="size-4">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z" />
+              </svg>
+              <span class="text-sm">4.8</span>
+            </div>
+          </div>
+          <div class="flex items-center justify-between">
+            <p class="text-xl urbanist-semibold text-left">Bibikhonim Mosque</p>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" stroke-width="1.5"
+              stroke="currentColor"
+              class="size-6 opacity-60 group-hover:translate-x-2 group-hover:-translate-y-0.5 transition-all duration-300 ease-in-out">
+              <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
+            </svg>
+          </div>
+        </div>
+        <div onclick="openCityPage('shokhizinda')"
+          class="space-y-5 md:p-5 p-8 rounded-xl bg-[#141414]/10 border border-white/20 hover:border-white/30 hover:bg-[#141414]/40 hover:scale-[102%] transition duration-300 ease-in-out backdrop-blur-md cursor-pointer group fade">
+          <div class="relative">
+            <img class="rounded-md w-full object-cover" src="./img/places/shokhizinda.png" alt="trip">
+            <div class="absolute top-3 right-3 bg-black/60 text-white px-2 py-1 rounded-md backdrop-blur-sm flex items-center space-x-1">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="gold" viewBox="0 0 24 24" stroke-width="0" stroke="currentColor" class="size-4">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z" />
+              </svg>
+              <span class="text-sm">5.0</span>
+            </div>
+          </div>
+          <div class="flex items-center justify-between">
+            <p class="text-xl urbanist-semibold text-left">"Shokhi Zinda" Mausoleum</p>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" stroke-width="1.5"
+              stroke="currentColor"
+              class="size-6 opacity-60 group-hover:translate-x-2 group-hover:-translate-y-0.5 transition-all duration-300 ease-in-out">
+              <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- family trip places -->
+    <section id="familytrip" class="px-20 mb-24 groups">
+      <h1 class="text text-white text-5xl md:text-7xl font-semibold mb-10 ml-8 fade-in-left">
+        Family Trip places
+      </h1>
+      <div class="grid grid-cols-3 md:grid-cols-1 gap-5 urbanist-semibold mb-20 relative">
+        <!-- ellipse -->
+        <div
+          class="absolute -left-[10%] -bottom-[15%] size-[160px] bg-[#F2FF41] rounded-full blur-[200px] elipse animate-move-reverse">
+        </div>
+        <div class="absolute right-[25%] -top-20 size-[180px] bg-[#F7743B] rounded-full blur-[220px] elipse animate-move">
+        </div>
+        <!-- cards -->
+        <div onclick="openCityPage('charvak')"
+          class="space-y-5 md:p-5 p-8 rounded-xl bg-[#141414]/10 border border-white/20 hover:border-white/30 hover:bg-[#141414]/40 hover:scale-[102%] transition duration-300 ease-in-out backdrop-blur-md cursor-pointer group fade">
+          <div class="relative">
+            <img class="rounded-md w-full object-cover" src="./img/places/charvak.png" alt="trip">
+            <div class="absolute top-3 right-3 bg-black/60 text-white px-2 py-1 rounded-md backdrop-blur-sm flex items-center space-x-1">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="gold" viewBox="0 0 24 24" stroke-width="0" stroke="currentColor" class="size-4">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z" />
+              </svg>
+              <span class="text-sm">4.9</span>
+            </div>
+          </div>
+          <div class="flex items-center justify-between">
+            <p class="text-xl urbanist-semibold text-left"> Charvak resort</p>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" stroke-width="1.5"
+              stroke="currentColor"
+              class="size-6 opacity-60 group-hover:translate-x-2 group-hover:-translate-y-0.5 transition-all duration-300 ease-in-out">
+              <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
+            </svg>
+          </div>
+        </div>
+        <div onclick="openCityPage('fergana')"
+          class="space-y-5 md:p-5 p-8 rounded-xl bg-[#141414]/10 border border-white/20 hover:border-white/30 hover:bg-[#141414]/40 hover:scale-[102%] transition duration-300 ease-in-out backdrop-blur-md cursor-pointer group fade">
+          <div class="relative">
+            <img class="rounded-md w-full object-cover" src="./img/places/fergana.png" alt="trip">
+            <div class="absolute top-3 right-3 bg-black/60 text-white px-2 py-1 rounded-md backdrop-blur-sm flex items-center space-x-1">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="gold" viewBox="0 0 24 24" stroke-width="0" stroke="currentColor" class="size-4">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z" />
+              </svg>
+              <span class="text-sm">4.8</span>
+            </div>
+          </div>
+          <div class="flex items-center justify-between">
+            <p class="text-xl urbanist-semibold text-left">Fergana Valley</p>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" stroke-width="1.5"
+              stroke="currentColor"
+              class="size-6 opacity-60 group-hover:translate-x-2 group-hover:-translate-y-0.5 transition-all duration-300 ease-in-out">
+              <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
+            </svg>
+          </div>
+        </div>
+        <div onclick="openCityPage('chimgan')"
+          class="space-y-5 md:p-5 p-8 rounded-xl bg-[#141414]/10 border border-white/20 hover:border-white/30 hover:bg-[#141414]/40 hover:scale-[102%] transition duration-300 ease-in-out backdrop-blur-md cursor-pointer group fade">
+          <div class="relative">
+            <img class="rounded-md w-full object-cover" src="./img/places/chimgan.png" alt="trip">
+            <div class="absolute top-3 right-3 bg-black/60 text-white px-2 py-1 rounded-md backdrop-blur-sm flex items-center space-x-1">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="gold" viewBox="0 0 24 24" stroke-width="0" stroke="currentColor" class="size-4">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z" />
+              </svg>
+              <span class="text-sm">4.7</span>
+            </div>
+          </div>
+          <div class="flex items-center justify-between">
+            <p class="text-xl urbanist-semibold text-left">Chimgan Mountains</p>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" stroke-width="1.5"
+              stroke="currentColor"
+              class="size-6 opacity-60 group-hover:translate-x-2 group-hover:-translate-y-0.5 transition-all duration-300 ease-in-out">
+              <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- faqs section -->
+    <section id="faqs" class="px-24 py-[100px] flex flex-col items-center justify-between gap-8 border-t-2 border-b-2 border-[#262626] groups">
+
+      <h1 class="text text-white text-5xl md:text-7xl font-semibold fade-in">
+        FAQs
+      </h1>
+
+      <div class="faq-section">
+        <div class="faq">
+          <div class="faq-question-container">
+            <span class="faq-question fade-in-left">What regions of Uzbekistan does Uzbekation cover?</span>
+            <svg class="openimg opacity-70" alt="Toggle Answer" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="size-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+            </svg>
+          </div>
+          <div class="answer-box">
+            <p class="faq-answer">Uzbekation offers tours to all regions of Uzbekistan including Tashkent, Samarkand, Bukhara, Khiva, Fergana Valley, and the Aral Sea. Our specialized guides ensure you experience both popular destinations and hidden gems throughout the country.</p>
+          </div>
+        </div>
+      
+        <div class="faq-divider"></div>
+      
+        <div class="faq">
+          <div class="faq-question-container">
+            <span class="faq-question fade-in-left">What is the best time of year to visit Uzbekistan?</span>
+            <svg class="openimg opacity-70" alt="Toggle Answer" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="size-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+            </svg>
+          </div>
+          <div class="answer-box">
+            <p class="faq-answer">While Uzbekation operates year-round, spring (April-May) and autumn (September-October) offer the most pleasant weather for sightseeing. Summer (June-August) can be very hot, especially in desert regions, while winter (November-March) brings cooler temperatures but fewer crowds at major attractions.</p>
+          </div>
+        </div>
+      
+        <div class="faq-divider"></div>
+      
+        <div class="faq">
+          <div class="faq-question-container">
+            <span class="faq-question fade-in-left">Do I need a visa to visit Uzbekistan?</span>
+            <svg class="openimg opacity-70" alt="Toggle Answer" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="size-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+            </svg>
+          </div>
+          <div class="answer-box">
+            <p class="faq-answer">Many countries now enjoy visa-free entry to Uzbekistan for up to 30 days. Our team will advise you on visa requirements based on your nationality and can assist with the e-visa application process if needed. We recommend checking visa requirements at least 1-2 months before your planned trip.</p>
+          </div>
+        </div>
+      
+        <div class="faq-divider"></div>
+      
+        <div class="faq">
+          <div class="faq-question-container">
+            <span class="faq-question fade-in-left">How long do your typical tours last?</span>
+            <svg class="openimg opacity-70" alt="Toggle Answer" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="size-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+            </svg>
+          </div>
+          <div class="answer-box">
+            <p class="faq-answer">Uzbekation offers tours ranging from 3-day city experiences to comprehensive 14-day journeys across the country. Our most popular "Silk Road Highlights" package lasts 7-8 days, covering the historic cities of Tashkent, Samarkand, Bukhara, and Khiva. We also create custom itineraries based on your preferences and available time.</p>
+          </div>
+        </div>
+      
+        <div class="faq-divider"></div>
+      
+        <div class="faq">
+          <div class="faq-question-container">
+            <span class="faq-question fade-in-left">What languages do your guides speak?</span>
+            <svg class="openimg opacity-70" alt="Toggle Answer" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="size-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+            </svg>
+          </div>
+          <div class="answer-box">
+            <p class="faq-answer">All Uzbekation guides are fluent in English. We also have guides available who speak Russian, French, German, Spanish, Italian, Chinese, Japanese, and Korean. Please request your preferred language when booking, and we'll match you with an appropriate guide.</p>
+          </div>
+        </div>
+      
+        <div class="faq-divider"></div>
+      
+        <div class="faq">
+          <div class="faq-question-container">
+            <span class="faq-question fade-in-left">What is your cancellation policy?</span>
+            <svg class="openimg opacity-70" alt="Toggle Answer" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="size-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+            </svg>
+          </div>
+          <div class="answer-box">
+            <p class="faq-answer">Cancellations made 30+ days before departure receive a full refund minus a $50 administration fee. Cancellations 15-29 days before departure receive a 75% refund. Cancellations 7-14 days before departure receive a 50% refund. Unfortunately, we cannot offer refunds for cancellations less than 7 days before departure. Travel insurance is highly recommended.</p>
+          </div>
+        </div>
+      
+        <div class="faq-divider"></div>
+      
+        <div class="faq">
+          <div class="faq-question-container">
+            <span class="faq-question fade-in-left">Is Uzbekistan safe for tourists?</span>
+            <svg class="openimg opacity-70" alt="Toggle Answer" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="size-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+            </svg>
+          </div>
+          <div class="answer-box">
+            <p class="faq-answer">Uzbekistan is considered one of the safest countries in Central Asia for tourists. Crime rates are low, and locals are typically very hospitable toward visitors. As with travel anywhere, basic precautions should be taken. Our guides will advise on local customs and appropriate behavior to ensure you have a comfortable and secure experience.</p>
+          </div>
+        </div>
+      
+        <div class="faq-divider"></div>
+      
+        <div class="faq">
+          <div class="faq-question-container">
+            <span class="faq-question fade-in-left">What accommodations do you offer?</span>
+            <svg class="openimg opacity-70" alt="Toggle Answer" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="size-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+            </svg>
+          </div>
+          <div class="answer-box">
+            <p class="faq-answer">Uzbekation provides accommodations ranging from luxury 5-star hotels to authentic boutique guesthouses in restored historic buildings. For adventurous travelers, we also offer yurt stays in desert regions. Our standard packages include 3-4 star hotels, but accommodations can be upgraded or modified based on your preferences and budget.</p>
+          </div>
+        </div>
+      
+        <div class="faq-divider"></div>
+      
+        <div class="faq">
+          <div class="faq-question-container">
+            <span class="faq-question fade-in-left">Do you offer group discounts?</span>
+            <svg class="openimg opacity-70" alt="Toggle Answer" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="size-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+            </svg>
+          </div>
+          <div class="answer-box">
+            <p class="faq-answer">Yes! Groups of 6-10 people receive a 10% discount on all tour packages. Groups of 11+ receive a 15% discount and a complimentary traditional Uzbek dinner show. We specialize in organizing tours for families, friends, corporate groups, and special interest clubs. Contact us for custom group package options.</p>
+          </div>
+        </div>
+      
+        <div class="faq-divider"></div>
+      </div>
+
+
+    </section>
+
+    <!-- footer -->
+    <footer class="px-24 py-[100px] flex items-start justify-between gap-20 groups">
+    
+      <!-- email us -->
+      <div class="flex flex-col items-start justify-normal gap-8 relative">
+        <!-- ellipse -->
+        <div
+          class="absolute left-[30%] top-[50%] size-[140px] bg-[#33FF00] rounded-full blur-[200px] elipse animate-move-reverse">
+        </div>
+        <!-- logo -->
+        <a href="./home.html" class=" flex items-end gap-4 urbanist-extrabold text-3xl fade-in-left">
+          <img src="./img/logo.svg" alt="">
+          Uzbekation
+        </a>
+        <div
+          class="flex itemscenter gap-2.5 py-4 px-6 rounded-xl bg-[#141414]/10 ring-1 focus-within:ring-[#703BF7] ring-inset ring-white/20 backdrop-blur-md fade-in-left">
+          <label id="email-icon" for="email" class="cursor-pointer"><img src="./img/email.svg" alt=""></label>
+          <input id="email" autocomplete="off" type="email" name="email" id="email" placeholder="Enter Your Email"
+            class="w-[300px] pr-2 bg-transparent border-none ring-none focus:outline-none focus:border-transparent focus:ring-0 caret-[#703BF7] placeholder-[#999999] urbanist-medium text-lg leading-6 tracking-[-0.6%]">
+          <button type="submit" class="cursor-pointer" id="send-btn">
+            <img src="./img/Iconly/Bulk/Send.svg" alt="send">
+          </button>
+        </div>
+      </div>
+    
+      <!-- menu links -->
+    
+      <div class="flex items-start justify-between gap-10 relative">
+        <!-- ellipse -->
+        <div
+          class="absolute right-[25%] -top-[50%] size-[200px] bg-[#F43BF7] rounded-full blur-[220px] elipse animate-move-reverse">
+        </div>
+    
+    
+        <div class="space-y-8 urbanist-medium tracking-[-0.6%] fade-in">
+          <p class=" text-[#999999] text-xl">Places</p>
+          <div class="flex flex-col items-start gap-5 text-lg  leading-6 ">
+            <a class="cursor-pointer hover:underline" href="./places.html#trending">Trending Places</a>
+            <a class="cursor-pointer hover:underline" href="./places.html#unexplored">Unexplored Places</a>
+            <a class="cursor-pointer hover:underline" href="./places.html#historical">Historical Places</a>
+            <a class="cursor-pointer hover:underline" href="./places.html#familytrip">Family Trip Places</a>
+            <a class="cursor-pointer hover:underline" href="./places.html#faqs">FAQ’s</a>
+    
+          </div>
+        </div>
+    
+        <div class="space-y-8 urbanist-medium tracking-[-0.6%] fade-in">
+          <p class=" text-[#999999] text-xl">About Us</p>
+          <div class="flex flex-col items-start gap-5 text-lg  leading-6 ">
+            <a class="cursor-pointer hover:underline" href="./about_us.html#ourstory">Our Story</a>
+            <a class="cursor-pointer hover:underline" href="./services.html">Our Works</a>
+            <a class="cursor-pointer hover:underline" href="./about_us.html#ourteam">Our Team</a>
+            <a class="cursor-pointer hover:underline" href="./home.html#reviews">Our Clients</a>
+    
+          </div>
+        </div>
+    
+        <div class="space-y-8 urbanist-medium tracking-[-0.6%] fade-in">
+          <p class=" text-[#999999] text-xl">Packages</p>
+          <div class="flex flex-col items-start gap-5 text-lg  leading-6 ">
+            <a class="cursor-pointer hover:underline" href="./places.html#premiumplaces">Premium Packages</a>
+            <a class="cursor-pointer hover:underline" href="./places.html#budgetplaces">Budget Packages</a>
+          </div>
+        </div>
+    
+        <div class="space-y-8 urbanist-medium tracking-[-0.6%] fade-in">
+          <p class=" text-[#999999] text-xl">Contact Us</p>
+          <div class="flex flex-col items-start gap-5 text-lg  leading-6 ">
+            <a class="cursor-pointer hover:underline" href="./contact_us.html#contactform">Contact Form</a>
+            <a class="cursor-pointer hover:underline" href="./contact_us.html#getintouch">Our Officess</a>
+          </div>
+        </div>
+    
+      </div>
+    </footer>
+  </main>
+
+  <!-- footer: copyright and social links -->
+  <section class="bg-[#1A1A1A] py-4 px-24 flex items-center justify-between groups">
+    <div class="flex items-center gap-10 py-2.5 urbanist-medium tracking-[-0.6%] text-lg leading-6">
+      <p class="fade">© 2025 Uzbekation. All Rights Reserved.</p>
+      <a class="cursor-pointer hover:underline fade" href="#">Terms & Conditions</a>
+    </div>
+
+    <div class="flex items-center gap-2.5">
+      <a href="#"
+        class="rounded-full p-4 bg-[#141414] overflow-hidden object-cover object-center hover:scale-110 hover:ring hover:ring-white/10 transition-transform duration-100 ease-in-out fade">
+        <img class="size-6" src="./img/socials/facebook.svg" alt="facebook">
+      </a>
+      <a href="#"
+        class="rounded-full p-4 bg-[#141414] overflow-hidden object-cover object-center hover:scale-110 hover:ring hover:ring-white/10 transition-transform duration-100 ease-in-out fade">
+        <img class="size-6" src="./img/socials/twitter.svg" alt="facebook">
+      </a>
+      <a href="#"
+        class="rounded-full p-4 bg-[#141414] overflow-hidden object-cover object-center hover:scale-110 hover:ring hover:ring-white/10 transition-transform duration-100 ease-in-out fade">
+        <img class="size-6" src="./img/socials/linkedin.svg" alt="facebook">
+      </a>
+      <a href="#"
+        class="rounded-full p-4 bg-[#141414] overflow-hidden object-cover object-center hover:scale-110 hover:ring hover:ring-white/10 transition-transform duration-100 ease-in-out fade">
+        <img class="size-6" src="./img/socials/youtube.svg" alt="facebook">
+      </a>
+    </div>
+
+  </section>
+
+  <script src="./js/main.js"></script>
+  <script src="./js/sendmail.js"></script>
+  <script src="./js/faq.js"></script>
+</body>
+
+</html>

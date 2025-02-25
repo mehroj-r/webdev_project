@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Uzbekation | Contact us</title>
+  <link rel="stylesheet" href="../../styles/fonts.css">
+  <link rel="stylesheet" href="../../styles/main.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="../auth/js/auth.js"></script>
+
+
+  <script>
+    tailwind.config = {
+      theme: {
+        screens: {
+          // 'xl': {'max': '1500px'},
+          // // => @media (max-width: 1535px) { ... }
+
+          lg: { max: "1024px" },
+          // => @media (max-width: 1024px) { ... }
+
+          md: { max: "768px" },
+          // => @media (max-width: 768px) { ... }
+
+          hamvisible: { max: "700px" },
+          // => @media (max-width: 650px) { ... }
+
+          sm: { max: "425px" },
+          // => @media (max-width: 425px) { ... }
+
+          xs: { max: "375px" },
+          // => @media (max-width: 375px) { ... }
+
+          s: { max: "320px" },
+          // => @media (max-width: 375px) { ... }
+        },
+        extend: {
+          colors: {
+            // search icon colors
+            lightpurple: "#A585FA",
+            mainpurple: "#4600FF",
+            // places to go card colors
+            endblue: "#05073C",
+          },
+        },
+      },
+    };
+  </script>
+
+</head>
+
+<body class="bg-[#141414] text-white scroll-smooth overscroll-auto scrollbar-hidden">
+
+  <!-- header -->
+  <header
+    class="flex items-center justify-between fixed top-0 left-0 right-0 px-24 py-5 backdrop-blur-[10px] border-b border-white/10 urbanist-medium z-50">
+    <!-- logo -->
+    <a href="./home.html" class=" flex items-end gap-4 urbanist-extrabold text-3xl">
+      <img src="./img/logo.svg" alt="">
+      Uzbekation
+    </a>
+    <nav>
+      <ul class="flex items-center justify-center gap-6 urbanist-medium">
+        <a href="./home.html" class="px-6 py-3 text-base leading-[150%] rounded-md cursor-pointer nav-link"
+          data-page="home">Home</a>
+        <a href="./about_us.html" class="px-6 py-3 text-base leading-[150%] rounded-md cursor-pointer nav-link"
+          data-page="about_us">About
+          Us</a>
+        <a href="./places.html" class="px-6 py-3 text-base leading-[150%] rounded-md cursor-pointer nav-link"
+          data-page="places">Places</a>
+        <a href="./services.html" class="px-6 py-3 text-base leading-[150%] rounded-md cursor-pointer nav-link"
+          data-page="services">Services</a>
+        <a href="./contact_us.html" class="px-6 py-3 text-base leading-[150%] rounded-md cursor-pointer nav-link"
+          data-page="contact_us">Contact us</a>
+      </ul>
+    </nav>
+    <a id="profileLink"
+      class="text-white px-5 py-3 text-base leading-[150%] bg-[#4a4a4a]/10 rounded-[10px] backdrop-blur-md border border-white/10 hover:border-white/20 hover:bg-[#4a4a4a]/20 transition duration-200 ease-in-out">
+      <span id="profileIconContainer">
+        <!-- Default profile icon -->
+        <img src="./img/profile.svg" alt="profile">
+      </span>
+    </a>
+  </header>
+
+  <!-- main part -->
+  <main>
+    <!--mainstage hook -->
+    <section class="flex flex-col items-start justify-center relative mb-10 groups">
+      <div class="absolute inset-0 bg-gradient-to-r from-[#141414] to-transparent "></div>
+      <div class="absolute inset-x-0 bottom-0 h-[80px] bg-gradient-to-t from-[#141414] to-transparent "></div>
+      <img class=" w-full -z-10" src="./img/contact-us.png" alt="">
+
+      <div class="flex flex-col items-start justify-start gap-20 absolute top-[30%] md:gap-10 ccontainer max-w-[55%]">
+        <!-- main info of event -->
+        <div class="flex flex-col items-start justify-center gap-4 ">
+          <div class="text-5xl waterbrush-regular fade-in-left">
+            Explorer and Travel
+          </div>
+          <div class="text-white font-bold text-[86px] fade-in-left">Contact us</div>
+          <div class="text-base urbanist-medium fade-in-left">
+            <p class="text-xl md:text-2xl leading-[1.8] text-gray-300">
+              Have questions about your next journey? <br> Get in touch with our team to plan your perfect trip. We're
+              here to help you
+              explore the world!
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+      </div>
+    </section>
+
+    <!-- get in touch with us -->
+    <section id="getintouch" class="ccontainer mb-20 space-y-20 relative groups">
+      <div class="flex items-center justify-between relative">
+        <!-- ellipse -->
+        <div class="absolute left-6 top-0 size-[200px] bg-[#703BF7] rounded-full blur-[180px] elipse animate-move">
+        </div>
+
+        <div
+          class="absolute right-16 top-5 size-[180px] bg-[#F43BF7] rounded-full blur-[220px] elipse animate-move-reverse">
+        </div>
+        <div class="absolute right-10 top-10 size-[180px] bg-[#703BF7] rounded-full blur-[220px] elipse animate-move">
+        </div>
+
+        <p class="text-white text-6xl font-semibold fade-in-left">Get In Touch With Us Now!</p>
+
+      </div>
+
+      <section class="grid grid-cols-2 gap-5 px-5 urbanist-semibold groups">
+        <!-- ellipse -->
+        <div
+          class="absolute left-[40%] bottom-[40%] size-[160px] bg-[#3BF7E7] rounded-full blur-[200px] animate-move-reverse">
+        </div>
+        <!-- contacts : phone number -->
+        <a class="flex-1 fade-in" href="tel:+998999999999">
+          <div
+            class="py-10 px-5 flex flex-col items-center gap-5 rounded-xl bg-[#1a1a1a]/10 border border-white/10 relative hover:border-white/20 group">
+            <img class="size-20" src="./img/dstay.svg" alt="stay">
+            <p class="text-[36px] font-bold">Phone Number</p>
+            <p>+998(99)999-99-99</p>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" stroke-width="1.5"
+              stroke="currentColor"
+              class="size-6 absolute top-5 right-5 opacity-60 group-hover:top-3 group-hover:translate-x-2 group-hover:-translate-y-0.5 transition-all duration-300 ease-in-out">
+              <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
+            </svg>
+          </div>
+        </a>
+
+        <!-- email -->
+        <a class="flex-1 fade-in" href="mailto:contact@uzbekation.uz">
+          <div
+            class="py-10 px-5 flex flex-col items-center gap-5 rounded-xl bg-[#1a1a1a]/10 border border-white/10 relative hover:border-white/20 group">
+            <img class="size-20" src="./img/dstay.svg" alt="stay">
+            <p class="text-[36px] font-bold">Email</p>
+            <p>contact@uzbekation.uz</p>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" stroke-width="1.5"
+              stroke="currentColor"
+              class="size-6 absolute top-5 right-5 opacity-60 group-hover:top-3 group-hover:translate-x-2 group-hover:-translate-y-0.5 transition-all duration-300 ease-in-out">
+              <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
+            </svg>
+          </div>
+        </a>
+
+        <!-- location info -->
+        <a class="flex-1 fade-in" href="https://www.google.com/maps?q=1,+Muvorounnahr,+Mirzo-Ulugbek,+Tashkent,+Uzbekistan"
+          target="_blank">
+          <div
+            class="py-10 px-5 flex flex-col items-center gap-5 rounded-xl bg-[#1a1a1a]/10 border border-white/10 relative hover:border-white/20 group">
+            <img class="size-20 group-hover:animate-bell" src="./img/dstay.svg" alt="stay">
+            <p class="text-[36px] font-bold">Location</p>
+            <p>1, Muvorounnahr, Mirzo-Ulugbek, Tashkent, Uzbekistan -100000</p>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" stroke-width="1.5"
+              stroke="currentColor"
+              class="size-6 absolute top-5 right-5 opacity-60 group-hover:top-3 group-hover:translate-x-2 group-hover:-translate-y-0.5 transition-all duration-300 ease-in-out">
+              <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
+            </svg>
+          </div>
+        </a>
+
+        <!-- working hours -->
+        <a class="flex-1 fade-in" href="#">
+          <div
+            class="py-10 px-5 flex flex-col items-center gap-5 rounded-xl bg-[#1a1a1a]/10 border border-white/10 relative hover:border-white/20 group">
+            <img class="width 34 height 34 group-hover:animate-bell" src="./img/dstay.svg" alt="stay">
+            <p class="text-[36px] font-bold">Working Hours</p>
+            <p>Monday to Saturday , 09:00 AM to 08:00 PM</p>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" stroke-width="1.5"
+              stroke="currentColor"
+              class="size-6 absolute top-5 right-5 opacity-60 group-hover:top-3 group-hover:translate-x-2 group-hover:-translate-y-0.5 transition-all duration-300 ease-in-out">
+              <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
+            </svg>
+          </div>
+        </a>
+      </section>
+    </section>
+
+    <!-- contact Form-->
+    <section id="contactform" class="ccontainer px-6 md:px-10 py-10 md:py-20 relative groups">
+      <h2 class="text-white text-6xl md:text-[64px] font-semibold mb-10 md:mb-12 text-left fade-in-left">
+        Contact Us
+      </h2>
+      <!-- ellipse -->
+      <div
+        class="absolute left-[25%] top-10 size-[140px] bg-[#33FF00] rounded-full blur-[180px] elipse animate-move-reverse">
+      </div>
+      <div class="absolute -right-28 -top-5 size-[280px] bg-[#703BF7] rounded-full blur-[200px] elipse animate-move">
+      </div>
+
+      <form class="grid grid-cols-2 md:grid-cols-2 gap-5 md:gap-6" id="contact-form groups">
+        <!-- First Name -->
+        <div class="relative flex-1 items-center fade-in">
+          <img src="./img/dstay.svg" alt="icon"
+            class="absolute left-4 top-1/2 -translate-y-1/2 w-8 h-8 md:w-[34px] md:h-[34px]" />
+          <input type="text" placeholder="First Name"
+            class="w-full urbanist-regular text-2xl pl-16 pr-4 py-3 md:py-4 text-white/50 md:text-[30px] font-normal bg-transparent border border-white/20 rounded-lg placeholder-white/50 focus:outline-none focus:ring-1 focus:ring-purple-500" />
+        </div>
+
+        <!-- Last Name -->
+        <div class="relative flex-1 items-center fade-in">
+          <img src="./img/dstay.svg" alt="icon"
+            class="absolute left-4 top-1/2 -translate-y-1/2 w-8 h-8 md:w-[34px] md:h-[34px]" />
+          <input type="text" placeholder="Last Name"
+            class="w-full urbanist-regular text-2xl pl-16 pr-4 py-3 md:py-4 text-white/50 md:text-[30px] font-normal bg-transparent border border-white/20 rounded-lg placeholder-white/50 focus:outline-none focus:ring-1 focus:ring-purple-500" />
+        </div>
+
+        <!-- Mobile Number -->
+        <div class="relative flex items-center fade-in">
+          <img src="./img/dstay.svg" alt="icon"
+            class="absolute left-4 top-1/2 -translate-y-1/2 w-8 h-8 md:w-[34px] md:h-[34px]" />
+          <input type="text" placeholder="Mobile Number"
+            class="w-full urbanist-regular text-2xl pl-16 pr-4 py-3 md:py-4 text-white/50 md:text-[30px] font-normal bg-transparent border border-white/20 rounded-lg placeholder-white/50 focus:outline-none focus:ring-1 focus:ring-purple-500" />
+        </div>
+
+        <!-- Email -->
+        <div class="relative flex items-center fade-in">
+          <img src="./img/dstay.svg" alt="icon"
+            class="absolute left-4 top-1/2 -translate-y-1/2 w-8 h-8 md:w-[34px] md:h-[34px]" />
+          <input type="email" placeholder="Email"
+            class="w-full urbanist-regular text-2xl pl-16 pr-4 py-3 md:py-4 text-white/50 md:text-[30px] font-normal bg-transparent border border-white/20 rounded-lg placeholder-white/50 focus:outline-none focus:ring-1 focus:ring-purple-500" />
+        </div>
+
+        <!-- Message -->
+        <div class="relative col-span-2 fade-in">
+          <img src="./img/dstay.svg" alt="icon" class="absolute left-4 top-4 w-8 h-8 md:w-[34px] md:h-[34px]" />
+          <textarea placeholder="Message" rows="4"
+            class="w-full urbanist-regular text-2xl pl-16 pr-4 py-3 md:py-4 text-white/50 md:text-[30px] font-normal bg-transparent border border-white/20 rounded-lg placeholder-white/50 focus:outline-none focus:ring-1 focus:ring-purple-500 resize-none"></textarea>
+        </div>
+
+        <!-- Submit Button -->
+        <div class="col-span-2 flex justify-center fade-in">
+          <button type="submit"
+            class="cursor-pointer px-6 py-3 rounded-xl bg-[#703BF7] text-lg transition-all duration-200 ease-in-out hover:shadow-[0_0_15px_5px_rgba(112,59,247,0.5)] hover:text-shadow-[0_0_10px_rgba(112,59,247,0.8),0_0_20px_rgba(112,59,247,0.9)] whitespace-nowrap">
+            Submit
+          </button>
+        </div>
+      </form>
+    </section>
+
+
+
+    <!-- ad hook -->
+    <section
+      class="px-24 py-[100px] flex items-center justify-between gap-14 border-t-2 border-b-2 border-[#262626] relative groups">
+
+      <article class="space-y-3 max-w-[820px] ">
+        <!-- ellipse -->
+        <div
+          class="absolute left-[10%] top-0 size-[190px] bg-[#F2FF41] rounded-full blur-[200px] elipse animate-move-reverse">
+        </div>
+
+        <h1 class="urbanist-semibold text-5xl leading-[150%] fade-in-left">
+          Start Your Real Around The World Journey Today
+        </h1>
+        <p class="urbanist-medium text-[#999999] text-lg leading-[150%] fade-in-left">Your dream place is just a click away. Whether
+          you're looking for a new place, a historial place, or a chill place,
+          Uzbekation is here to assist you every step of the way. Take the first step towards your real trip planner and
+          explore our
+          available properties or get in touch with our team for personalized assistance.</p>
+      </article>
+      <button onclick="window.location.href=`./places.html`"
+        class="cursor-pointer px-6 py-4 rounded-xl bg-[#703BF7] text-lg transition-all duration-200 ease-in-out hover:shadow-[0_0_15px_5px_rgba(112,59,247,0.5)] hover:text-shadow-[0_0_10px_rgba(112,59,247,0.8),0_0_20px_rgba(112,59,247,0.9)] whitespace-nowrap fade-in">
+        Explore Places
+      </button>
+
+    </section>
+
+
+    <!-- footer -->
+    <footer class="px-24 py-[100px] flex items-start justify-between gap-20 groups">
+
+      <!-- email us -->
+      <div class="flex flex-col items-start justify-normal gap-8 relative">
+        <!-- ellipse -->
+        <div
+          class="absolute left-[30%] top-[50%] size-[140px] bg-[#33FF00] rounded-full blur-[200px] elipse animate-move-reverse">
+        </div>
+        <!-- logo -->
+        <a href="./home.html" class=" flex items-end gap-4 urbanist-extrabold text-3xl fade-in-left">
+          <img src="./img/logo.svg" alt="">
+          Uzbekation
+        </a>
+        <div
+          class="flex itemscenter gap-2.5 py-4 px-6 rounded-xl bg-[#141414]/10 ring-1 focus-within:ring-[#703BF7] ring-inset ring-white/20 backdrop-blur-md fade-in-left">
+          <label id="email-icon" for="email" class="cursor-pointer"><img src="./img/email.svg" alt=""></label>
+          <input id="email" autocomplete="off" type="email" name="email" id="email" placeholder="Enter Your Email"
+            class="w-[300px] pr-2 bg-transparent border-none ring-none focus:outline-none focus:border-transparent focus:ring-0 caret-[#703BF7] placeholder-[#999999] urbanist-medium text-lg leading-6 tracking-[-0.6%]">
+          <button type="submit" class="cursor-pointer" id="send-btn">
+            <img src="./img/Iconly/Bulk/Send.svg" alt="send">
+          </button>
+        </div>
+      </div>
+
+      <!-- menu links -->
+
+      <div class="flex items-start justify-between gap-10 relative">
+        <!-- ellipse -->
+        <div
+          class="absolute right-[25%] -top-[50%] size-[200px] bg-[#F43BF7] rounded-full blur-[220px] elipse animate-move-reverse">
+        </div>
+
+
+        <div class="space-y-8 urbanist-medium tracking-[-0.6%] fade-in">
+          <p class=" text-[#999999] text-xl">Places</p>
+          <div class="flex flex-col items-start gap-5 text-lg  leading-6 ">
+            <a class="cursor-pointer hover:underline" href="./places.html#trending">Trending Places</a>
+            <a class="cursor-pointer hover:underline" href="./places.html#unexplored">Unexplored Places</a>
+            <a class="cursor-pointer hover:underline" href="./places.html#historical">Historical Places</a>
+            <a class="cursor-pointer hover:underline" href="./places.html#familytrip">Family Trip Places</a>
+            <a class="cursor-pointer hover:underline" href="./places.html#faqs">FAQ’s</a>
+
+          </div>
+        </div>
+
+        <div class="space-y-8 urbanist-medium tracking-[-0.6%] fade-in">
+          <p class=" text-[#999999] text-xl">About Us</p>
+          <div class="flex flex-col items-start gap-5 text-lg  leading-6 ">
+            <a class="cursor-pointer hover:underline" href="./about_us.html#ourstory">Our Story</a>
+            <a class="cursor-pointer hover:underline" href="./services.html">Our Works</a>
+            <a class="cursor-pointer hover:underline" href="./about_us.html#ourteam">Our Team</a>
+            <a class="cursor-pointer hover:underline" href="./home.html#reviews">Our Clients</a>
+
+          </div>
+        </div>
+
+        <div class="space-y-8 urbanist-medium tracking-[-0.6%] fade-in">
+          <p class=" text-[#999999] text-xl">Packages</p>
+          <div class="flex flex-col items-start gap-5 text-lg  leading-6 ">
+            <a class="cursor-pointer hover:underline" href="./places.html#premiumplaces">Premium Packages</a>
+            <a class="cursor-pointer hover:underline" href="./places.html#budgetplaces">Budget Packages</a>
+          </div>
+        </div>
+
+        <div class="space-y-8 urbanist-medium tracking-[-0.6%] fade-in">
+          <p class=" text-[#999999] text-xl">Contact Us</p>
+          <div class="flex flex-col items-start gap-5 text-lg  leading-6 ">
+            <a class="cursor-pointer hover:underline" href="./contact_us.html#contactform">Contact Form</a>
+            <a class="cursor-pointer hover:underline" href="./contact_us.html#getintouch">Our Officess</a>
+          </div>
+        </div>
+
+      </div>
+    </footer>
+  </main>
+
+  <!-- footer: copyright and social links -->
+  <section class="bg-[#1A1A1A] py-4 px-24 flex items-center justify-between groups">
+    <div class="flex items-center gap-10 py-2.5 urbanist-medium tracking-[-0.6%] text-lg leading-6">
+      <p class="fade">© 2025 Uzbekation. All Rights Reserved.</p>
+      <a class="cursor-pointer hover:underline fade" href="#">Terms & Conditions</a>
+    </div>
+
+    <div class="flex items-center gap-2.5">
+      <a href="#"
+        class="rounded-full p-4 bg-[#141414] overflow-hidden object-cover object-center hover:scale-110 hover:ring hover:ring-white/10 transition-transform duration-100 ease-in-out fade">
+        <img class="size-6" src="./img/socials/facebook.svg" alt="facebook">
+      </a>
+      <a href="#"
+        class="rounded-full p-4 bg-[#141414] overflow-hidden object-cover object-center hover:scale-110 hover:ring hover:ring-white/10 transition-transform duration-100 ease-in-out fade">
+        <img class="size-6" src="./img/socials/twitter.svg" alt="facebook">
+      </a>
+      <a href="#"
+        class="rounded-full p-4 bg-[#141414] overflow-hidden object-cover object-center hover:scale-110 hover:ring hover:ring-white/10 transition-transform duration-100 ease-in-out fade">
+        <img class="size-6" src="./img/socials/linkedin.svg" alt="facebook">
+      </a>
+      <a href="#"
+        class="rounded-full p-4 bg-[#141414] overflow-hidden object-cover object-center hover:scale-110 hover:ring hover:ring-white/10 transition-transform duration-100 ease-in-out fade">
+        <img class="size-6" src="./img/socials/youtube.svg" alt="facebook">
+      </a>
+    </div>
+
+  </section>
+
+  <script src="./js/main.js"></script>
+  <script src="./js/sendmail.js"></script>
+  <script src="./js/contact-form.js"></script>
+</body>
+
+</html>
