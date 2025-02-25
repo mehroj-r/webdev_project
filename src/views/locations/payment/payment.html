@@ -62,7 +62,7 @@
   <!-- main content -->
   <section class="relative z-10 flex flex-col items-start justify-start h-full px-8 py-6">
     <!-- button for going back -->
-    <button onclick="history.back()"
+    <button onclick="window.location.href=`../../main/places.html`"
       class="text-lg sfpro-display-bold flex items-center justify-center gap-1.5 py-2 px-4 bg-mainpurple rounded-xl transition-all duration-200 ease-in-out hover:shadow-[0_0_15px_5px_rgba(112,59,247,0.5)] hover:text-shadow-[0_0_10px_rgba(112,59,247,0.8),0_0_20px_rgba(112,59,247,0.9)] whitespace-nowrap">
       <img class="size-4" src="../img/svgs/back.svg" alt="back">
       Back
@@ -114,6 +114,12 @@
                   role="option"> Chimgan</li>
                 <li class="hover:bg-lightpurple text-white hover:rounded-md focus:rounded-md focus:bg-lightpurple"
                   role="option"> Castle "Ichan"</li>
+                <li class="hover:bg-lightpurple text-white hover:rounded-md focus:rounded-md focus:bg-lightpurple"
+                  role="option">Living Museum</li>
+                <li class="hover:bg-lightpurple text-white hover:rounded-md focus:rounded-md focus:bg-lightpurple"
+                  role="option"> Capital City</li>
+                <li class="hover:bg-lightpurple text-white hover:rounded-md focus:rounded-md focus:bg-lightpurple"
+                  role="option"> Vergana Valley</li>
                 <!-- Clear option to reset selection -->
                 <li class="hover:bg-lightpurple text-white hover:rounded-md focus:rounded-md focus:bg-lightpurple"
                   role="option" data-value="clear">
@@ -153,6 +159,15 @@
                 <li class="hover:bg-lightpurple text-white hover:rounded-md focus:rounded-md focus:bg-lightpurple"
                   role="option">
                   Khiva</li>
+                <li class="hover:bg-lightpurple text-white hover:rounded-md focus:rounded-md focus:bg-lightpurple"
+                  role="option">
+                  Bukhara</li>
+                <li class="hover:bg-lightpurple text-white hover:rounded-md focus:rounded-md focus:bg-lightpurple"
+                  role="option">
+                  Tashkent</li>
+                <li class="hover:bg-lightpurple text-white hover:rounded-md focus:rounded-md focus:bg-lightpurple"
+                  role="option">
+                  Fergana</li>
                 <!-- Clear option to reset selection -->
                 <li class="hover:bg-lightpurple text-white hover:rounded-md focus:rounded-md focus:bg-lightpurple"
                   role="option" data-value="clear">
@@ -169,7 +184,7 @@
               <path stroke-linecap="round" stroke-linejoin="round"
                 d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5m-9-6h.008v.008H12v-.008ZM12 15h.008v.008H12V15Zm0 2.25h.008v.008H12v-.008ZM9.75 15h.008v.008H9.75V15Zm0 2.25h.008v.008H9.75v-.008ZM7.5 15h.008v.008H7.5V15Zm0 2.25h.008v.008H7.5v-.008Zm6.75-4.5h.008v.008h-.008v-.008Zm0 2.25h.008v.008h-.008V15Zm0 2.25h.008v.008h-.008v-.008Zm2.25-4.5h.008v.008H16.5v-.008Zm0 2.25h.008v.008H16.5V15Z" />
             </svg>
-            <input id="departureDateInput" type="text" placeholder="Departure date"
+            <input id="departureDateInput" type="text" placeholder="Departure date" required
               class="w-full urbanist-regular text-2xl pl-16 pr-4 py-3 md:py-4 text-white/50 md:text-[30px] font-normal bg-transparent border border-white/20 rounded-lg placeholder-white/50 focus:outline-none focus:ring-1 focus:ring-purple-500" />
           </div>
           <!-- Return data -->
@@ -179,7 +194,7 @@
               <path stroke-linecap="round" stroke-linejoin="round"
                 d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5m-9-6h.008v.008H12v-.008ZM12 15h.008v.008H12V15Zm0 2.25h.008v.008H12v-.008ZM9.75 15h.008v.008H9.75V15Zm0 2.25h.008v.008H9.75v-.008ZM7.5 15h.008v.008H7.5V15Zm0 2.25h.008v.008H7.5v-.008Zm6.75-4.5h.008v.008h-.008v-.008Zm0 2.25h.008v.008h-.008V15Zm0 2.25h.008v.008h-.008v-.008Zm2.25-4.5h.008v.008H16.5v-.008Zm0 2.25h.008v.008H16.5V15Z" />
             </svg>
-            <input id="returnDateInput" type="text" placeholder="Return date"
+            <input id="returnDateInput" type="text" placeholder="Return date" required 
               class="w-full urbanist-regular text-2xl pl-16 pr-4 py-3 md:py-4 text-white/50 md:text-[30px] font-normal bg-transparent border border-white/20 rounded-lg placeholder-white/50 focus:outline-none focus:ring-1 focus:ring-purple-500" />
           </div>
           <!-- Number of travellers -->
@@ -190,7 +205,7 @@
                 d="M18 18.72a9.094 9.094 0 0 0 3.741-.479 3 3 0 0 0-4.682-2.72m.94 3.198.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0 1 12 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 0 1 6 18.719m12 0a5.971 5.971 0 0 0-.941-3.197m0 0A5.995 5.995 0 0 0 12 12.75a5.995 5.995 0 0 0-5.058 2.772m0 0a3 3 0 0 0-4.681 2.72 8.986 8.986 0 0 0 3.74.477m.94-3.197a5.971 5.971 0 0 0-.94 3.197M15 6.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm6 3a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Zm-13.5 0a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Z" />
             </svg>
     
-            <input id="numberOfTravelersInput" type="text" placeholder="Number of travelers"
+            <input id="numberOfTravelersInput" type="text" placeholder="Number of travelers" required
               class="w-full urbanist-regular text-2xl pl-16 pr-4 py-3 md:py-4 text-white/50 md:text-[30px] font-normal bg-transparent border border-white/20 rounded-lg placeholder-white/50 focus:outline-none focus:ring-1 focus:ring-purple-500" />
           </div>
         </div>
