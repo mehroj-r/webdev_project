@@ -33,6 +33,7 @@ This document outlines the testing and debugging process for the application, en
 ```sh
 git clone https://github.com/mehroj-r/webdev_project.git
 cd webdev_project 
+```
 
 ## Test Cases examples
  
@@ -44,4 +45,4 @@ cd webdev_project
 
 ## Contributors
 - **Dilnur Aliqulov**  
-  - Email: [d.aliqulov@newuu.uz](mailto:d.aliqulov@newuu.uz)
+  - Email: d.aliqulov@newuu.uz
