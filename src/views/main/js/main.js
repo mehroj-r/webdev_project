@@ -36,6 +36,7 @@ try {
 
   .animate-bell {
     animation: bell 1s ease-in-out infinite; /* Rings every 2s */
+    transform-origin: bottom center;
   }
 
 .animate-move {

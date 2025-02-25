@@ -117,8 +117,8 @@
               </button>
               <div class="flex flex-col items-start justify-center gap-1">
                 <label for="locationInput" class="text-base">Location</label>
-                <input id="locationInput" type="text" autocomplete="off" value="Samarkand"
-                  class="max-w-36 bg-transparent border-none ring-none focus:outline-none focus:border-transparent focus:ring-0 text-xl worksans-bold text-white">
+                <input id="locationInput" type="text" autocomplete="off" value="Samarkand " disabled
+                  class="max-w-36 bg-transparent border-none ring-none focus:outline-none focus:border-transparent focus:ring-0 text-xl worksans-bold text-white caret-lightpurple">
               </div>
             </div>
             <div class="border border-r border-white h-7 rounded-full"></div>
@@ -128,16 +128,16 @@
               </label>
               <div class="flex flex-col items-start justify-center gap-1">
                 <label for="dateInput" class="text-base">Date</label>
-                <input id="dateInput" type="text" autocomplete="off" value="13 May, 2025"
+                <input id="dateInput" type="text" autocomplete="off" disabled value="13 May, 2025"
                   class="inline-block max-w-36 bg-transparent border-none ring-none focus:outline-none focus:border-transparent focus:ring-0 text-xl worksans-bold text-white border-white border-r-2">
               </div>
             </div>
           </div>
           <!-- search button -->
-          <a href="../locations/registan.html" id="searchBtn"
+          <button onclick="window.location.href=`../locations/registan.html`" id="searchBtn"
             class="grid place-content-center p-5 rounded-2xl bg-gradient-to-r from-[#A585FA] to-[#4600FF] cursor-pointer transition-all duration-200 ease-in-out hover:shadow-[0_0_15px_5px_rgba(112,59,247,0.5)] hover:text-shadow-[0_0_10px_rgba(112,59,247,0.8),0_0_20px_rgba(112,59,247,0.9)]">
             <img src="./img/searchicon.svg" alt="search">
-          </a>
+          </button>
         </div>
         <!-- locations modal with popular travel locations -->
         <div id="locationModal"
@@ -178,6 +178,39 @@
                 </p>
               </div>
             </a>
+            <a href="../locations/bukhara.html"
+              class="flex items-center space-x-3 rounded-lg p-3 shadow-sm bg-transparent backdrop-blur-sm border border-white/20 hover:border-white/30 cursor-pointer hover:scale-105 transition duration-200 ease-in-out">
+              <div class="flex-shrink-0 object-cover object-center overflow-hidden">
+                <img class="h-14 w-20 rounded-sm" src="./img/bukhara.png" alt="location" />
+              </div>
+              <div class="min-w-0 flex-1">
+                <p class="text-sm font-semibold">
+                  Ark, Bukhara
+                </p>
+              </div>
+            </a>
+            <a href="../locations/tashkent.html"
+              class="flex items-center space-x-3 rounded-lg p-3 shadow-sm bg-transparent backdrop-blur-sm border border-white/20 hover:border-white/30 cursor-pointer hover:scale-105 transition duration-200 ease-in-out">
+              <div class="flex-shrink-0 object-cover object-center overflow-hidden">
+                <img class="h-14 w-20 rounded-sm" src="./img/tashkent.png" alt="location" />
+              </div>
+              <div class="min-w-0 flex-1">
+                <p class="text-sm font-semibold">
+                  TV Tower, Tashkent
+                </p>
+              </div>
+            </a>
+            <a href="../locations/fergana.html"
+              class="flex items-center space-x-3 rounded-lg p-3 shadow-sm bg-transparent backdrop-blur-sm border border-white/20 hover:border-white/30 cursor-pointer hover:scale-105 transition duration-200 ease-in-out">
+              <div class="flex-shrink-0 object-cover object-center overflow-hidden">
+                <img class="h-14 w-20 rounded-sm" src="./img/fergana_valley.png" alt="location" />
+              </div>
+              <div class="min-w-0 flex-1">
+                <p class="text-sm font-semibold">
+                  Fergana Valley, Vergana
+                </p>
+              </div>
+            </a>
           </div>
         </div>
 
@@ -186,7 +219,7 @@
 
     <!-- offers -->
     <section class="px-5 flex gap-5 urbanist-semibold mb-20 groups">
-      <a class="flex-1 fade-in" href="#">
+      <a class="flex-1 fade-in" href="./contact_us.html">
         <div
           class="py-10 px-5 flex flex-col items-center gap-5 rounded-xl bg-[#1a1a1a]/10 border border-white/10 relative hover:border-white/20 group hover:scale-[103%] transition duration-200 ease-in-out">
           <img class="size-20" src="./img/dstay.svg" alt="stay">
@@ -201,7 +234,7 @@
           </div>
         </div>
       </a>
-      <a class="flex-1 fade-in" href="#">
+      <a class="flex-1 fade-in" href="./places.html">
         <div
           class="py-10 px-5 flex flex-col items-center gap-5 rounded-xl bg-[#1a1a1a]/10 border border-white/10 relative hover:border-white/20 group hover:scale-[103%] transition duration-200 ease-in-out">
           <img class="size-20" src="./img/package.svg" alt="stay">
@@ -213,7 +246,7 @@
           </svg>
         </div>
       </a>
-      <a class="flex-1 fade-in" href="#">
+      <a class="flex-1 fade-in" href="./services.html">
         <div
           class="py-10 px-5 flex flex-col items-center gap-5 rounded-xl bg-[#1a1a1a]/10 border border-white/10 relative hover:border-white/20 group hover:scale-[103%] transition duration-200 ease-in-out">
           <img class="size-20 group-hover:animate-bell" src="./img/building.svg" alt="stay">
@@ -225,7 +258,7 @@
           </svg>
         </div>
       </a>
-      <a class="flex-1 fade-in" href="#">
+      <a class="flex-1 fade-in" href="./places.html">
         <div
           class="py-10 px-5 flex flex-col items-center gap-5 rounded-xl bg-[#1a1a1a]/10 border border-white/10 relative hover:border-white/20 group hover:scale-[103%] transition duration-200 ease-in-out">
           <img class="size-20 group-hover:animate-bell" src="./img/sun.svg" alt="stay">
@@ -311,9 +344,9 @@
           Each listing offers a glimpse into exceptional Places available through Uzbekation
         </p>
         <!-- ellipse -->
-        <div class="absolute left-[25%] top-10 size-[180px] bg-[#33FF00] rounded-full blur-[220px] elipse animate-move-reverse">
+        <div class="absolute left-[25%] top-10 size-[140px] bg-[#33FF00] rounded-full blur-[200px] elipse animate-move-reverse">
         </div>
-        <div class="absolute right-0 -top-5 size-[320px] bg-[#703BF7] rounded-full blur-[200px] elipse animate-move">
+        <div class="absolute right-0 -top-5 size-[320px] bg-[#703BF7] rounded-full blur-[180px] elipse animate-move">
         </div>
       </div>
 
@@ -321,7 +354,11 @@
 
       <div class="flex items-center gap-8 px-24 overflow-auto scrollbar-hidden snap-x snap-mandatory scroll-pl-24 relative">
         <!-- ellipse -->
+<<<<<<< HEAD
         <div class="absolute left-[15%] size-[190px] rounded-full blur-[200px] elipse animate-move-reverse">
+=======
+        <div class="absolute left-[15%] size-[160px] bg-[#F2FF41] rounded-full blur-[180px] elipse animate-move-reverse">
+>>>>>>> 3d103d6 (minor bug fixes)
         </div>
 
         <!-- Khiva Card -->
@@ -500,8 +537,8 @@
         </div>
 
         <div class="flex items-center justify-center gap-2 fade-in">
-          <p class="text-white urbanist-medium text-xl">01</p>
-          <p class="urbanist-medium text-[#999999] text-xl">of 60</p>
+          <p class="text-white urbanist-medium text-xl">1</p>
+          <p class="urbanist-medium text-[#999999] text-xl">of 6</p>
         </div>
         <div class="flex items-center gap-2 fade-in">
           <button class="rounded-full p-4 border border-[#262626] cursor-pointer hover:border-white/20">
@@ -536,8 +573,13 @@
 
       <div class="flex items-center gap-8 px-24 overflow-scroll scrollbar-none snap-x snap-mandatory scroll-pl-24">
 
+<<<<<<< HEAD
         <<div
         class="flex flex-col items-start gap-10 w-fit p-[50px] rounded-xl bg-[#141414]/10 border border-white/20 backdrop-blur-md snap-start snap-always fade-in-left">
+=======
+        <div
+        class="flex flex-col items-start gap-10 w-fit p-[50px] rounded-xl bg-[#141414]/10 border border-white/20 backdrop-blur-md snap-start snap-always">
+>>>>>>> 3d103d6 (minor bug fixes)
       
         <!-- satisfaction level (stars)-->
         <div class="flex items-center justify-start gap-2.5">
@@ -795,8 +837,8 @@
       <div class="flex items-center justify-between ccontainer border-[#262626] border-t-2 mt-[50px] pt-5 groups">
         <!-- pagination -->
         <div class="flex items-center justify-center gap-2 fade-in">
-          <p class="text-white urbanist-medium text-xl">01</p>
-          <p class="urbanist-medium text-[#999999] text-xl">of 180</p>
+          <p class="text-white urbanist-medium text-xl">6</p>
+          <p class="urbanist-medium text-[#999999] text-xl">reviews</p>
         </div>
         <div class="flex items-center gap-2 fade-in">
           <button class="rounded-full p-4 border border-[#262626] cursor-pointer hover:border-white/20">
