@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Places | Fergana Valley</title>
+  <link rel="stylesheet" href="../../styles/fonts.css">
+  <link rel="stylesheet" href="../../styles/main.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        screens: {
+          lg: { max: "1024px" },
+          md: { max: "768px" },
+          hamvisible: { max: "700px" },
+          sm: { max: "425px" },
+          xs: { max: "375px" },
+          s: { max: "320px" },
+        },
+        extend: {
+          colors: {
+            mainpurple: "#703BF7",
+            lighterpurple: "#A685FA"
+          },
+        },
+      },
+    };
+  </script>
+
+  <style>
+    .text-inner-shadow {
+      text-shadow: inset 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    }
+  </style>
+</head>
+
+<body
+  class="bg-[url('./img/fergana.png')] h-screen bg-cover bg-center text-white scroll-smooth overscroll-auto scrollbar-hidden">
+  <div class="absolute inset-0 bg-gradient-to-r from-black/50 to-black/50 via-transparent -z-10"></div>
+
+  <div class="flex flex-col justify-between h-full px-8 py-6">
+    <!-- navigation buttons -->
+    <nav class="flex items-center justify-between">
+      <button onclick="history.back()"
+        class="text-lg sfpro-display-bold flex items-center justify-center gap-1.5 py-2 px-4 bg-mainpurple rounded-xl transition-all duration-200 ease-in-out hover:shadow-[0_0_15px_5px_rgba(112,59,247,0.5)] hover:text-shadow-[0_0_10px_rgba(112,59,247,0.8),0_0_20px_rgba(112,59,247,0.9)] whitespace-nowrap">
+        <img class="size-4" src="./img/svgs/back.svg" alt="back">
+        Back
+      </button>
+      <button onclick="doPayment()"
+        class="text-lg sfpro-display-bold flex items-center justify-center gap-1.5 py-2 px-4 bg-mainpurple rounded-xl transition-all duration-200 ease-in-out hover:shadow-[0_0_15px_5px_rgba(112,59,247,0.5)] hover:text-shadow-[0_0_10px_rgba(112,59,247,0.8),0_0_20px_rgba(112,59,247,0.9)] whitespace-nowrap">
+        Next
+        <img class="size-4" src="./img/svgs/next.svg" alt="next">
+      </button>
+    </nav>
+
+    <div class="flex items-end justify-between">
+      <!-- detailed information about the place -->
+      <article
+        class="flex flex-col items-start max-w-[550px] p-4 bg-[#0A0A0A]/30 border border-[#FFFFFF]/20 backdrop-blur-sm rounded-3xl">
+        <img class="size-12" src="./img/svgs/park.svg" alt="nature">
+        <div class="flex flex-col items-start ml-6 mt-4 mb-10">
+          <p class="sfpro-display-bold text-5xl text-[#F8F8FF] ml-4">Fergana Valley</p>
+          <p class="regular-brush text-5xl text-lighterpurple mt-1">Silk & Orchards</p>
+        </div>
+        <img class="mb-5" src="./img/divider.png" alt="divider">
+        <!-- details about the location -->
+        <p class="sfpro-display text-base mb-5">
+          The Fergana Valley is one of the most <span class="text-lighterpurple font-semibold">fertile regions in Central Asia</span>, 
+          surrounded by the Tian Shan and Pamir mountain ranges. Historically a center of the Silk Road, 
+          it remains <span class="text-lighterpurple font-semibold">Uzbekistan's agricultural heartland</span>, producing fruits, 
+          vegetables, cotton, and silk. The region is home to several ancient cities including 
+          <span class="text-lighterpurple font-semibold">Andijan, Fergana, and Namangan</span>, each with distinct cultural traditions. 
+          The valley is famous for its <span class="text-lighterpurple font-semibold">traditional silk production, ceramics, and woodworking</span>, 
+          with artisanal techniques passed down through generations.
+        </p>
+
+        <!-- information -->
+        <div class="flex items-start gap-5">
+          <div class="flex flex-col items-center justify-start relative max-w-[160px] min-h-[168px]">
+            <img class="absolute top-0 left-0 right-0 bottom-0" src="./img/svgs/Union.svg" alt="union">
+            <img class="size-15" src="./img/svgs/sleep.svg" alt="silk">
+            <p class="text-lighterpurple regular-brush text-base text-[#A685FA] text-center mb-1">Silk Heritage</p>
+            <p class="text-center text-[#F8F8FF] sfpro-display text-xs mx-1">Visit traditional silk workshops where artisans still create vibrant fabrics using ancient techniques.</p>
+          </div>
+          <div class="flex flex-col items-center justify-center relative max-w-[160px] min-h-[168px]">
+            <img class="absolute top-0 left-0 right-0 bottom-0" src="./img/svgs/Union.svg" alt="union">
+            <img class="size-15" src="./img/svgs/plane.svg" alt="pottery">
+            <p class="text-lighterpurple regular-brush text-base text-[#A685FA] text-center mb-1">Ceramics</p>
+            <p class="text-center text-[#F8F8FF] sfpro-display text-xs mx-1">
+              Rishtan pottery, with distinctive blue glaze, is produced using techniques dating back centuries.</p>
+          </div>
+          <div class="flex flex-col items-center justify-center relative max-w-[160px] min-h-[168px]">
+            <img class="absolute top-0 left-0 right-0 bottom-0" src="./img/svgs/Union.svg" alt="union">
+            <img class="size-15" src="./img/svgs/animalpath.svg" alt="fruit">
+            <p class="text-lighterpurple regular-brush text-base text-[#A685FA] text-center mb-1">Orchards</p>
+            <p class="text-center text-[#F8F8FF] sfpro-display text-xs mx-1">The valley's fertile soil produces some of Central Asia's most delicious fruits, especially melons, apricots, and pomegranates.</p>
+          </div>
+        </div>
+
+        <!-- Weather info -->
+        <div class="flex flex-col items-center mx-auto mt-4">
+          <p class="text-[#A685FA] sfpro-display-bold text-lg">Weather info: </p>
+          <p class="font-semibold">The Fergana Valley enjoys a <span class="text-lighterpurple">continental climate</span> with 
+          <span class="text-lighterpurple">hot, dry summers</span> and <span class="text-lighterpurple">moderately cold winters</span>. 
+          Protected by mountains, the valley experiences less temperature extremes than other parts of Uzbekistan, with 
+          <span class="underline">average summer temperatures around 30°C</span>.
+          </p>
+        </div>
+      </article>
+      
+      <div class="flex flex-col gap-3 items-end">
+        <!-- price info -->
+        <p
+          class="w-fit px-6 py-4 text-xl regular-brush text-lighterpurple leading-[150%] bg-[#000]/20 rounded-xl backdrop-blur-md border border-white/10">
+          Price <span class="sfpro-display font-bold text-white"> : $52</span></p>
+        <!-- Geographical information -->
+        <article
+          class="flex flex-col items-start max-w-[500px] py-6 px-3 bg-[#0A0A0A]/30 border border-[#FFFFFF]/20 backdrop-blur-sm rounded-3xl">
+          <p class="sfpro-display-bold text-lighterpurple text-xl mx-auto mb-4">Geography</p>
+          <img class="rounded-3xl mb-4" src="./img/ferganamap.png" alt="map">
+
+          <!-- facts about the place -->
+          <div class="flex flex-col items-start gap-1 ml-3">
+            <p class="sfpro-display-bold text-base">Location : <span class="text-lighterpurple"> Eastern Uzbekistan</span> </p>
+            <p class="sfpro-display-bold text-base">Coordinates : <span class="text-lighterpurple"> 40°22′N 71°46′E</span></p>
+            <p class="sfpro-display-bold text-base">Area : <span class="text-lighterpurple">22,000 km² (8,500 sq mi)</span></p>
+            <p class="sfpro-display-bold text-base">Altitude : <span class="text-lighterpurple">400-500 meters above sea level</span></p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
