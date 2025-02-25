@@ -135,9 +135,9 @@
           </div>
 
           <!-- button for updating credentials -->
-          <button id="editBtn" type="submit"
+          <button id="logoutBtn" type="submit"
             class="text-lg sfpro-display py-2.5 px-10 bg-mainpurple rounded-xl transition-all duration-200 ease-in-out hover:shadow-[0_0_15px_5px_rgba(112,59,247,0.5)] hover:text-shadow-[0_0_10px_rgba(112,59,247,0.8),0_0_20px_rgba(112,59,247,0.9)] whitespace-nowrap">
-            Update
+            Log Out
           </button>
 
         </form>
@@ -158,6 +158,17 @@
         document.getElementById("phoneInput").value = user.phone; // Set phone input value
       }
     }
+
+    document.addEventListener("DOMContentLoaded", function () {
+        const logoutBtn = document.getElementById("logoutBtn");
+        if (logoutBtn) {
+          logoutBtn.addEventListener("click", function () {
+            localStorage.removeItem("loggedInUser"); // Clear session
+            alert("Logged out successfully.");
+            window.location.href = "../auth/signin.html"; // Redirect to login page
+          });
+        }
+      });
   </script>
 </body>
 
