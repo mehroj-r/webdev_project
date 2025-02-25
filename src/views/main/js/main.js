@@ -131,15 +131,15 @@ const observer = new IntersectionObserver((entries, observer) => {
         fadeElements.forEach((element, index) => {
           setTimeout(() => {
             element.classList.add('visible');
-          }, index * 400);
+          }, index * 100);
         });
-      }, 500);
+      }, 0);
 
       observer.unobserve(entry.target);
     }
   });
 }, {
-  threshold: 0.6
+  threshold: [0.2, 0.3, 0.5, 0.7, 1]
 });
 
 sections.forEach(section => observer.observe(section));
