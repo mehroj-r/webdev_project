@@ -212,6 +212,13 @@
   </section>
 
   <script src="./js/profile.js"></script>
+
+  <!-- Inline script to prevent form submission -->
+  <script>
+    document.getElementById("showModalBtn").addEventListener("click", function (event) {
+      event.preventDefault(); 
+    });
+  </script>
   
 </body>
 
