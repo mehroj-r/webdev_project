@@ -11,7 +11,7 @@ global.console = {
     ...console,
     log: jest.fn(), // Suppress console.log
     info: jest.fn(), // Suppress console.info
-    warn: console.warn, // Keep warnings visible
-    error: console.error, // Keep errors visible
+    warn: jest.fn(), // Suppress console.warn
+    error: jest.fn(), // Suppress console.error
 };
   
