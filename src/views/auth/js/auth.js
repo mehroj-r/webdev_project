@@ -10,7 +10,13 @@ try {
 
       // Redirect to sign-in page when button is clicked
       goToSignIn.addEventListener("click", function () {
-        window.location.href = "../../auth/signin.html";
+        const currentPage = window.location.pathname.split("/").pop(); // Get current page file name
+
+        if (currentPage === "payment.html") {
+          window.location.href = "../../auth/signin.html";
+        } else {
+          window.location.href = "../auth/signin.html";
+        }
       });
 
       return false; // Stop further execution
@@ -23,7 +29,6 @@ try {
       window.location.href = "../locations/payment/payment.html"; // Redirect to payment page if signed in
     }
   }
-
 } catch (err) {
   console.log(err);
 }
@@ -65,4 +70,3 @@ document.addEventListener("DOMContentLoaded", function () {
     `;
   }
 });
-
