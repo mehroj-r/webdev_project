@@ -131,9 +131,9 @@ const observer = new IntersectionObserver((entries, observer) => {
         fadeElements.forEach((element, index) => {
           setTimeout(() => {
             element.classList.add('visible');
-          }, index * 400);
+          }, index * 100);
         });
-      }, 500);
+      }, 0);
 
       observer.unobserve(entry.target);
     }
