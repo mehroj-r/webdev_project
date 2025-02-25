@@ -24,11 +24,17 @@
 }
 
 .answer-box {
-  display: none;
+  max-height: 0;
   overflow: hidden;
-  margin-top: 20px;
   font-size: 18px;
-  transition: transform 0.3s ease;
+  transition: max-height 0.3s ease, margin-top 0.3s ease, opacity 0.3s ease;
+  opacity: 0;
+}
+
+.faq.active .answer-box {
+  max-height: 500px; /* Set a large enough value to accommodate content */
+  margin-top: 20px;
+  opacity: 1;
 }
 
 .faq.active .openimg {
