@@ -39,7 +39,8 @@ const handleLogOut = () => {
   }
 
   // Show modal when clicking log out button in profile page
-  showModalBtn.addEventListener("click", function () {
+  showModalBtn.addEventListener("click", function (e) {
+    e.preventDefault();
     logoutModal.classList.remove("hidden");
   });
 
