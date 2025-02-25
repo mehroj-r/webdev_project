@@ -75,15 +75,6 @@
       </ul>
     </nav>
     <!-- profile icon or sign in icon (if dont have profile yet) -->
-    <!-- <a href="./profile.html"
-      class="text-white px-5 py-3 text-base leading-[150%] bg-[#4a4a4a]/10 rounded-[10px] backdrop-blur-md border border-white/10  hover:border-white/20 hover:bg-[#4a4a4a]/20 transition duration-200 ease-in-out">
-      <img src="./img/profile.svg" alt="profile">
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="#A685FA"
-        class="size-6">
-        <path stroke-linecap="round" stroke-linejoin="round"
-          d="M8.25 9V5.25A2.25 2.25 0 0 1 10.5 3h6a2.25 2.25 0 0 1 2.25 2.25v13.5A2.25 2.25 0 0 1 16.5 21h-6a2.25 2.25 0 0 1-2.25-2.25V15M12 9l3 3m0 0-3 3m3-3H2.25" />
-      </svg>
-    </a> -->
     <a id="profileLink"
       class="text-white px-5 py-3 text-base leading-[150%] bg-[#4a4a4a]/10 rounded-[10px] backdrop-blur-md border border-white/10 hover:border-white/20 hover:bg-[#4a4a4a]/20 transition duration-200 ease-in-out">
       <span id="profileIconContainer">
@@ -313,10 +304,10 @@
 
       <div class=" ccontainer space-y-4 mb-20 relative">
         <p class="urbanist-bold text-5xl leading-[150%] fade-in-left">Featured Trips</p>
-        <p class="urbanist-medium text-xl leading-[150%] text-[#999999] fade-in-left">Explore our handpicked selection of featured
-          Trips.Each
-          listing offers a glimpse into exceptional Places available
-          through Estatein</p>
+        <p class="urbanist-medium text-xl leading-[150%] text-[#999999] fade-in-left">
+          Explore our handpicked selection of featured trips. 
+          Each listing offers a glimpse into exceptional Places available through Uzbekation
+        </p>
         <!-- ellipse -->
         <div class="absolute left-[25%] top-10 size-[180px] bg-[#33FF00] rounded-full blur-[220px] elipse animate-move-reverse">
         </div>
@@ -333,76 +324,163 @@
 
         <div onclick="openCityPage('khiva')"
           class="space-y-[30px] w-fit p-10 rounded-xl bg-[#141414]/10 border border-white/20 hover:border-white/30 hover:bg-[#141414]/40 transition duration-300 ease-in-out backdrop-blur-md snap-start snap-always cursor-pointer fade">
-          <img class="rounded-t-lg w-full h-[300px] object-cover" src="./img/khiva.webp" alt="trip">
+          <div class="relative">
+            <img class="rounded-lg w-full h-[300px] object-cover" src="./img/khiva.webp" alt="trip">
+            <div class="absolute bottom-3 right-3 bg-black/60 px-3 py-1.5 rounded-lg flex items-center gap-1.5">
+              <img src="./img/rating_star.svg" alt="rating star" class="h-6 w-6">
+              <p class="urbanist-regular text-2xl text-white">4.8 (243)</p>
+            </div>
+          </div>
           <div class="flex flex-col gap-8">
             <div class="flex flex-col items-start gap-1.5">
               <p id="locationName" class="text-4xl urbanist-semibold">Khiva, Khorezm</p>
-              <p class="urbanist-medium text-2xl whitespace-normal w-[432px]">Ancient Walled City – Open-Air Museum</p>
+              <p class="urbanist-medium text-2xl whitespace-normal w-[432px] text-[#D3D3D3]">Ancient Walled City – Open-Air Museum</p>
             </div>
             <div class="flex items-center jusfity-between gap-[50px]">
               <div class="flex flex-col items-start gap-0.5">
                 <p class="text-[#999999] text-3xl urbanist-medium">From</p>
-                <p class="urbanist-semibold text-2xl">$ 57</p>
+                <p class="urbanist-semibold text-2xl">$57</p>
               </div>
               <button onclick="openCityPage('khiva')"
                 class="cursor-pointer flex-1 px-6 py-4 rounded-xl bg-[#703BF7] text-lg transition-all duration-200 ease-in-out hover:shadow-[0_0_15px_5px_rgba(112,59,247,0.5)] hover:text-shadow-[0_0_10px_rgba(112,59,247,0.8),0_0_20px_rgba(112,59,247,0.9)] whitespace-nowrap">
                 View Trip Details
               </button>
             </div>
-            <div class="grid place-content-center">
-              <p class="urbanist-regular text-2xl">4.8 (243)</p>
-            </div>
           </div>
         </div>
         <div  onclick="openCityPage('registan')"
           class="flex flex-col items-center gap-[30px] w-fit p-10 rounded-xl bg-[#141414]/10 border border-white/20 hover:border-white/30 hover:bg-[#141414]/40 transition duration-300 ease-in-out backdrop-blur-md snap-start snap-always cursor-pointer fade">
-          <div class="flex-1">
-            <img class="rounded-t-lg w-full h-[300px] object-cover" src="./img/registanpic.jpg" alt="trip">
+          <div class="relative flex-1">
+            <img class="rounded-lg w-full h-[300px] object-cover" src="./img/registanpic.jpg" alt="trip">
+            <div class="absolute bottom-3 right-3 bg-black/60 px-3 py-1.5 rounded-lg flex items-center gap-1.5">
+              <img src="./img/rating_star.svg" alt="rating star" class="h-6 w-6">
+              <p class="urbanist-medium text-2xl text-white">4.5 (168)</p>
+            </div>
           </div>
           <div class="flex flex-col gap-8">
             <div class="flex flex-col items-start gap-1.5">
               <p id="locationName" class="text-4xl urbanist-semibold">Registan, Samarkand</p>
-              <p class="urbanist-medium text-2xl whitespace-normal w-[432px] max-w-[430px]">
+              <p class="urbanist-medium text-2xl whitespace-normal w-[432px] max-w-[430px] text-[#D3D3D3]">
                 Pearl of the Silk Road
               </p>
             </div>
             <div class="flex items-center jusfity-between gap-[50px]">
               <div class="flex flex-col items-start gap-0.5">
                 <p class="text-[#999999] text-3xl urbanist-medium">From</p>
-                <p class="urbanist-semibold text-2xl">$ 42</p>
+                <p class="urbanist-semibold text-2xl">$42</p>
               </div>
               <button onclick="openCityPage('registan')"
                 class="cursor-pointer flex-1 px-6 py-4 rounded-xl bg-[#703BF7] text-lg transition-all duration-200 ease-in-out hover:shadow-[0_0_15px_5px_rgba(112,59,247,0.5)] hover:text-shadow-[0_0_10px_rgba(112,59,247,0.8),0_0_20px_rgba(112,59,247,0.9)] whitespace-nowrap">
                 View Trip Details
               </button>
             </div>
-            <div class="grid place-content-center">
-              <p class="urbanist-medium text-2xl">4.5 (168)</p>
-            </div>
           </div>
         </div>
         <div onclick="openCityPage('chimgan')"
           class="space-y-[30px] w-fit p-10 rounded-xl bg-[#141414]/10 border border-white/20 hover:border-white/30 hover:bg-[#141414]/40 transition duration-300 ease-in-out backdrop-blur-md snap-start snap-always cursor-pointer fade">
-          <img class="rounded-t-lg w-full h-[300px] object-cover" src="./img/chimgan-skiing.jpg" alt="trip">
+          <div class="relative">
+            <img class="rounded-lg w-full h-[300px] object-cover" src="./img/chimgan-skiing.jpg" alt="trip">
+            <div class="absolute bottom-3 right-3 bg-black/60 px-3 py-1.5 rounded-lg flex items-center gap-1.5">
+              <img src="./img/rating_star.svg" alt="rating star" class="h-6 w-6">
+              <p class="urbanist-medium text-2xl text-white">4.76 (343)</p>
+            </div>
+          </div>
           <div class="flex flex-col gap-8">
             <div class="flex flex-col items-start gap-1.5">
-              <p id="locationName" class="text-4xl urbanist-semibold">Chimgan, tashkent</p>
-              <p class="urbanist-medium text-2xl whitespace-normal w-[432px] max-w-[430px]">
+              <p id="locationName" class="text-4xl urbanist-semibold">Chimgan, Tashkent</p>
+              <p class="urbanist-medium text-2xl whitespace-normal w-[432px] max-w-[430px] text-[#D3D3D3]">
                 "Uzbek Switzerland" - Chimgan!
               </p>
             </div>
             <div class="flex items-center jusfity-between gap-[50px]">
               <div class="flex flex-col items-start gap-0.5">
                 <p class="text-[#999999] text-3xl urbanist-medium">From</p>
-                <p class="urbanist-semibold text-2xl">$ 45</p>
+                <p class="urbanist-semibold text-2xl">$45</p>
               </div>
               <button onclick="openCityPage('chimgan')"
                 class="cursor-pointer flex-1 px-6 py-4 rounded-xl bg-[#703BF7] text-lg transition-all duration-200 ease-in-out hover:shadow-[0_0_15px_5px_rgba(112,59,247,0.5)] hover:text-shadow-[0_0_10px_rgba(112,59,247,0.8),0_0_20px_rgba(112,59,247,0.9)] whitespace-nowrap">
                 View Trip Details
               </button>
             </div>
-            <div class="grid place-content-center">
-              <p class="urbanist-medium text-2xl">4.76 (343)</p>
+          </div>
+        </div>
+        <!-- Bukhara Card -->
+        <div onclick="openCityPage('bukhara')" class="space-y-[30px] w-fit p-10 rounded-xl bg-[#141414]/10 border border-white/20 hover:border-white/30 hover:bg-[#141414]/40 transition duration-300 ease-in-out backdrop-blur-md snap-start snap-always cursor-pointer fade">
+          <div class="relative">
+            <img class="rounded-lg w-full h-[300px] object-cover" src="./img/bukhara.png" alt="trip">
+            <div class="absolute bottom-3 right-3 bg-black/60 px-3 py-1.5 rounded-lg flex items-center gap-1.5">
+              <img src="./img/rating_star.svg" alt="rating star" class="h-6 w-6">
+              <p class="urbanist-medium text-2xl text-white">4.9 (289)</p>
+            </div>
+          </div>
+          <div class="flex flex-col gap-8">
+            <div class="flex flex-col items-start gap-1.5">
+              <p id="locationName" class="text-4xl urbanist-semibold">Bukhara, Bukhara Province</p>
+              <p class="urbanist-medium text-2xl whitespace-normal w-[432px] text-[#D3D3D3]">Living Museum with 140+ Monuments</p>
+            </div>
+            <div class="flex items-center jusfity-between gap-[50px]">
+              <div class="flex flex-col items-start gap-0.5">
+                <p class="text-[#999999] text-3xl urbanist-medium">From</p>
+                <p class="urbanist-semibold text-2xl">$49</p>
+              </div>
+              <button onclick="openCityPage('bukhara')"
+                class="cursor-pointer flex-1 px-6 py-4 rounded-xl bg-[#703BF7] text-lg transition-all duration-200 ease-in-out hover:shadow-[0_0_15px_5px_rgba(112,59,247,0.5)] hover:text-shadow-[0_0_10px_rgba(112,59,247,0.8),0_0_20px_rgba(112,59,247,0.9)] whitespace-nowrap">
+                View Trip Details
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tashkent Card -->
+        <div onclick="openCityPage('tashkent')" class="space-y-[30px] w-fit p-10 rounded-xl bg-[#141414]/10 border border-white/20 hover:border-white/30 hover:bg-[#141414]/40 transition duration-300 ease-in-out backdrop-blur-md snap-start snap-always cursor-pointer fade">
+          <div class="relative">
+            <img class="rounded-lg w-full h-[300px] object-cover" src="./img/tashkent.png" alt="trip">
+            <div class="absolute bottom-3 right-3 bg-black/60 px-3 py-1.5 rounded-lg flex items-center gap-1.5">
+              <img src="./img/rating_star.svg" alt="rating star" class="h-6 w-6">
+              <p class="urbanist-medium text-2xl text-white">4.7 (312)</p>
+            </div>
+          </div>
+          <div class="flex flex-col gap-8">
+            <div class="flex flex-col items-start gap-1.5">
+              <p id="locationName" class="text-4xl urbanist-semibold">Tashkent, Capital</p>
+              <p class="urbanist-medium text-2xl whitespace-normal w-[432px] text-[#D3D3D3]">Modern Capital with Historic Charm</p>
+            </div>
+            <div class="flex items-center jusfity-between gap-[50px]">
+              <div class="flex flex-col items-start gap-0.5">
+                <p class="text-[#999999] text-3xl urbanist-medium">From</p>
+                <p class="urbanist-semibold text-2xl">$38</p>
+              </div>
+              <button onclick="openCityPage('tashkent')"
+                class="cursor-pointer flex-1 px-6 py-4 rounded-xl bg-[#703BF7] text-lg transition-all duration-200 ease-in-out hover:shadow-[0_0_15px_5px_rgba(112,59,247,0.5)] hover:text-shadow-[0_0_10px_rgba(112,59,247,0.8),0_0_20px_rgba(112,59,247,0.9)] whitespace-nowrap">
+                View Trip Details
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Fergana Valley Card -->
+        <div onclick="openCityPage('fergana')" class="space-y-[30px] w-fit p-10 rounded-xl bg-[#141414]/10 border border-white/20 hover:border-white/30 hover:bg-[#141414]/40 transition duration-300 ease-in-out backdrop-blur-md snap-start snap-always cursor-pointer fade">
+          <div class="relative">
+            <img class="rounded-lg w-full h-[300px] object-cover" src="./img/fergana_valley.png" alt="trip">
+            <div class="absolute bottom-3 right-3 bg-black/60 px-3 py-1.5 rounded-lg flex items-center gap-1.5">
+              <img src="./img/rating_star.svg" alt="rating star" class="h-6 w-6">
+              <p class="urbanist-medium text-2xl text-white">4.6 (201)</p>
+            </div>
+          </div>
+          <div class="flex flex-col gap-8">
+            <div class="flex flex-col items-start gap-1.5">
+              <p id="locationName" class="text-4xl urbanist-semibold">Fergana Valley</p>
+              <p class="urbanist-medium text-2xl whitespace-normal w-[432px] text-[#D3D3D3]">Lush Agricultural Oasis & Silk Traditions</p>
+            </div>
+            <div class="flex items-center jusfity-between gap-[50px]">
+              <div class="flex flex-col items-start gap-0.5">
+                <p class="text-[#999999] text-3xl urbanist-medium">From</p>
+                <p class="urbanist-semibold text-2xl">$52</p>
+              </div>
+              <button onclick="openCityPage('fergana')"
+                class="cursor-pointer flex-1 px-6 py-4 rounded-xl bg-[#703BF7] text-lg transition-all duration-200 ease-in-out hover:shadow-[0_0_15px_5px_rgba(112,59,247,0.5)] hover:text-shadow-[0_0_10px_rgba(112,59,247,0.8),0_0_20px_rgba(112,59,247,0.9)] whitespace-nowrap">
+                View Trip Details
+              </button>
             </div>
           </div>
         </div>
@@ -444,153 +522,265 @@
 
         <p class="urbanist-bold text-5xl leading-[150%] fade-in-left">What Our Clients Say</p>
         <p class="urbanist-medium text-xl leading-[150%] text-[#999999] fade-in-left">Read the success stories and heartfelt
-          testimonials from our valued clients. Discover why they chose Estatein for their
+          testimonials from our valued clients. Discover why they chose Uzbekation for their
           Trip planning</p>
       </div>
 
       <div class="flex items-center gap-8 px-24 overflow-scroll scrollbar-none snap-x snap-mandatory scroll-pl-24">
 
-        <div
-          class="flex flex-col items-start gap-10 w-fit p-[50px] rounded-xl bg-[#141414]/10 border border-white/20 backdrop-blur-md snap-start snap-always fade">
-
-          <!-- satisfaction level (stars)-->
-          <div class="flex items-center justify-start gap-2.5">
-            <div class="bg-[#1A1A1A] rounded-full p-4 border border-[#262626]">
-              <img src="./img/start.svg" alt="review">
-            </div>
-            <div class="bg-[#1A1A1A] rounded-full p-4 border border-[#262626]">
-              <img src="./img/start.svg" alt="review">
-            </div>
-            <div class="bg-[#1A1A1A] rounded-full p-4 border border-[#262626]">
-              <img src="./img/start.svg" alt="review">
-            </div>
-            <div class="bg-[#1A1A1A] rounded-full p-4 border border-[#262626]">
-              <img src="./img/start.svg" alt="review">
-            </div>
-            <div class="bg-[#1A1A1A] rounded-full p-4 border border-[#262626]">
-              <img src="./img/start.svg" alt="review">
-            </div>
-
+        <<div
+        class="flex flex-col items-start gap-10 w-fit p-[50px] rounded-xl bg-[#141414]/10 border border-white/20 backdrop-blur-md snap-start snap-always">
+      
+        <!-- satisfaction level (stars)-->
+        <div class="flex items-center justify-start gap-2.5">
+          <div class="bg-[#1A1A1A] rounded-full p-4 border border-[#262626]">
+            <img src="./img/start.svg" alt="review">
           </div>
-
-          <!-- review content -->
-          <div class="space-y-3 w-[412px]">
-            <p class="urbanist-semibold text-2xl leading-[150%]">
-              Exceptional Service!
-            </p>
-            <p class="urbanist-medium text-lg leading-[150%] text-left">Our experience with Estatein was outstanding.
-              Their team's dedication and professionalism made organizing
-              our trip like
-              a breeze. Highly recommended!</p>
+          <div class="bg-[#1A1A1A] rounded-full p-4 border border-[#262626]">
+            <img src="./img/start.svg" alt="review">
           </div>
-
-          <!-- user information -->
-          <div class="flex items-center justify-center gap-3">
-            <div class="size-[60px] rounded-full overflow-hidden cursor-pointer object-cover object-center">
-              <img src="./img/wade.png" alt="user">
-            </div>
-            <div class="space-y-0.5">
-              <p class="urbanist-medium text-xl leading-[150%]">Wade Warren</p>
-              <p class="urbanist-medium text-lg text-[#999999] leading-[150%]">USA, California</p>
-            </div>
+          <div class="bg-[#1A1A1A] rounded-full p-4 border border-[#262626]">
+            <img src="./img/start.svg" alt="review">
           </div>
-
+          <div class="bg-[#1A1A1A] rounded-full p-4 border border-[#262626]">
+            <img src="./img/start.svg" alt="review">
+          </div>
+          <div class="bg-[#1A1A1A] rounded-full p-4 border border-[#262626]">
+            <img src="./img/start.svg" alt="review">
+          </div>
         </div>
-        <div
-          class="flex flex-col items-start gap-10 w-fit p-[50px] rounded-xl bg-[#141414]/10 border border-white/20 backdrop-blur-md snap-start snap-always fade">
-
-          <!-- satisfaction level (stars)-->
-          <div class="flex items-center justify-start gap-2.5">
-            <div class="bg-[#1A1A1A] rounded-full p-4 border border-[#262626]">
-              <img src="./img/start.svg" alt="review">
-            </div>
-            <div class="bg-[#1A1A1A] rounded-full p-4 border border-[#262626]">
-              <img src="./img/start.svg" alt="review">
-            </div>
-            <div class="bg-[#1A1A1A] rounded-full p-4 border border-[#262626]">
-              <img src="./img/start.svg" alt="review">
-            </div>
-            <div class="bg-[#1A1A1A] rounded-full p-4 border border-[#262626]">
-              <img src="./img/start.svg" alt="review">
-            </div>
-            <div class="bg-[#1A1A1A] rounded-full p-4 border border-[#262626]">
-              <img src="./img/start.svg" alt="review">
-            </div>
-
-          </div>
-
-          <!-- review content -->
-          <div class="space-y-3 w-[412px]">
-            <p class="urbanist-semibold text-2xl leading-[150%]">
-              Efficient and Reliable
-            </p>
-            <p class="urbanist-medium text-lg leading-[150%] text-left">Our experience with Estatein was outstanding.
-              The tours in this website are great. I had been really enjoy with my family! Will surely
-              recommend to my freind to join this company!
-            </p>
-          </div>
-
-          <!-- user information -->
-          <div class="flex items-center justify-center gap-3">
-            <div class="size-[60px] rounded-full overflow-hidden cursor-pointer object-cover object-center">
-              <img src="./img/emelie.png" alt="user">
-            </div>
-            <div class="space-y-0.5">
-              <p class="urbanist-medium text-xl leading-[150%]">Emelie Thomson</p>
-              <p class="urbanist-medium text-lg text-[#999999] leading-[150%]">USA, Florida</p>
-            </div>
-          </div>
-
+      
+        <!-- review content -->
+        <div class="space-y-3 w-[412px]">
+          <p class="urbanist-semibold text-2xl leading-[150%]">
+            Incredible Local Knowledge!
+          </p>
+          <p class="urbanist-medium text-lg leading-[150%] text-left">What impressed me most about Uzbekation was their in-depth knowledge of the local areas. Our guide knew every hidden gem and authentic experience off the tourist trail. We discovered places we would never have found on our own. Thank you for your incredible services.</p>
         </div>
-        <div
-          class="flex flex-col items-start gap-10 w-fit p-[50px] rounded-xl bg-[#141414]/10 border border-white/20 backdrop-blur-md snap-start snap-always fade">
-
-          <!-- satisfaction level (stars)-->
-          <div class="flex items-center justify-start gap-2.5">
-            <div class="bg-[#1A1A1A] rounded-full p-4 border border-[#262626]">
-              <img src="./img/start.svg" alt="review">
-            </div>
-            <div class="bg-[#1A1A1A] rounded-full p-4 border border-[#262626]">
-              <img src="./img/start.svg" alt="review">
-            </div>
-            <div class="bg-[#1A1A1A] rounded-full p-4 border border-[#262626]">
-              <img src="./img/start.svg" alt="review">
-            </div>
-            <div class="bg-[#1A1A1A] rounded-full p-4 border border-[#262626]">
-              <img src="./img/start.svg" alt="review">
-            </div>
-            <div class="bg-[#1A1A1A] rounded-full p-4 border border-[#262626]">
-              <img src="./img/start.svg" alt="review">
-            </div>
-
+      
+        <!-- user information -->
+        <div class="flex items-center justify-center gap-3">
+          <div class="size-[60px] rounded-full overflow-hidden cursor-pointer object-cover object-center">
+            <img src="./img/wade.png" alt="user">
           </div>
-
-          <!-- review content -->
-          <div class="space-y-3 w-[412px]">
-            <p class="urbanist-semibold text-2xl leading-[150%]">
-              Trusted Advisors
-            </p>
-            <p class="urbanist-medium text-lg leading-[150%] text-left">Our experience with Estatein was outstanding.
-              The Estatein team guided us through the entire Planning process. Their knowledge and commitment to our
-              needs were
-              impressive. Thank you for your support!
-            </p>
+          <div class="space-y-0.5">
+            <p class="urbanist-medium text-xl leading-[150%]">Hiroshi Tanaka</p>
+            <p class="urbanist-medium text-lg text-[#999999] leading-[150%]">Japan, Tokyo</p>
           </div>
-
-          <!-- user information -->
-          <div class="flex items-center justify-center gap-3">
-            <div class="size-[60px] rounded-full overflow-hidden cursor-pointer object-cover object-center">
+        </div>
+      </div>
+      
+      <div
+        class="flex flex-col items-start gap-10 w-fit p-[50px] rounded-xl bg-[#141414]/10 border border-white/20 backdrop-blur-md snap-start snap-always">
+      
+        <!-- satisfaction level (stars)-->
+        <div class="flex items-center justify-start gap-2.5">
+          <div class="bg-[#1A1A1A] rounded-full p-4 border border-[#262626]">
+            <img src="./img/start.svg" alt="review">
+          </div>
+          <div class="bg-[#1A1A1A] rounded-full p-4 border border-[#262626]">
+            <img src="./img/start.svg" alt="review">
+          </div>
+          <div class="bg-[#1A1A1A] rounded-full p-4 border border-[#262626]">
+            <img src="./img/start.svg" alt="review">
+          </div>
+          <div class="bg-[#1A1A1A] rounded-full p-4 border border-[#262626]">
+            <img src="./img/start.svg" alt="review">
+          </div>
+          <div class="bg-[#1A1A1A] rounded-full p-4 border border-[#262626]">
+            <img src="./img/start.svg" alt="review">
+          </div>
+        </div>
+      
+        <!-- review content -->
+        <div class="space-y-3 w-[412px]">
+          <p class="urbanist-semibold text-2xl leading-[150%]">
+            Sustainability Champions
+          </p>
+          <p class="urbanist-medium text-lg leading-[150%] text-left">As someone deeply concerned about environmental impact, I was thoroughly impressed by Uzbekation's commitment to sustainable tourism. From carbon offset options to supporting local conservation efforts, they've thought of everything</p>
+        </div>
+      
+        <!-- user information -->
+        <div class="flex items-center justify-center gap-3">
+          <div class="size-[60px] rounded-full overflow-hidden cursor-pointer object-cover object-center">
+            <img src="./img/emelie.png" alt="user">
+          </div>
+          <div class="space-y-0.5">
+            <p class="urbanist-medium text-xl leading-[150%]">Sophia Martínez</p>
+            <p class="urbanist-medium text-lg text-[#999999] leading-[150%]">Chile, Santiago</p>
+          </div>
+        </div>
+      </div>
+      
+      <div
+        class="flex flex-col items-start gap-10 w-fit p-[50px] rounded-xl bg-[#141414]/10 border border-white/20 backdrop-blur-md snap-start snap-always">
+      
+        <!-- satisfaction level (stars)-->
+        <div class="flex items-center justify-start gap-2.5">
+          <div class="bg-[#1A1A1A] rounded-full p-4 border border-[#262626]">
+            <img src="./img/start.svg" alt="review">
+          </div>
+          <div class="bg-[#1A1A1A] rounded-full p-4 border border-[#262626]">
+            <img src="./img/start.svg" alt="review">
+          </div>
+          <div class="bg-[#1A1A1A] rounded-full p-4 border border-[#262626]">
+            <img src="./img/start.svg" alt="review">
+          </div>
+          <div class="bg-[#1A1A1A] rounded-full p-4 border border-[#262626]">
+            <img src="./img/start.svg" alt="review">
+          </div>
+          <div class="bg-[#1A1A1A] rounded-full p-4 border border-[#262626]">
+            <img src="./img/start.svg" alt="review">
+          </div>
+        </div>
+      
+        <!-- review content -->
+        <div class="space-y-3 w-[412px]">
+          <p class="urbanist-semibold text-2xl leading-[150%]">
+            Cultural Immersion Excellence
+          </p>
+          <p class="urbanist-medium text-lg leading-[150%] text-left">Uzbekation excels at creating authentic cultural experiences! Our family cooking class with a local chef was the highlight of our trip. The children still talk about making traditional pastries! The translation services were flawless to say the least. Perfect holiday experience.</p>
+        </div>
+      
+        <!-- user information -->
+        <div class="flex items-center justify-center gap-3">
+          <div class="size-[60px] rounded-full overflow-hidden cursor-pointer object-cover object-center">
             <!-- reviewer profile image -->
-              <img src="./img/john.png" alt="user">
-            </div>
-            <!-- reviewer information -->
-            <div class="space-y-0.5">
-              <p class="urbanist-medium text-xl leading-[150%]">John Mans</p>
-              <p class="urbanist-medium text-lg text-[#999999] leading-[150%]">USA, Nevada</p>
-            </div>
+            <img src="./img/john.png" alt="user">
           </div>
-
+          <!-- reviewer information -->
+          <div class="space-y-0.5">
+            <p class="urbanist-medium text-xl leading-[150%]">Aditya Patel</p>
+            <p class="urbanist-medium text-lg text-[#999999] leading-[150%]">India, Mumbai</p>
+          </div>
         </div>
+      </div>
+      
+      <div
+        class="flex flex-col items-start gap-10 w-fit p-[50px] rounded-xl bg-[#141414]/10 border border-white/20 backdrop-blur-md snap-start snap-always">
+      
+        <!-- satisfaction level (stars)-->
+        <div class="flex items-center justify-start gap-2.5">
+          <div class="bg-[#1A1A1A] rounded-full p-4 border border-[#262626]">
+            <img src="./img/start.svg" alt="review">
+          </div>
+          <div class="bg-[#1A1A1A] rounded-full p-4 border border-[#262626]">
+            <img src="./img/start.svg" alt="review">
+          </div>
+          <div class="bg-[#1A1A1A] rounded-full p-4 border border-[#262626]">
+            <img src="./img/start.svg" alt="review">
+          </div>
+          <div class="bg-[#1A1A1A] rounded-full p-4 border border-[#262626]">
+            <img src="./img/start.svg" alt="review">
+          </div>
+          <div class="bg-[#1A1A1A] rounded-full p-4 border border-[#262626]">
+            <img src="./img/start.svg" alt="review">
+          </div>
+        </div>
+      
+        <!-- review content -->
+        <div class="space-y-3 w-[412px]">
+          <p class="urbanist-semibold text-2xl leading-[150%]">
+            Luxurious Comfort
+          </p>
+          <p class="urbanist-medium text-lg leading-[150%] text-left">I was amazed by the attention to detail in our accommodations. Uzbekation curated the perfect blend of luxury and authentic local style. Every hotel was immaculate, with spectacular views and top-tier service. Worth every penny for a truly memorable holiday.</p>
+        </div>
+      
+        <!-- user information -->
+        <div class="flex items-center justify-center gap-3">
+          <div class="size-[60px] rounded-full overflow-hidden cursor-pointer object-cover object-center">
+            <img src="./img/wade.png" alt="user">
+          </div>
+          <div class="space-y-0.5">
+            <p class="urbanist-medium text-xl leading-[150%]">Olivia Kowalski</p>
+            <p class="urbanist-medium text-lg text-[#999999] leading-[150%]">Poland, Kraków</p>
+          </div>
+        </div>
+      </div>
+      
+      <div
+        class="flex flex-col items-start gap-10 w-fit p-[50px] rounded-xl bg-[#141414]/10 border border-white/20 backdrop-blur-md snap-start snap-always">
+      
+        <!-- satisfaction level (stars)-->
+        <div class="flex items-center justify-start gap-2.5">
+          <div class="bg-[#1A1A1A] rounded-full p-4 border border-[#262626]">
+            <img src="./img/start.svg" alt="review">
+          </div>
+          <div class="bg-[#1A1A1A] rounded-full p-4 border border-[#262626]">
+            <img src="./img/start.svg" alt="review">
+          </div>
+          <div class="bg-[#1A1A1A] rounded-full p-4 border border-[#262626]">
+            <img src="./img/start.svg" alt="review">
+          </div>
+          <div class="bg-[#1A1A1A] rounded-full p-4 border border-[#262626]">
+            <img src="./img/start.svg" alt="review">
+          </div>
+          <div class="bg-[#1A1A1A] rounded-full p-4 border border-[#262626]">
+            <img src="./img/start.svg" alt="review">
+          </div>
+        </div>
+      
+        <!-- review content -->
+        <div class="space-y-3 w-[412px]">
+          <p class="urbanist-semibold text-2xl leading-[150%]">
+            Perfect for Solo Travelers
+          </p>
+          <p class="urbanist-medium text-lg leading-[150%] text-left">As a solo traveler, safety and community are priorities. Uzbekation's small group tour was exactly what I needed. I felt secure while making lifelong friends from across the globe. The guides were knowledgeable and the itinerary balanced adventure with relaxation.</p>
+        </div>
+      
+        <!-- user information -->
+        <div class="flex items-center justify-center gap-3">
+          <div class="size-[60px] rounded-full overflow-hidden cursor-pointer object-cover object-center">
+            <img src="./img/emelie.png" alt="user">
+          </div>
+          <div class="space-y-0.5">
+            <p class="urbanist-medium text-xl leading-[150%]">Amara Okafor</p>
+            <p class="urbanist-medium text-lg text-[#999999] leading-[150%]">Nigeria, Lagos</p>
+          </div>
+        </div>
+      </div>
+      
+      <div
+        class="flex flex-col items-start gap-10 w-fit p-[50px] rounded-xl bg-[#141414]/10 border border-white/20 backdrop-blur-md snap-start snap-always">
+      
+        <!-- satisfaction level (stars)-->
+        <div class="flex items-center justify-start gap-2.5">
+          <div class="bg-[#1A1A1A] rounded-full p-4 border border-[#262626]">
+            <img src="./img/start.svg" alt="review">
+          </div>
+          <div class="bg-[#1A1A1A] rounded-full p-4 border border-[#262626]">
+            <img src="./img/start.svg" alt="review">
+          </div>
+          <div class="bg-[#1A1A1A] rounded-full p-4 border border-[#262626]">
+            <img src="./img/start.svg" alt="review">
+          </div>
+          <div class="bg-[#1A1A1A] rounded-full p-4 border border-[#262626]">
+            <img src="./img/start.svg" alt="review">
+          </div>
+          <div class="bg-[#1A1A1A] rounded-full p-4 border border-[#262626]">
+            <img src="./img/start.svg" alt="review">
+          </div>
+        </div>
+      
+        <!-- review content -->
+        <div class="space-y-3 w-[412px]">
+          <p class="urbanist-semibold text-2xl leading-[150%]">
+            Accessible Adventure
+          </p>
+          <p class="urbanist-medium text-lg leading-[150%] text-left">I was concerned about traveling with mobility limitations, but Uzbekation made it seamless. They arranged appropriate transport and accommodations without compromising on experiences. Their attention to accessibility needs while maintaining adventure was impressive.</p>
+        </div>
+      
+        <!-- user information -->
+        <div class="flex items-center justify-center gap-3">
+          <div class="size-[60px] rounded-full overflow-hidden cursor-pointer object-cover object-center">
+            <img src="./img/john.png" alt="user">
+          </div>
+          <div class="space-y-0.5">
+            <p class="urbanist-medium text-xl leading-[150%]">Lars Svensson</p>
+            <p class="urbanist-medium text-lg text-[#999999] leading-[150%]">Sweden, Stockholm</p>
+          </div>
+        </div>
+      </div>
 
       </div>
 
@@ -629,7 +819,7 @@
         </h1>
         <p class="urbanist-medium text-[#999999] text-lg leading-[150%] fade-in-left">Your dream place is just a click away. Whether
           you're looking for a new place, a historial place, or a chill place,
-          Estatein is here to assist you every step of the way. Take the first step towards your real trip planner and
+          Uzbekation is here to assist you every step of the way. Take the first step towards your real trip planner and
           explore our
           available properties or get in touch with our team for personalized assistance.</p>
       </article>
@@ -720,7 +910,7 @@
   <!-- footer: copyright and social links -->
   <section class="bg-[#1A1A1A] py-4 px-24 flex items-center justify-between groups">
     <div class="flex items-center gap-10 py-2.5 urbanist-medium tracking-[-0.6%] text-lg leading-6">
-      <p class="fade">@20234Tripsy. All Rights Reserved.</p>
+      <p class="fade">© 2025 Uzbekation. All Rights Reserved.</p>
       <a class="cursor-pointer hover:underline fade" href="#">Terms & Conditions</a>
     </div>
 

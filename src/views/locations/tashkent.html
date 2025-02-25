@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Places | Tashkent</title>
+  <link rel="stylesheet" href="../../styles/fonts.css">
+  <link rel="stylesheet" href="../../styles/main.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        screens: {
+          lg: { max: "1024px" },
+          md: { max: "768px" },
+          hamvisible: { max: "700px" },
+          sm: { max: "425px" },
+          xs: { max: "375px" },
+          s: { max: "320px" },
+        },
+        extend: {
+          colors: {
+            mainpurple: "#703BF7",
+            lighterpurple: "#A685FA"
+          },
+        },
+      },
+    };
+  </script>
+
+  <style>
+    .text-inner-shadow {
+      text-shadow: inset 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    }
+  </style>
+</head>
+
+<body
+  class="bg-[url('./img/tashkent.png')] h-screen bg-cover bg-center text-white scroll-smooth overscroll-auto scrollbar-hidden">
+  <div class="absolute inset-0 bg-gradient-to-r from-black/50 to-black/50 via-transparent -z-10"></div>
+
+  <div class="flex flex-col justify-between h-full px-8 py-6">
+    <!-- navigation buttons -->
+    <nav class="flex items-center justify-between">
+      <button onclick="history.back()"
+        class="text-lg sfpro-display-bold flex items-center justify-center gap-1.5 py-2 px-4 bg-mainpurple rounded-xl transition-all duration-200 ease-in-out hover:shadow-[0_0_15px_5px_rgba(112,59,247,0.5)] hover:text-shadow-[0_0_10px_rgba(112,59,247,0.8),0_0_20px_rgba(112,59,247,0.9)] whitespace-nowrap">
+        <img class="size-4" src="./img/svgs/back.svg" alt="back">
+        Back
+      </button>
+      <button onclick="doPayment()"
+        class="text-lg sfpro-display-bold flex items-center justify-center gap-1.5 py-2 px-4 bg-mainpurple rounded-xl transition-all duration-200 ease-in-out hover:shadow-[0_0_15px_5px_rgba(112,59,247,0.5)] hover:text-shadow-[0_0_10px_rgba(112,59,247,0.8),0_0_20px_rgba(112,59,247,0.9)] whitespace-nowrap">
+        Next
+        <img class="size-4" src="./img/svgs/next.svg" alt="next">
+      </button>
+    </nav>
+
+    <div class="flex items-end justify-between">
+      <!-- detailed information about the place -->
+      <article
+        class="flex flex-col items-start max-w-[550px] p-4 bg-[#0A0A0A]/30 border border-[#FFFFFF]/20 backdrop-blur-sm rounded-3xl">
+        <img class="size-12" src="./img/svgs/park.svg" alt="city">
+        <div class="flex flex-col items-start ml-6 mt-4 mb-10">
+          <p class="sfpro-display-bold text-5xl text-[#F8F8FF] ml-4">Tashkent</p>
+          <p class="regular-brush text-5xl text-lighterpurple mt-1">Modern Capital</p>
+        </div>
+        <img class="mb-5" src="./img/divider.png" alt="divider">
+        <!-- details about the location -->
+        <p class="sfpro-display text-base mb-5">
+          Tashkent, the capital and largest city of Uzbekistan, blends <span class="text-lighterpurple font-semibold">Soviet-era architecture</span> 
+          with modern developments and historic Islamic influences. After an earthquake in 1966 destroyed much of the city, 
+          it was rebuilt with wide avenues, <span class="text-lighterpurple font-semibold">spacious parks, and monuments</span>. 
+          Despite the modernization, Tashkent still preserves parts of its <span class="text-lighterpurple font-semibold">old town, 
+          with traditional houses and religious buildings</span>. The city serves as the cultural and economic heart of the country, 
+          featuring <span class="text-lighterpurple font-semibold">numerous museums, theaters, and educational institutions</span>.
+        </p>
+
+        <!-- information -->
+        <div class="flex items-start gap-5">
+          <div class="flex flex-col items-center justify-start relative max-w-[160px] min-h-[168px]">
+            <img class="absolute top-0 left-0 right-0 bottom-0" src="./img/svgs/Union.svg" alt="union">
+            <img class="size-15" src="./img/svgs/sleep.svg" alt="metro">
+            <p class="text-lighterpurple regular-brush text-base text-[#A685FA] text-center mb-1">Transportation</p>
+            <p class="text-center text-[#F8F8FF] sfpro-display text-xs mx-1">Tashkent has Central Asia's oldest metro system, with stations that are works of art showcasing Uzbek history.</p>
+          </div>
+          <div class="flex flex-col items-center justify-center relative max-w-[160px] min-h-[168px]">
+            <img class="absolute top-0 left-0 right-0 bottom-0" src="./img/svgs/Union.svg" alt="union">
+            <img class="size-15" src="./img/svgs/plane.svg" alt="food">
+            <p class="text-lighterpurple regular-brush text-base text-[#A685FA] text-center mb-1">Urban life</p>
+            <p class="text-center text-[#F8F8FF] sfpro-display text-xs mx-1">
+              Experience both tradition and modernity with vibrant bazaars, restaurants, and cafes and tea houses.</p>
+          </div>
+          <div class="flex flex-col items-center justify-center relative max-w-[160px] min-h-[168px]">
+            <img class="absolute top-0 left-0 right-0 bottom-0" src="./img/svgs/Union.svg" alt="union">
+            <img class="size-15" src="./img/svgs/animalpath.svg" alt="museum">
+            <p class="text-lighterpurple regular-brush text-base text-[#A685FA] text-center mb-1">Culture</p>
+            <p class="text-center text-[#F8F8FF] sfpro-display text-xs mx-1">Home to world-class museums including the State Museum of History of Uzbekistan and Museum of Applied Arts.</p>
+          </div>
+        </div>
+
+        <!-- Weather info -->
+        <div class="flex flex-col items-center mx-auto mt-4">
+          <p class="text-[#A685FA] sfpro-display-bold text-lg">Weather info: </p>
+          <p class="font-semibold">Tashkent has a <span class="text-lighterpurple">continental climate</span> with 
+          <span class="text-lighterpurple">hot summers and cold winters</span>. Summer temperatures typically reach 
+          <span class="underline">35°C</span> in July and August, while winter brings 
+          <span class="text-lighterpurple">occasional snow and temperatures around 0°C</span>.
+          </p>
+        </div>
+      </article>
+      
+      <div class="flex flex-col gap-3 items-end">
+        <!-- price info -->
+        <p
+          class="w-fit px-6 py-4 text-xl regular-brush text-lighterpurple leading-[150%] bg-[#000]/20 rounded-xl backdrop-blur-md border border-white/10">
+          Price <span class="sfpro-display font-bold text-white"> : $38</span></p>
+        <!-- Geographical information -->
+        <article
+          class="flex flex-col items-start max-w-[500px] py-6 px-3 bg-[#0A0A0A]/30 border border-[#FFFFFF]/20 backdrop-blur-sm rounded-3xl">
+          <p class="sfpro-display-bold text-lighterpurple text-xl mx-auto mb-4">Geography</p>
+          <img class="rounded-3xl mb-4" src="./img/tashkentmap.png" alt="map">
+
+          <!-- facts about the place -->
+          <div class="flex flex-col items-start gap-1 ml-3">
+            <p class="sfpro-display-bold text-base">Location : <span class="text-lighterpurple"> Tashkent Region, Uzbekistan</span> </p>
+            <p class="sfpro-display-bold text-base">Coordinates : <span class="text-lighterpurple"> 41°18′N 69°16′E</span></p>
+            <p class="sfpro-display-bold text-base">Area : <span class="text-lighterpurple">334.8 km² (129.3 sq mi)</span></p>
+            <p class="sfpro-display-bold text-base">Established : <span class="text-lighterpurple">2nd century BCE</span></p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

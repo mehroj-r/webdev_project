@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Uzbekation | Payment</title>
+  <link rel="stylesheet" href="../../../styles/fonts.css">
+  <link rel="stylesheet" href="../../../styles/main.css">
+  <link rel="stylesheet" href="../style/payment.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        screens: {
+          // 'xl': {'max': '1500px'},
+          // // => @media (max-width: 1535px) { ... }
+
+          lg: { max: "1024px" },
+          // => @media (max-width: 1024px) { ... }
+
+          md: { max: "768px" },
+          // => @media (max-width: 768px) { ... }
+
+          hamvisible: { max: "700px" },
+          // => @media (max-width: 650px) { ... }
+
+          sm: { max: "425px" },
+          // => @media (max-width: 425px) { ... }
+
+          xs: { max: "375px" },
+          // => @media (max-width: 375px) { ... }
+
+          s: { max: "320px" },
+          // => @media (max-width: 375px) { ... }
+        },
+        extend: {
+          colors: {
+            // search icon colors
+            lightpurple: "#A585FA",
+            mainpurple: "#703BF7",
+
+            // places to go card colors
+            endblue: "#05073C",
+          },
+        },
+      },
+    };
+  </script>
+
+</head>
+
+<body class="relative h-screen bg-cover bg-center text-white scroll-smooth overscroll-auto scrollbar-hidden">
+  <!-- Background Image Wrapper -->
+  <div
+    class="absolute inset-0 bg-[url('../img/khiva.webp')] bg-cover bg-center filter brightness-50 contrast-125 saturate-100 sepia-10 hue-rotate-15">
+  </div>
+  <!-- Overlay for Better Readability -->
+  <div class="absolute inset-0 bg-black opacity-40"></div>
+
+  <!-- main content -->
+  <section class="relative z-10 flex flex-col items-start justify-start h-full px-8 py-6">
+    <!-- button for going back -->
+    <button onclick="history.back()"
+      class="text-lg sfpro-display-bold flex items-center justify-center gap-1.5 py-2 px-4 bg-mainpurple rounded-xl transition-all duration-200 ease-in-out hover:shadow-[0_0_15px_5px_rgba(112,59,247,0.5)] hover:text-shadow-[0_0_10px_rgba(112,59,247,0.8),0_0_20px_rgba(112,59,247,0.9)] whitespace-nowrap">
+      <img class="size-4" src="../img/svgs/back.svg" alt="back">
+      Back
+    </button>
+
+    <!-- modal -->
+    <div class="relative overflow-hidden w-full flex-1 grid place-content-center">
+
+    <!-- Booking form  -->
+    <div id="modal1"
+      class="flex flex-col items-center justify-center rounded-3xl px-8 py-7  bg-[#OAOAOA]/50 border border-1 border-white/20 backdrop-blur-md modal active">
+    
+      <h1 class="urbanist-semibold text-6xl mb-3">Booking</h1>
+      <!-- steps -->
+      <div class="flex items-center gap-0 justify-center py-4 px-5">
+        <div class="size-5 rounded-full bg-lightpurple"></div>
+        <img src="../img/svgs/stepline.svg" alt="line">
+        <div class="size-5 rounded-full bg-[#575B65]"></div>
+        <img src="../img/svgs/stepline.svg" alt="line">
+        <div class="size-5 rounded-full bg-[#575B65]"></div>
+      </div>
+      <!-- Booking form -->
+      <form action="#" class="flex flex-col items-center justify-center ">
+        <div class="p-5 space-y-5">
+          <!-- Destination  -->
+          <div class="relative flex-1 items-center">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#A685FA"
+              class="size-5 absolute left-4 top-1/2 -translate-y-1/2 w-8 h-8 md:w-[34px] md:h-[34px]">>
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
+            </svg>
+    
+            <!-- Custom Dropdown Structure -->
+            <div class="custom-select relative inline-block w-full">
+              <button id="dropdown-button"
+                class="select-button w-full urbanist-regular text-2xl pl-16 pr-4 py-3 md:py-4 text-white/50 md:text-[30px] font-normal bg-transparent border border-white/20 rounded-lg placeholder-white/50 hover:ring-1 hover:ring-purple-500"
+                role="combobox" aria-label="select button" aria-haspopup="listbox" aria-expanded="false"
+                aria-controls="select-dropdown">
+                <span class="selected-value urbanist-regular text-2xl text-white/50 font-normal">Destination</span>
+                <span class="arrow"></span>
+              </button>
+              <ul
+                class="select-dropdown bg-black/80 border border-1 border-white/20 rounded-lg hidden z-40 space-y-2 urbanist-semibold text-xl"
+                role="listbox" id="select-dropdown" aria-labelledby="dropdown-button">
+                <li class="hover:bg-lightpurple text-white hover:rounded-md focus:rounded-md focus:bg-lightpurple"
+                  role="option"> Registan</li>
+                <li class="hover:bg-lightpurple text-white hover:rounded-md focus:rounded-md focus:bg-lightpurple"
+                  role="option"> Chimgan</li>
+                <li class="hover:bg-lightpurple text-white hover:rounded-md focus:rounded-md focus:bg-lightpurple"
+                  role="option"> Castle "Ichan"</li>
+                <!-- Clear option to reset selection -->
+                <li class="hover:bg-lightpurple text-white hover:rounded-md focus:rounded-md focus:bg-lightpurple"
+                  role="option" data-value="clear">
+                  <span>Clear selection</span>
+                </li>
+              </ul>
+            </div>
+    
+          </div>
+          <!-- Departure city  -->
+          <div class="relative flex-1 items-center">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#A685FA"
+              class="size-5 absolute left-4 top-1/2 -translate-y-1/2 w-8 h-8 md:w-[34px] md:h-[34px]">>
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
+            </svg>
+    
+            <!-- Custom Dropdown Structure -->
+            <div class="custom-select relative inline-block w-full">
+              <button id="dropdown-button"
+                class="select-button w-full urbanist-regular text-2xl pl-16 pr-4 py-3 md:py-4 text-white/50 md:text-[30px] font-normal bg-transparent border border-white/20 rounded-lg placeholder-white/50 hover:ring-1 hover:ring-purple-500"
+                role="combobox" aria-label="select button" aria-haspopup="listbox" aria-expanded="false"
+                aria-controls="select-dropdown">
+                <span class="selected-value urbanist-regular text-2xl text-white/50 font-normal">Departure city</span>
+                <span class="arrow"></span>
+              </button>
+              <ul
+                class="select-dropdown bg-black/80 border border-1 border-white/20 rounded-lg hidden z-40 space-y-2 urbanist-semibold text-xl"
+                role="listbox" id="select-dropdown" aria-labelledby="dropdown-button">
+                <li class="hover:bg-lightpurple text-white hover:rounded-md focus:rounded-md focus:bg-lightpurple"
+                  role="option">
+                  Samarkand</li>
+                <li class="hover:bg-lightpurple text-white hover:rounded-md focus:rounded-md focus:bg-lightpurple"
+                  role="option">
+                  Tashkent</li>
+                <li class="hover:bg-lightpurple text-white hover:rounded-md focus:rounded-md focus:bg-lightpurple"
+                  role="option">
+                  Khiva</li>
+                <!-- Clear option to reset selection -->
+                <li class="hover:bg-lightpurple text-white hover:rounded-md focus:rounded-md focus:bg-lightpurple"
+                  role="option" data-value="clear">
+                  <span>Clear selection</span>
+                </li>
+              </ul>
+            </div>
+    
+          </div>
+          <!-- Departure date  -->
+          <div class="relative flex-1 items-center">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#A685FA"
+              class="size-5 absolute left-4 top-1/2 -translate-y-1/2 w-8 h-8 md:w-[34px] md:h-[34px]">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5m-9-6h.008v.008H12v-.008ZM12 15h.008v.008H12V15Zm0 2.25h.008v.008H12v-.008ZM9.75 15h.008v.008H9.75V15Zm0 2.25h.008v.008H9.75v-.008ZM7.5 15h.008v.008H7.5V15Zm0 2.25h.008v.008H7.5v-.008Zm6.75-4.5h.008v.008h-.008v-.008Zm0 2.25h.008v.008h-.008V15Zm0 2.25h.008v.008h-.008v-.008Zm2.25-4.5h.008v.008H16.5v-.008Zm0 2.25h.008v.008H16.5V15Z" />
+            </svg>
+            <input id="departureDateInput" type="text" placeholder="Departure date"
+              class="w-full urbanist-regular text-2xl pl-16 pr-4 py-3 md:py-4 text-white/50 md:text-[30px] font-normal bg-transparent border border-white/20 rounded-lg placeholder-white/50 focus:outline-none focus:ring-1 focus:ring-purple-500" />
+          </div>
+          <!-- Return data -->
+          <div class="relative flex-1 items-center">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#A685FA"
+              class="size-5 absolute left-4 top-1/2 -translate-y-1/2 w-8 h-8 md:w-[34px] md:h-[34px]">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5m-9-6h.008v.008H12v-.008ZM12 15h.008v.008H12V15Zm0 2.25h.008v.008H12v-.008ZM9.75 15h.008v.008H9.75V15Zm0 2.25h.008v.008H9.75v-.008ZM7.5 15h.008v.008H7.5V15Zm0 2.25h.008v.008H7.5v-.008Zm6.75-4.5h.008v.008h-.008v-.008Zm0 2.25h.008v.008h-.008V15Zm0 2.25h.008v.008h-.008v-.008Zm2.25-4.5h.008v.008H16.5v-.008Zm0 2.25h.008v.008H16.5V15Z" />
+            </svg>
+            <input id="returnDateInput" type="text" placeholder="Return date"
+              class="w-full urbanist-regular text-2xl pl-16 pr-4 py-3 md:py-4 text-white/50 md:text-[30px] font-normal bg-transparent border border-white/20 rounded-lg placeholder-white/50 focus:outline-none focus:ring-1 focus:ring-purple-500" />
+          </div>
+          <!-- Number of travellers -->
+          <div class="relative flex-1 items-center">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#A685FA"
+              class="size-5 absolute left-4 top-1/2 -translate-y-1/2 w-8 h-8 md:w-[34px] md:h-[34px]">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M18 18.72a9.094 9.094 0 0 0 3.741-.479 3 3 0 0 0-4.682-2.72m.94 3.198.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0 1 12 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 0 1 6 18.719m12 0a5.971 5.971 0 0 0-.941-3.197m0 0A5.995 5.995 0 0 0 12 12.75a5.995 5.995 0 0 0-5.058 2.772m0 0a3 3 0 0 0-4.681 2.72 8.986 8.986 0 0 0 3.74.477m.94-3.197a5.971 5.971 0 0 0-.94 3.197M15 6.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm6 3a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Zm-13.5 0a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Z" />
+            </svg>
+    
+            <input id="numberOfTravelersInput" type="text" placeholder="Number of travelers"
+              class="w-full urbanist-regular text-2xl pl-16 pr-4 py-3 md:py-4 text-white/50 md:text-[30px] font-normal bg-transparent border border-white/20 rounded-lg placeholder-white/50 focus:outline-none focus:ring-1 focus:ring-purple-500" />
+          </div>
+        </div>
+    
+        <!-- Next step button -->
+        <button id="nextBtn"
+          class="text-lg sfpro-display py-2.5 px-10 bg-mainpurple rounded-xl transition-all duration-200 ease-in-out hover:shadow-[0_0_15px_5px_rgba(112,59,247,0.5)] hover:text-shadow-[0_0_10px_rgba(112,59,247,0.8),0_0_20px_rgba(112,59,247,0.9)] whitespace-nowrap">
+          Next
+        </button>
+    
+      </form>
+    
+    </div>
+    <!-- Additional details to be included -->
+    <div id="modal2"
+      class="flex flex-col items-center justify-center rounded-3xl px-8 py-7  bg-[#OAOAOA]/50 border border-1 border-white/20 backdrop-blur-md modal">
+    
+      <h1 class="urbanist-semibold text-6xl mb-3">Additional</h1>
+      <!-- steps -->
+      <div class="flex items-center gap-0 justify-center py-4 px-5">
+        <div class="size-5 rounded-full bg-lightpurple"></div>
+        <div class="w-[220px] border-t-2 border-t-lightpurple h-0.5"></div>
+        <div class="size-5 rounded-full bg-lightpurple"></div>
+        <img src="../img/svgs/stepline.svg" alt="line">
+        <div class="size-5 rounded-full bg-[#575B65]"></div>
+      </div>
+    
+      <!-- radio inputs  -->
+      <form class="w-full p-5 mt-5 px-10 mb-6" action="#">
+        <label class="form-control urbanist-regular text-2xl text-white/50 font-normal">
+          <input type="checkbox" name="preferences" />
+          Accomodation
+        </label>
+    
+        <label class="form-control urbanist-regular text-2xl text-white/50 font-normal">
+          <input type="checkbox" name="preferences" />
+          Dietary needs
+        </label>
+        <label class="form-control urbanist-regular text-2xl text-white/50 font-normal">
+          <input type="checkbox" name="preferences" />
+          Wheelchair Access
+        </label>
+        <label class="form-control urbanist-regular text-2xl text-white/50 font-normal">
+          <input type="checkbox" name="preferences" />
+          Personal guide
+        </label>
+      </form>
+    
+      <!-- Next step button -->
+      <div class="flex items-center justify-center gap-4">
+        <button id="backBtn" 
+          class="text-lg sfpro-display py-2.5 px-7 bg-black/40 border border-white/20 rounded-xl transition-all duration-200 ease-in-out hover:shadow-[0_0_15px_5px_rgba(112,59,247,0.5)] hover:text-shadow-[0_0_10px_rgba(112,59,247,0.8),0_0_20px_rgba(112,59,247,0.9)] whitespace-nowrap">
+          Back
+        </button>
+        <button id="nextBtn" 
+          class="text-lg sfpro-display py-2.5 px-7 bg-mainpurple rounded-xl transition-all duration-200 ease-in-out hover:shadow-[0_0_15px_5px_rgba(112,59,247,0.5)] hover:text-shadow-[0_0_10px_rgba(112,59,247,0.8),0_0_20px_rgba(112,59,247,0.9)] whitespace-nowrap">
+          Next
+        </button>
+      </div>
+    
+    </div>
+    <!-- Billing details -->
+    <div id="modal3"
+      class="flex flex-col items-center justify-center rounded-3xl px-8 py-7  bg-[#OAOAOA]/50 border border-1 border-white/20 backdrop-blur-md modal">
+    
+      <h1 class="urbanist-semibold text-6xl mb-3">Billing Details</h1>
+      <!-- steps -->
+      <div class="flex items-center gap-0 justify-center py-4 px-5 mb-4">
+        <div class="size-5 rounded-full bg-lightpurple"></div>
+        <div class="w-[220px] border-t-2 border-t-lightpurple h-0.5"></div>
+        <div class="size-5 rounded-full bg-lightpurple"></div>
+        <div class="w-[220px] border-t-2 border-t-lightpurple h-0.5"></div>
+        <div class="size-5 rounded-full bg-lightpurple"></div>
+      </div>
+    
+      <!--Total Payment Details of trip  -->
+      <div class="flex flex-col items-enter justify-center gap-2 py-1 px-5 w-full">
+    
+        <div class="flex items-center justify-between border-b border-b-white/30 pb-2 px-1">
+          <p class="urbanist-semibold  text-2xl text-white/60">Airplane ticket 2x</p>
+          <p class="urbanist-semibold  text-2xl text-white/60">$1200</p>
+        </div>
+        <div class="flex items-center justify-between border-b border-b-white/30 pb-2 px-1">
+          <p class="urbanist-semibold  text-2xl text-white/60">Accomodation</p>
+          <p class="urbanist-semibold  text-2xl text-white/60">$350</p>
+        </div>
+        <div class="flex items-center justify-between border-b border-b-white/30 pb-2 px-1">
+          <p class="urbanist-semibold  text-2xl text-white/60">Service fee</p>
+          <p class="urbanist-semibold  text-2xl text-white/60"> $440</p>
+        </div>
+    
+        <!-- divider -->
+        <div class="w-full border-t border-t-white h-0.5 mt-5 mb-2"></div>
+    
+        <!-- total -->
+        <div class="flex items-center justify-between mb-2 px-1">
+          <p class="urbanist-semibold font-bold  text-3xl text-white">Total</p>
+          <p class="urbanist-semibold font-bold  text-3xl text-white"> $440</p>
+        </div>
+    
+        <!-- payment methods -->
+        <div class="flex flex-col items-center justify-center gap-4 mb-4">
+          <p class="text-white text-3xl urbanist-semibold font-bold text-center">Payment Method</p>
+          <div class="grid grid-cols-2 gap-5" id="paymentOptions">
+            <a href="#" class="payment-option">
+              <img src="../img/svgs/mastercard.svg" alt="mastercard">
+              MasterCard
+            </a>
+            <a href="#" class="payment-option">
+              <img src="../img/svgs/visa.svg" alt="visa">
+            </a>
+            <a href="#" class="payment-option">
+              <img src="../img/svgs/unionpay.svg" alt="unionpay">
+            </a>
+            <a href="#" class="payment-option">
+              <img src="../img/svgs/paypal.svg" alt="paypal">
+            </a>
+            <a href="#" class="payment-option col-span-2">
+              <img src="../img/svgs/cash.svg" alt="cash">
+              Cash
+            </a>
+          </div>
+        </div>
+    
+      </div>
+    
+      <!-- Next step and go back button -->
+      <div class="flex items-center justify-center gap-4">
+        <button id="backBtn"
+          class="text-lg sfpro-display py-2.5 px-7 bg-black/40 border border-white/20 rounded-xl transition-all duration-200 ease-in-out hover:shadow-[0_0_15px_5px_rgba(112,59,247,0.5)] hover:text-shadow-[0_0_10px_rgba(112,59,247,0.8),0_0_20px_rgba(112,59,247,0.9)] whitespace-nowrap">
+          Back
+        </button>
+        <button id="payBtn" 
+          class="text-lg sfpro-display py-2.5 px-7 bg-mainpurple rounded-xl transition-all duration-200 ease-in-out hover:shadow-[0_0_15px_5px_rgba(112,59,247,0.5)] hover:text-shadow-[0_0_10px_rgba(112,59,247,0.8),0_0_20px_rgba(112,59,247,0.9)] whitespace-nowrap">
+          Pay
+        </button>
+      </div>
+    </div>
+    <!-- resulting modals -->
+
+    <!-- successful payment -->
+    <div id="successModal" class="flex flex-col items-center justify-center rounded-3xl px-8 py-7  bg-[#OAOAOA]/50 border border-1 border-white/20 backdrop-blur-md modal final-modal">
+      <img src="../img/svgs/success.svg" alt="success">
+      <p class="urbanist-black font-black text-6xl mt-2">Success</p>
+    </div>
+    <!-- failed payment -->
+    <div id="failModal" class="flex flex-col items-center justify-center rounded-3xl px-8 py-7  bg-[#OAOAOA]/50 border border-1 border-white/20 backdrop-blur-md modal final-modal">
+      <img src="../img/svgs/fail.svg" alt="success">
+      <p class="urbanist-black font-black text-6xl mt-2">Failed</p>
+    </div>
+
+    </div>
+  </section>
+
+  
+
+  <script src="../js/modal.js"></script>
+  <script src="../js/custom_dropdown.js"></script>
+  <script src="../../auth/js/auth.js"></script>
+</body>
+
+
+</html>

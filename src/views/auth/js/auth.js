@@ -1,13 +1,20 @@
 try {
-  const checkAuth = () => {
-    window.addEventListener("load", function () {
-      const loggedInUser = localStorage.getItem("loggedInUser");
-      if (!loggedInUser) {
-        alert("You must be logged in to access this page.");
-        window.location.href = "../auth/signin.html"; // Redirect to login page
-      }
-    });
-  };
+  function checkAuth() {
+    const loggedInUser = localStorage.getItem("loggedInUser");
+    if (!loggedInUser) {
+      alert("You must be logged in to buy a ticket.");
+      window.location.href = "../auth/signin.html"; // Redirect to login page
+      return false; // Stop further execution
+    }
+    return true; // User is signed in
+  }
+
+  function doPayment() {
+    if (checkAuth()) {
+      window.location.href = "../locations/payment/payment.html"; // Redirect to payment page if signed in
+    }
+  }
+
 } catch (err) {
   console.log(err);
 }
