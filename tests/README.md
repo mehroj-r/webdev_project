@@ -33,6 +33,7 @@ This document outlines the testing and debugging process for the application, en
 ```sh
 git clone https://github.com/mehroj-r/webdev_project.git
 cd webdev_project 
+npx jest test
 ```
 
 ## Test Cases examples
