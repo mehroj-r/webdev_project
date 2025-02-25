@@ -6,5 +6,7 @@
   },
   "dependencies": {
     "@tailwindcss/forms": "^0.5.10"
-  }
+    
+  
+}
 }
