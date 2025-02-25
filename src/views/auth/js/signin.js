@@ -1,25 +1,49 @@
-document.getElementById("signinBtn").addEventListener("click", function (e) {
-  e.preventDefault();
+document.addEventListener("DOMContentLoaded", () => {
+  const signInBtn = document.getElementById("signinBtn");
+  const emailInput = document.getElementById("emailInput");
+  const passwordInput = document.getElementById("passwordInput");
 
-  const email = document.getElementById("emailInput").value;
-  const password = document.getElementById("passwordInput").value;
+  signInBtn.addEventListener("click", (event) => {
+    event.preventDefault();
 
-  if (!email || !password) {
-    alert("Please enter both email and password.");
-    return;
-  }
+    const email = emailInput.value.trim();
+    const password = passwordInput.value.trim();
 
-  // Retrieve user from localStorage
-  const user = JSON.parse(localStorage.getItem(email));
+    const storedUsers = JSON.parse(localStorage.getItem("users")) || [];
+    const user = storedUsers.find((u) => u.email === email);
 
-  if (user && user.password === password) {
-    alert("Login successful!");
+    if (!user) {
+      showModal(
+        "Error!",
+        "No account found linked to this email! <br> If you don't have an account, please sign up!",
+        "bg-mainpurple",
+        "warning"
+      );
+      return;
+    }
 
-    // Save logged-in user email to localStorage
+    if (user.password !== password) {
+      showModal(
+        "Incorrect Password!",
+        "The password you entered is incorrect. Please try again.",
+        "bg-mainpurple",
+        "warning"
+      );
+      return;
+    }
+
+    // Save logged-in user's email
     localStorage.setItem("loggedInUser", email);
 
-    window.location.href = "../main/home.html"; // Redirect to home page
-  } else {
-    alert("Invalid email or password.");
-  }
+    showModal(
+      "Success!",
+      "Login successful! Redirecting to your dashboard...",
+      "bg-mainpurple",
+      "success"
+    );
+
+    setTimeout(() => {
+      window.location.href = "../main/home.html";
+    }, 3000);
+  });
 });
